@@ -1,3 +1,4 @@
+.idea/
 .storybook
 **/dist/report-*
 **/dist/stats-*
