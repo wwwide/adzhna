@@ -1,6 +1,6 @@
 {
   "name": "adzhna",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React components library",
   "main": "index.js",
   "exports": {
@@ -10,6 +10,9 @@
     "*": {
       "button": [
         "./dist/components/Button/index.d.ts"
+      ],
+      "theme": [
+        "./dist/theme/index.d.ts"
       ]
     }
   },
