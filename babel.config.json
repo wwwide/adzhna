@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "babel-plugin-styled-components"
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3,
+        "targets": "ie >= 8"
+      }
+    ],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ]
+}
