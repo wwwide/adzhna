@@ -7,7 +7,6 @@ const config: Configuration = {
   entry: {
     button: './src/components/Button',
     theme: './src/theme',
-    themeProvider: './src/components/ThemeProvider',
   },
   output: {
     path: resolve(__dirname, './dist'),
