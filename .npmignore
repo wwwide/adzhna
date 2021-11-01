@@ -2,6 +2,7 @@
 .storybook
 **/dist/report-*
 **/dist/stats-*
+**/dist/*.map
 .eslintignore
 .eslintrc
 .gitignore
