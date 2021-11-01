@@ -20,4 +20,4 @@ yarn-error.log
 src/
 .pnp.cjs
 .pnp.loader.mjs
-
+.husky/
