@@ -88,7 +88,7 @@ export const DefaultTheme: Theme = {
   fonts: {
     family:
       'haas, pragmatica, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-    size: 14,
+    size: 1,
   },
   borders: {
     radius: 4,
@@ -99,19 +99,20 @@ export const DefaultTheme: Theme = {
   },
   base: {
     outline: {
-      width: 3,
+      width: 2,
       style: 'solid',
-      color: '#b56fef',
+      color: '#8a8a8a',
     },
   },
   components: {
     button: {
+      borderRadius: 4,
       padding: {
-        x: 20,
-        y: 10,
+        x: 1.3,
+        y: .6,
       },
       shadow: '1px 1px 5px rgba(0, 0, 0, .25)',
-      fontSize: 14,
+      fontSize: .9,
     },
   },
 }

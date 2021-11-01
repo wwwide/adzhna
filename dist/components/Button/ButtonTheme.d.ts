@@ -5,4 +5,5 @@ export declare type ButtonTheme = {
     };
     shadow: string;
     fontSize?: number;
+    borderRadius?: number;
 };

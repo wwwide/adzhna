@@ -114,7 +114,7 @@ export type Theme = {
   fonts: {
     // Family
     family: string
-    // Base font size in "px"
+    // Base font size in "rem"
     size: number
   }
   // Base border settings
@@ -126,7 +126,7 @@ export type Theme = {
   }
   // Layout grid parameters
   grid: {
-    // Base step size in "px"
+    // Base step size in "rem"
     step: number
   }
   base: {
