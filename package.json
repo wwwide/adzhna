@@ -23,7 +23,7 @@
     "build": "yarn lint && webpack --config ./webpack.config.ts --mode=production",
     "lint": "eslint --ext .tsx,.ts ./src",
     "storybook": "start-storybook -p 4444",
-    "test": "jest --detectOpenHandles --forceExit",
+    "test": "jest",
     "husky-init": "husky install"
   },
   "repository": {
