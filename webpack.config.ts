@@ -6,6 +6,7 @@ const StatoscopeWebpackPlugin = require('@statoscope/webpack-plugin').default
 const config: Configuration = {
   entry: {
     button: './src/components/Button',
+    icon: './src/components/Icon',
     theme: './src/theme',
   },
   output: {

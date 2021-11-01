@@ -5,7 +5,5 @@ export type ButtonTheme = {
     y: number
   }
   shadow: string
-  // Base font size.
-  fontSize?: number
   borderRadius?: number
 }

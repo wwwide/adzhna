@@ -1,8 +1,9 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
-import { ThemeProvider } from 'styled-components'
+import SC, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { Button, ButtonFace } from '../components/Button'
 import { DefaultTheme } from '../theme'
+import { IconFace, IconName, IconPosition, IconSize } from '../components/Icon'
 
 export default {
   title: 'Button',
@@ -50,3 +51,72 @@ export const Outlined: Story = () => {
 }
 
 Outlined.args = {}
+
+export const WithIcon: Story = () => {
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <Button face={ButtonFace.Primary} icon={{ name: IconName.DeleteCircle }}>
+        Default left aligned icon
+      </Button>{' '}
+      <Button
+        face={ButtonFace.Primary}
+        icon={{ name: IconName.DeleteCircle, position: IconPosition.Right }}
+      >
+        Right aligned icon
+      </Button>{' '}
+      <Button
+        face={ButtonFace.Warning}
+        icon={{ name: IconName.DeleteCircle, face: IconFace.Danger }}
+      >
+        Warning button with danger faced icon
+      </Button>{' '}
+      <Button
+        face={ButtonFace.Success}
+        icon={{ name: IconName.DeleteCircle, size: IconSize.XL }}
+      >
+        Button with XL icon
+      </Button>{' '}
+      <Button
+        face={ButtonFace.Danger}
+        icon={{ name: IconName.DeleteCircle, color: 'yellow', fill: 'magenta' }}
+      >
+        Button with custom colored icon
+      </Button>{' '}
+      <Button
+        outlined
+        face={ButtonFace.Warning}
+        icon={{ name: IconName.DeleteCircle }}
+      >
+        Outlined warning with icon
+      </Button>{' '}
+    </ThemeProvider>
+  )
+}
+
+WithIcon.args = {}
+
+const WrappedButton = SC(Button)`
+  font-style: italic;
+`
+
+const GlobalStyle = createGlobalStyle`
+  .rounded-button {
+    border-radius: 100px;
+  }
+`
+
+export const CustomStyles: Story = () => {
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <GlobalStyle />
+      <WrappedButton face={ButtonFace.Primary}>
+        Button with italic font
+      </WrappedButton>{' '}
+      <Button face={ButtonFace.Success} className="rounded-button">
+        Button with css class name applied
+      </Button>{' '}
+    </ThemeProvider>
+  )
+}
+
+WithIcon.args = {}

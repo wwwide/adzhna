@@ -95,7 +95,7 @@ export const DefaultTheme: Theme = {
     color: '#eee',
   },
   grid: {
-    step: 4,
+    step: 0.5,
   },
   base: {
     outline: {
@@ -109,10 +109,9 @@ export const DefaultTheme: Theme = {
       borderRadius: 4,
       padding: {
         x: 1.3,
-        y: .6,
+        y: 0.6,
       },
       shadow: '1px 1px 5px rgba(0, 0, 0, .25)',
-      fontSize: .9,
     },
   },
 }

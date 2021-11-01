@@ -3,7 +3,7 @@ import { ButtonStyledProps } from '../ButtonStyledProps'
 import { Base } from './base'
 
 export const Link = SC(Base)<ButtonStyledProps>`
-  padding: 0 ${(p) => p.theme.grid.step / 2}px;
+  padding: 0 ${(p) => p.theme.grid.step / 2}rem;
   background: ${(p) => p.theme.colors.link.fill.normal};;
   color: ${(p) => p.theme.colors.link.text.normal};
   box-shadow: none;

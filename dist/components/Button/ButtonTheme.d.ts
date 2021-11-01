@@ -4,6 +4,5 @@ export declare type ButtonTheme = {
         y: number;
     };
     shadow: string;
-    fontSize?: number;
     borderRadius?: number;
 };
