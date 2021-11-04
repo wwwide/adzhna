@@ -9,7 +9,7 @@ export const Secondary = SC(Base)<ButtonStyledProps>`
     p.$outlined
       ? p.theme.colors.secondary.fill.normal
       : p.theme.colors.secondary.text.normal};
-  border: 2px solid ${(p) => p.theme.colors.secondary.fill.normal};
+  border: 1px solid ${(p) => p.theme.colors.secondary.fill.normal};
   
   &:hover {
     color: ${(p) =>

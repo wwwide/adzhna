@@ -7,6 +7,7 @@ const config: Configuration = {
   entry: {
     button: './src/components/Button',
     icon: './src/components/Icon',
+    input: './src/components/Input',
     theme: './src/theme',
   },
   output: {

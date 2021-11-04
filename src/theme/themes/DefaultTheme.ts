@@ -4,26 +4,26 @@ export const DefaultTheme: Theme = {
   colors: {
     primary: {
       fill: {
-        normal: '#4cbdce',
-        hover: '#6fdfef',
-        active: '#2c8492',
+        normal: '#3D2F64',
+        hover: '#5a478d',
+        active: '#221632',
       },
       text: {
         normal: '#fff',
         hover: '#fff',
-        active: '#fff',
+        active: '#f6cf76',
       },
     },
     secondary: {
       fill: {
-        normal: '#ad8ba0',
-        hover: '#d9bbcd',
-        active: '#87677b',
+        normal: '#F9BA2D',
+        hover: '#f6cf76',
+        active: '#E0A729',
       },
       text: {
-        normal: '#fff',
-        hover: '#fff',
-        active: '#fff',
+        normal: '#000',
+        hover: '#555',
+        active: '#000',
       },
     },
     text: '#444',
@@ -88,20 +88,20 @@ export const DefaultTheme: Theme = {
   fonts: {
     family:
       'haas, pragmatica, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-    size: 1,
+    size: .85,
   },
   borders: {
     radius: 4,
-    color: '#eee',
+    color: '#e0e0e0',
   },
   grid: {
     step: 0.5,
   },
   base: {
     outline: {
-      width: 2,
+      width: 1,
       style: 'solid',
-      color: '#8a8a8a',
+      color: '#444',
     },
   },
   components: {
@@ -112,6 +112,13 @@ export const DefaultTheme: Theme = {
         y: 0.6,
       },
       shadow: '1px 1px 5px rgba(0, 0, 0, .25)',
+    },
+    input: {
+      borderRadius: 4,
+      padding: {
+        x: 0.6,
+        y: 0.6,
+      },
     },
   },
 }

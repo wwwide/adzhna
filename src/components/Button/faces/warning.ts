@@ -9,7 +9,7 @@ export const Warning = SC(Base)<ButtonStyledProps>`
     p.$outlined
       ? p.theme.colors.warning.fill.normal
       : p.theme.colors.warning.text.normal};
-  border: 2px solid ${(p) => p.theme.colors.warning.fill.normal};
+  border: 1px solid ${(p) => p.theme.colors.warning.fill.normal};
   
   &:hover {
     color: ${(p) =>

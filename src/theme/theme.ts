@@ -1,4 +1,5 @@
 import { ButtonTheme } from '../components/Button'
+import { InputTheme } from '../components/Input'
 
 export type Theme = {
   colors: {
@@ -140,5 +141,7 @@ export type Theme = {
   components: {
     // Button
     button: ButtonTheme
+    // Input
+    input: InputTheme
   }
 }

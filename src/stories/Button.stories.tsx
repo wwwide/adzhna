@@ -14,13 +14,16 @@ export default {
 export const Normal: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Button face={ButtonFace.Primary} tabIndex={0}>
+      <Button face={ButtonFace.Primary}>
         Primary
       </Button>{' '}
       <Button face={ButtonFace.Secondary}>Secondary</Button>{' '}
       <Button face={ButtonFace.Danger}>Danger</Button>{' '}
       <Button face={ButtonFace.Warning}>Warning</Button>{' '}
       <Button face={ButtonFace.Success}>Success</Button>{' '}
+      <Button disabled>
+        Disabled
+      </Button>{' '}
       <Button face={ButtonFace.Link}>Forgot password?</Button>
     </ThemeProvider>
   )
@@ -31,7 +34,7 @@ Normal.args = {}
 export const Outlined: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Button outlined face={ButtonFace.Primary} tabIndex={0}>
+      <Button outlined face={ButtonFace.Primary}>
         Primary
       </Button>{' '}
       <Button outlined face={ButtonFace.Secondary}>
@@ -45,6 +48,9 @@ export const Outlined: Story = () => {
       </Button>{' '}
       <Button outlined face={ButtonFace.Success}>
         Success
+      </Button>{' '}
+      <Button disabled outlined face={ButtonFace.Primary}>
+        Disabled
       </Button>
     </ThemeProvider>
   )
@@ -89,6 +95,13 @@ export const WithIcon: Story = () => {
       >
         Outlined warning with icon
       </Button>{' '}
+      <Button
+        disabled
+        face={ButtonFace.Warning}
+        icon={{ name: IconName.DeleteCircle }}
+      >
+        Disabled with icon
+      </Button>{' '}
     </ThemeProvider>
   )
 }
@@ -108,7 +121,7 @@ const GlobalStyle = createGlobalStyle`
 export const CustomStyles: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <GlobalStyle />
+      <GlobalStyle/>
       <WrappedButton face={ButtonFace.Primary}>
         Button with italic font
       </WrappedButton>{' '}

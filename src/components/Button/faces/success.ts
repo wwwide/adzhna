@@ -9,7 +9,7 @@ export const Success = SC(Base)<ButtonStyledProps>`
     p.$outlined
       ? p.theme.colors.success.fill.normal
       : p.theme.colors.success.text.normal};
-  border: 2px solid ${(p) => p.theme.colors.success.fill.normal};
+  border: 1px solid ${(p) => p.theme.colors.success.fill.normal};
   
   &:hover {
     color: ${(p) =>

@@ -8,6 +8,7 @@ import { ContentWithIcon, WrappedIcon } from './styles'
 export const Button: FC<ButtonProps> = memo((props) => {
   const {
     children,
+    disabled,
     face = ButtonFace.Secondary,
     icon,
     outlined,
@@ -26,7 +27,7 @@ export const Button: FC<ButtonProps> = memo((props) => {
     return (
       <ContentWithIcon $position={icon.position}>
         <WrappedIcon
-          {...{ ...icon, face: icon.face || getIconFaceByButtonFace(face) }}
+          {...{ ...icon, face: icon.face || getIconFaceByButtonFace(face, disabled) }}
         />
         {children}
       </ContentWithIcon>
@@ -34,8 +35,9 @@ export const Button: FC<ButtonProps> = memo((props) => {
   }, [children, icon])
 
   return (
-    <Element $outlined={outlined} {...rest}>
+    <Element $outlined={outlined} $disabled={disabled} {...rest}>
       {content}
     </Element>
   )
 })
+

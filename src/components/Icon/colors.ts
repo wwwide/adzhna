@@ -7,6 +7,8 @@ export const getColor = (
   type: 'text' | 'fill',
 ) => {
   switch (face) {
+    case IconFace.Disabled:
+      return theme.colors.disabled[type]
     case IconFace.Primary:
       return theme.colors.primary[type].normal
     case IconFace.Secondary:

@@ -4,4 +4,5 @@ export enum IconFace {
   Secondary = 'secondary',
   Success = 'success',
   Warning = 'warning',
+  Disabled = 'disabled',
 }

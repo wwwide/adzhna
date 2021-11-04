@@ -1,7 +1,10 @@
 import { ButtonFace } from './ButtonFace'
 import { IconFace } from '../Icon'
 
-export const getIconFaceByButtonFace = (face: ButtonFace): IconFace => {
+export const getIconFaceByButtonFace = (face: ButtonFace, disabled?: boolean): IconFace => {
+  if (disabled) {
+    return IconFace.Disabled
+  }
   switch (face) {
     case ButtonFace.Warning:
       return IconFace.Warning
