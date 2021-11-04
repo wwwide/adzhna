@@ -15,10 +15,13 @@ export const Simple: Story = () => {
   const [value, setValue] = useState('')
   const [error, setError] = useState('')
 
-  const onChange = useCallback((value: string, error?: string) => {
-    setValue(value)
-    setError(error || '')
-  }, [setValue, setError])
+  const onChange = useCallback(
+    (value: string, error?: string) => {
+      setValue(value)
+      setError(error || '')
+    },
+    [setValue, setError],
+  )
 
   return (
     <ThemeProvider theme={DefaultTheme}>
@@ -26,9 +29,9 @@ export const Simple: Story = () => {
         autoFocus
         style={{ marginRight: '.5rem' }}
         value={value}
-        validator={(value) => value.toString().length < 3 ? 'Too short value' : undefined}
+        validator={(value) => (value.toString().length < 3 ? 'Too short value' : undefined)}
         onChange={onChange}
-        placeholder='Type at least 3 symbols'
+        placeholder="Type at least 3 symbols"
       />
       <Button face={error ? ButtonFace.Danger : ButtonFace.Success}>Error: {error || 'no error'}</Button>
     </ThemeProvider>
@@ -38,24 +41,13 @@ export const Simple: Story = () => {
 Simple.args = {}
 
 export const CustomMask: Story = () => {
-  const [value, setValue] = useState('16.06.1985')
+  const [value, setValue] = useState('5601482034')
 
   return (
     <ThemeProvider theme={DefaultTheme}>
       <MaskedInput
         autoFocus
-        mask={[
-          /\d/,
-          /\d/,
-          '.',
-          /\d/,
-          /\d/,
-          '.',
-          /\d/,
-          /\d/,
-          /\d/,
-          /\d/,
-        ]}
+        mask={[/\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/]}
         value={value}
         onChange={setValue}
       />
@@ -70,11 +62,7 @@ export const PhoneNumberInput: Story = () => {
 
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <PhoneInput
-        autoFocus
-        value={value}
-        onChange={setValue}
-      />
+      <PhoneInput autoFocus countryCodeMask={['7']} value={value} onChange={setValue} />
     </ThemeProvider>
   )
 }

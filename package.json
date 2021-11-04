@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "yarn lint && webpack --config ./webpack.config.ts --mode=production",
-    "lint": "eslint --ext .tsx,.ts ./src",
+    "lint": "eslint --fix --ext .tsx,.ts ./src",
     "storybook": "start-storybook -p 4444",
     "test": "jest",
     "husky-init": "husky install"

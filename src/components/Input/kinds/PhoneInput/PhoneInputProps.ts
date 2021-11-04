@@ -1,4 +1,5 @@
-import { MaskedInputProps } from "../MaskedInput";
+import { MaskedInputProps } from '../MaskedInput'
 
-export interface PhoneInputProps extends Omit<MaskedInputProps, 'kind'> {
+export interface PhoneInputProps extends Omit<MaskedInputProps, 'kind' | 'mask'> {
+  countryCodeMask: (string | RegExp)[]
 }

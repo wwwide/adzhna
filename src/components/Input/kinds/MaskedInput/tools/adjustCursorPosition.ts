@@ -2,16 +2,23 @@ import { MutableRefObject } from 'react'
 import { getPlaceholdersChainUnderCaret } from './getPlaceholdersChainUnderCaret'
 import { isOnlyFormattersHere } from './isOnlyFormattersHere'
 
+/**
+ * Place caret to proper position after value change.
+ * @param newValue - new value
+ * @param oldValue - previous value
+ * @param input reference to HTML input control
+ * @param mask - mask
+ */
 export const adjustCursorPosition = (
   newValue: string,
   oldValue: string,
-  input: MutableRefObject<HTMLInputElement>,
+  input: MutableRefObject<HTMLInputElement | null>,
   mask: (string | RegExp)[],
 ): number => {
-  const caret = input.current.selectionStart || 0
+  const caret = input.current?.selectionStart || 0
   let cursor = 1000000
   let length = newValue.length - oldValue.length
-  let start = caret - length
+  const start = caret - length
 
   if (length > 0) {
     const placeholders = getPlaceholdersChainUnderCaret(caret, mask)

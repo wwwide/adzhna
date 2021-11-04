@@ -1,6 +1,7 @@
-import { InputProps } from "../../InputProps";
+import { InputProps } from '../../InputProps'
 
-export interface MaskedInputProps extends Omit<InputProps, 'kind' | 'onChange'> {
+export interface MaskedInputProps extends Omit<InputProps, 'value' | 'kind' | 'onChange'> {
+  value: string
   mask: (string | RegExp)[]
   onChange?: (value: string, error?: string) => void
 }

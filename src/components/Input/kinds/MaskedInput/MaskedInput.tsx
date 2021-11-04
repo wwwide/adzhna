@@ -6,9 +6,9 @@ import { isRegExp } from './tools'
 
 export const MaskedInput: FC<MaskedInputProps> = memo((props) => {
   const { mask, onChange: handler, value, placeholder, ...rest } = props
-  const inputRef = useRef<HTMLInputElement>()
+  const inputRef = useRef<HTMLInputElement>(null)
   const { formattedValue, onKeyDown, onChange, onPaste } = useInputBehavior(value, mask, inputRef, handler)
-  const defaultPlaceholder = mask.map(i => isRegExp(i) ? '_' : i).join('')
+  const defaultPlaceholder = mask.map((i) => (isRegExp(i) ? '_' : i)).join('')
 
   return (
     <SingleLineInput

@@ -11,25 +11,30 @@ import { adjustValueToMask, adjustCursorPosition } from '../tools'
 export const useOnChange = (
   currentValue: string,
   mask: (string | RegExp)[],
-  input: MutableRefObject<HTMLInputElement>,
+  input: MutableRefObject<HTMLInputElement | null>,
   handler?: (value: string, error?: string) => void,
 ) => {
-  const onChange = useCallback((value: string, error?: string) => {
-    if (handler) {
-      if (value.length > mask.length) {
-        return
+  const onChange = useCallback(
+    (value: string, error?: string) => {
+      if (handler) {
+        if (value.length > mask.length) {
+          return
+        }
+
+        const newValue = adjustValueToMask(value, mask)
+        const cursor = adjustCursorPosition(newValue, currentValue, input, mask)
+
+        handler(newValue, error)
+
+        setTimeout(() => {
+          if (input?.current) {
+            input.current.selectionStart = input.current.selectionEnd = cursor
+          }
+        }, 0)
       }
-
-      const newValue = adjustValueToMask(value, mask)
-      const cursor = adjustCursorPosition(newValue, currentValue, input, mask)
-
-      handler(newValue, error)
-
-      setTimeout(() => {
-        input.current.selectionStart = input.current.selectionEnd = cursor
-      }, 0)
-    }
-  }, [handler, currentValue])
+    },
+    [handler, currentValue],
+  )
 
   return {
     onChange,
