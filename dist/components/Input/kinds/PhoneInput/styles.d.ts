@@ -1,1 +1,1 @@
-export declare const Box: import("styled-components").StyledComponent<"input", import("styled-components").DefaultTheme, import("../../InputStyledProps").InputStyledProps, never>;
+export declare const Box: import("styled-components").StyledComponent<"input", import("styled-components").DefaultTheme, import("../CommonInput/InputStyledProps").InputStyledProps, never>;

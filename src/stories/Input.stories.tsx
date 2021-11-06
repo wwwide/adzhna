@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { Input, MaskedInput, PhoneInput } from '../components/Input'
 import { Button, ButtonFace } from '../components/Button'
 import { DefaultTheme } from '../theme'
+import { IconFace, IconName } from '../components/Icon'
 
 export default {
   title: 'Input',
@@ -27,9 +28,9 @@ export const Simple: Story = () => {
     <ThemeProvider theme={DefaultTheme}>
       <Input
         autoFocus
-        style={{ marginRight: '.5rem' }}
+        style={{ marginRight: '.5rem', width: '400px' }}
         value={value}
-        validator={(value) => (value.toString().length < 3 ? 'Too short value' : undefined)}
+        validator={(value: string) => (value.toString().length < 3 ? 'Too short value' : undefined)}
         onChange={onChange}
         placeholder="Type at least 3 symbols"
       />
@@ -39,6 +40,35 @@ export const Simple: Story = () => {
 }
 
 Simple.args = {}
+
+export const WithIcon: Story = () => {
+  const [value, setValue] = useState('')
+
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <div style={{ width: '400px' }}>
+        <Input
+          autoFocus
+          icon={{ name: IconName.DeleteCircle }}
+          copyButton={{ show: true, title: 'Copy to clipboard' }}
+          value={value}
+          onChange={setValue}
+          placeholder="Type here..."
+          style={{ marginBottom: '1rem' }}
+        />
+        <PhoneInput
+          countryCodeMask={['7']}
+          copyButton={{ show: true, title: 'Copy to clipboard' }}
+          icon={{ name: IconName.Phone, face: IconFace.Primary }}
+          value={value}
+          onChange={setValue}
+        />
+      </div>
+    </ThemeProvider>
+  )
+}
+
+WithIcon.args = {}
 
 export const CustomMask: Story = () => {
   const [value, setValue] = useState('5601482034')
@@ -68,3 +98,24 @@ export const PhoneNumberInput: Story = () => {
 }
 
 PhoneNumberInput.args = {}
+
+export const MultiLine: Story = () => {
+  const [value, setValue] = useState('')
+
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <div style={{ width: '400px' }}>
+        <Input
+          autoFocus
+          multiline
+          value={value}
+          onChange={setValue}
+          placeholder="Type here..."
+          style={{ height: '200px' }}
+        />
+      </div>
+    </ThemeProvider>
+  )
+}
+
+MultiLine.args = {}

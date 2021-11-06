@@ -1,6 +1,5 @@
 import SC from 'styled-components'
-import { BaseInput } from '../styles'
+import { BaseInput } from '../CommonInput'
 
 export const Box = SC(BaseInput)`
-  
 `

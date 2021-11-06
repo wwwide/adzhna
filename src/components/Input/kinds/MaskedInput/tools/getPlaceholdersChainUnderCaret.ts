@@ -14,7 +14,7 @@ const getChainTowardDirection = (
   direction: 'left' | 'right',
   accumulator: string[] = [],
 ): string[] => {
-  if (isRegExp(mask[caret]) || caret >= mask.length - 1) {
+  if (isRegExp(mask[caret]) || caret >= mask.length - 1 || (direction === 'left' && caret < 0)) {
     return accumulator
   }
   return getChainTowardDirection(

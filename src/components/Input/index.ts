@@ -1,6 +1,6 @@
 export * from './getInputByKind'
 export * from './InputKind'
 export * from './InputTheme'
-export { SingleLineInput as Input } from './kinds/SingleLineInput'
+export { CommonInput as Input } from './kinds/CommonInput'
 export * from './kinds/MaskedInput'
 export * from './kinds/PhoneInput'

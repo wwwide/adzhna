@@ -9,4 +9,6 @@ export interface IconProps {
     color?: string;
     fill?: string;
     position?: IconPosition;
+    title?: string;
+    onClick?: () => void;
 }

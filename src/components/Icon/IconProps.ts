@@ -20,4 +20,7 @@ export interface IconProps {
   // Not used directly in icon, placed here con consistent usage in button component
   // along with other icon props.
   position?: IconPosition
+
+  title?: string
+  onClick?: () => void
 }
