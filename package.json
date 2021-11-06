@@ -11,6 +11,9 @@
       "button": [
         "./dist/components/Button/index.d.ts"
       ],
+      "card": [
+        "./dist/components/Card/index.d.ts"
+      ],
       "icon": [
         "./dist/components/Icon/index.d.ts"
       ],

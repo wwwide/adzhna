@@ -1,4 +1,5 @@
 import { ButtonTheme } from '../components/Button'
+import { CardTheme } from '../components/Card'
 import { InputTheme } from '../components/Input'
 
 export type Theme = {
@@ -139,9 +140,8 @@ export type Theme = {
   }
   // Component specific parameters
   components: {
-    // Button
     button: ButtonTheme
-    // Input
+    card: CardTheme
     input: InputTheme
   }
 }

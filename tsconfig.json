@@ -16,9 +16,6 @@
     "baseUrl": "./",
     "paths": {
       "theme": ["./src/theme"],
-//      "hooks/*": ["./src/hooks/*"],
-//      "service": ["./src/service"],
-//      "service/*": ["./src/service/*"]
     }
   },
   "include": [

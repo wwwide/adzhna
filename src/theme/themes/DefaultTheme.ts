@@ -86,9 +86,8 @@ export const DefaultTheme: Theme = {
     },
   },
   fonts: {
-    family:
-      'haas, pragmatica, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-    size: .85,
+    family: 'haas, pragmatica, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    size: 0.85,
   },
   borders: {
     radius: 4,
@@ -112,6 +111,25 @@ export const DefaultTheme: Theme = {
         y: 0.6,
       },
       shadow: '1px 1px 5px rgba(0, 0, 0, .25)',
+    },
+    card: {
+      borderRadius: 4,
+      content: {
+        padding: {
+          x: 1.3,
+          y: 0.8,
+        },
+      },
+      header: {
+        padding: {
+          x: 1.3,
+          y: 0.6,
+        },
+        title: {
+          fontSize: 1.2,
+        },
+      },
+      shadow: '0 0 20px rgba(0, 0, 0, .1)',
     },
     input: {
       borderRadius: 4,
