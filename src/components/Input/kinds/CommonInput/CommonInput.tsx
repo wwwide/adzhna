@@ -70,6 +70,7 @@ export const CommonInput = memo(
           $hasIcon={!!icon}
           $hasCopyIcon={!!copyButton}
           $hasClearIcon={showClearButton && !!value}
+          disabled={disabled}
           ref={ref || ownRef}
           onChange={onChangeWrapper}
           className={inputClassName}

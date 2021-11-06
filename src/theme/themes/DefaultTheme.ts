@@ -64,6 +64,18 @@ export const DefaultTheme: Theme = {
         active: '#fff',
       },
     },
+    light: {
+      fill: {
+        normal: '#f9f9f9',
+        hover: '#ffffff',
+        active: '#f0f0f0',
+      },
+      text: {
+        normal: '#444',
+        hover: '#666',
+        active: '#000',
+      },
+    },
     link: {
       fill: {
         normal: 'transparent',
@@ -116,18 +128,31 @@ export const DefaultTheme: Theme = {
       borderRadius: 4,
       content: {
         padding: {
-          x: 1.3,
-          y: 0.8,
+          left: 1.3,
+          right: 1.3,
+          top: 0.8,
+          bottom: 0.8,
         },
       },
       header: {
         padding: {
-          x: 1.3,
-          y: 0.6,
+          left: 1.3,
+          right: 1.3,
+          top: 0.8,
+          bottom: 0.8,
         },
         title: {
           fontSize: 1.2,
         },
+      },
+      footer: {
+        padding: {
+          left: 1.3,
+          right: 1.3,
+          top: 0,
+          bottom: 0.8,
+        },
+        fontSize: .8,
       },
       shadow: '0 0 20px rgba(0, 0, 0, .1)',
     },

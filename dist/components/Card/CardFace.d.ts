@@ -1,9 +1,8 @@
-export declare enum ButtonFace {
+export declare enum CardFace {
+    Default = "default",
     Danger = "danger",
-    Link = "link",
     Primary = "primary",
     Secondary = "secondary",
     Success = "success",
-    Warning = "warning",
-    Light = "light"
+    Warning = "warning"
 }

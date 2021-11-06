@@ -1,19 +1,43 @@
 import React, { FC, memo } from 'react'
 import { CardProps } from './CardProps'
-import { Actions, Box, Content, Header, Title } from './styles'
+import { Actions, Box, Content, Header, Title, Footer } from './styles'
+import { CardFace } from './CardFace'
 
 export const Card: FC<CardProps> = memo((props) => {
-  const { children, header, maxWidth, ...rest } = props
+  const {
+    className,
+    contentClassName,
+    contentStyle,
+    footerClassName,
+    footerStyle,
+    children,
+    face = CardFace.Default,
+    footer,
+    header,
+    maxWidth,
+    ...rest
+  } = props
 
   return (
-    <Box $maxWidth={maxWidth} {...rest}>
+    <Box {...rest} $maxWidth={maxWidth} className={className}>
       {!!(header?.title || header?.actions) && (
-        <Header>
-          {!!header.title && <Title>{header.title}</Title>}
-          {!!header.actions && <Actions>{header.title}</Actions>}
+        <Header $face={face} className={header.headerClassName} style={header.headerStyle}>
+          {!!header.title && (
+            <Title $hasActions={!!header.actions} className={header.titleClassName} style={header.titleStyle}>
+              {header.title}
+            </Title>
+          )}
+          {!!header.actions && <Actions>{header.actions}</Actions>}
         </Header>
       )}
-      <Content>{children}</Content>
+      <Content className={contentClassName} style={contentStyle}>
+        {children}
+      </Content>
+      {!!footer && (
+        <Footer className={footerClassName} style={footerStyle}>
+          {footer}
+        </Footer>
+      )}
     </Box>
   )
 })

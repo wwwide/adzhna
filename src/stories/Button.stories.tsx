@@ -14,6 +14,7 @@ export default {
 export const Normal: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
+      <Button face={ButtonFace.Light}>Light</Button>{' '}
       <Button face={ButtonFace.Primary}>
         Primary
       </Button>{' '}

@@ -1,18 +1,31 @@
 export type CardTheme = {
   content: {
     padding: {
-      x: number
-      y: number
+      top: number
+      bottom: number
+      left: number
+      right: number
     }
   }
   header: {
     padding: {
-      x: number
-      y: number
+      top: number
+      bottom: number
+      left: number
+      right: number
     }
     title: {
       fontSize: number
     }
+  }
+  footer: {
+    padding: {
+      top: number
+      bottom: number
+      left: number
+      right: number
+    }
+    fontSize: number
   }
   borderRadius?: number
   shadow: string

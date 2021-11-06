@@ -6,6 +6,8 @@ export const getIconFaceByButtonFace = (face: ButtonFace, disabled?: boolean): I
     return IconFace.Disabled
   }
   switch (face) {
+    case ButtonFace.Light:
+      return IconFace.Disabled
     case ButtonFace.Warning:
       return IconFace.Warning
     case ButtonFace.Success:

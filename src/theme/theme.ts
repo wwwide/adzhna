@@ -83,6 +83,21 @@ export type Theme = {
         active: string
       }
     }
+    // Light for dark backgrounds
+    light: {
+      // Background
+      fill: {
+        normal: string
+        hover: string
+        active: string
+      }
+      // Foreground
+      text: {
+        normal: string
+        hover: string
+        active: string
+      }
+    }
     // Disabled state colors
     disabled: {
       // Background

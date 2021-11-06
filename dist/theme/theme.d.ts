@@ -1,4 +1,5 @@
 import { ButtonTheme } from '../components/Button';
+import { CardTheme } from '../components/Card';
 import { InputTheme } from '../components/Input';
 export declare type Theme = {
     colors: {
@@ -64,6 +65,18 @@ export declare type Theme = {
                 active: string;
             };
         };
+        light: {
+            fill: {
+                normal: string;
+                hover: string;
+                active: string;
+            };
+            text: {
+                normal: string;
+                hover: string;
+                active: string;
+            };
+        };
         disabled: {
             fill: string;
             text: string;
@@ -105,6 +118,7 @@ export declare type Theme = {
     };
     components: {
         button: ButtonTheme;
+        card: CardTheme;
         input: InputTheme;
     };
 };

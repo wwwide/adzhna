@@ -1,7 +1,7 @@
 import { ButtonFace } from './ButtonFace'
 import { StyledComponent } from 'styled-components'
 import { Theme } from 'theme'
-import { Danger, Link, Primary, Secondary, Success, Warning } from './faces'
+import { Danger, Link, Light, Primary, Secondary, Success, Warning } from './faces'
 import { ButtonStyledProps } from './ButtonStyledProps'
 
 export const getButtonByFace = (
@@ -24,6 +24,9 @@ export const getButtonByFace = (
   }
   if (face === ButtonFace.Link) {
     return Link
+  }
+  if (face === ButtonFace.Light) {
+    return Light
   }
   return undefined
 }
