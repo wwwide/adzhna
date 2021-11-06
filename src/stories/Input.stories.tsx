@@ -28,7 +28,6 @@ export const Simple: Story = () => {
     <ThemeProvider theme={DefaultTheme}>
       <Input
         autoFocus
-        disabled
         style={{ marginRight: '.5rem', width: '400px' }}
         value={value}
         validator={(value: string) => (value.toString().length < 3 ? 'Too short value' : undefined)}
