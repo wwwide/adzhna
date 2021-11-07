@@ -1,17 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { Button, ButtonFace } from '../components/Button'
-import { Card, CardFace } from '../components/Card'
+import { Dialog, DialogFace } from '../components/Dialog'
 import { DefaultTheme } from '../theme'
 
 export default {
-  title: 'Card',
-  component: Card,
+  title: 'Dialog',
+  component: Dialog,
   argTypes: {},
 } as Meta
 
-const title = '"War and peace" is a roman written by the great russian writer Lev Tolstoy'
 const content = (
   <div style={{ textAlign: 'justify' }}>
     Just then another visitor entered the drawing room: Prince Andrew Bolkónski, the little princess’ husband. He was a
@@ -25,150 +24,116 @@ const content = (
 )
 
 export const Simple: Story = () => {
+  const [open, setOpen] = useState(true)
+
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Card width="400px">{content}</Card>
+      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+        Open dialog
+      </Button>
+      <Dialog id="simple" open={open} onClose={() => setOpen(false)} width="400px" header={{ title: 'Sample dialog' }}>
+        Short dialog content.
+      </Dialog>
     </ThemeProvider>
   )
 }
 
 Simple.args = {}
 
-export const WithTitle: Story = () => {
+export const WithLongTitle: Story = () => {
+  const [open, setOpen] = useState(true)
+
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Card width="400px" header={{ title: 'War and peace' }} style={{ marginBottom: '1rem' }}>
+      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+        Open dialog
+      </Button>
+      <Dialog
+        id="simple"
+        open={open}
+        onClose={() => setOpen(false)}
+        width="400px"
+        header={{
+          title: 'Sample dialog with very long title',
+        }}
+      >
         {content}
-      </Card>
-      <br />
-      <Card width="400px" header={{ title }}>
-        {content}
-      </Card>
+      </Dialog>
     </ThemeProvider>
   )
 }
 
-WithTitle.args = {}
+WithLongTitle.args = {}
 
 export const WithTitleAndActions: Story = () => {
+  const [open, setOpen] = useState(true)
+
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Card
-        width="400px"
-        header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
-          title: 'War and peace',
-        }}
+      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+        Open dialog
+      </Button>
+      <Dialog
+        id="simple"
+        open={open}
+        onClose={() => setOpen(false)}
+        width="800px"
+        header={{ title: 'Sample dialog', actions: <Button face={ButtonFace.Success}>Read</Button> }}
       >
         {content}
-      </Card>
-      <br />
-      <Card
-        width="400px"
-        header={{
-          title,
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
-        }}
-      >
-        {content}
-      </Card>
+      </Dialog>
     </ThemeProvider>
   )
 }
 
 WithTitleAndActions.args = {}
 
-export const Faces: Story = () => {
+export const CustomFace: Story = () => {
+  const [open, setOpen] = useState(true)
+
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Card
-        face={CardFace.Default}
+      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+        Open dialog
+      </Button>
+      <Dialog
+        id="simple"
+        open={open}
+        onClose={() => setOpen(false)}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
-          title: 'War and peace',
+          title: 'Sample dialog',
+          actions: <Button face={ButtonFace.Light}>Action</Button>,
         }}
+        face={DialogFace.Primary}
       >
         {content}
-      </Card>
-      <br />
-      <Card
-        face={CardFace.Primary}
-        width="400px"
-        header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
-          title: 'War and peace',
-        }}
-      >
-        {content}
-      </Card>
-      <br />
-      <Card
-        face={CardFace.Secondary}
-        width="400px"
-        header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
-          title: 'War and peace',
-        }}
-      >
-        {content}
-      </Card>
-      <br />
-      <Card
-        face={CardFace.Success}
-        width="400px"
-        header={{
-          actions: <Button face={ButtonFace.Primary}>Read</Button>,
-          title: 'War and peace',
-        }}
-      >
-        {content}
-      </Card>
-      <br />
-      <Card
-        face={CardFace.Warning}
-        width="400px"
-        header={{
-          actions: <Button face={ButtonFace.Primary}>Read</Button>,
-          title: 'War and peace',
-        }}
-      >
-        {content}
-      </Card>
-      <br />
-      <Card
-        face={CardFace.Danger}
-        width="400px"
-        header={{
-          actions: <Button face={ButtonFace.Light}>Read</Button>,
-          title: 'War and peace',
-        }}
-      >
-        {content}
-      </Card>
+      </Dialog>
     </ThemeProvider>
   )
 }
 
-Faces.args = {}
+CustomFace.args = {}
 
 export const WithFooter: Story = () => {
+  const [open, setOpen] = useState(true)
+
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Card
+      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+        Open dialog
+      </Button>
+      <Dialog
+        id="simple"
+        open={open}
+        onClose={() => setOpen(false)}
         width="400px"
-        header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
-          title: 'War and peace',
-        }}
-        footer={
-          <span>
-            <b>Date</b>: 1863—1869, 1873
-          </span>
-        }
+        header={{ title: 'Sample dialog' }}
+        face={DialogFace.Danger}
+        footer={<i>Footer content</i>}
       >
         {content}
-      </Card>
+      </Dialog>
     </ThemeProvider>
   )
 }
@@ -191,12 +156,20 @@ const GlobalStyle = createGlobalStyle`
 `
 
 export const StyledWithClassNames: Story = () => {
+  const [open, setOpen] = useState(true)
+
   return (
     <ThemeProvider theme={DefaultTheme}>
       <GlobalStyle />
-      <Card
+      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+        Open dialog
+      </Button>
+      <Dialog
         contentClassName="content-class"
         footerClassName="footer-class"
+        id="simple"
+        open={open}
+        onClose={() => setOpen(false)}
         width="400px"
         header={{
           actions: <Button face={ButtonFace.Success}>Read</Button>,
@@ -207,7 +180,7 @@ export const StyledWithClassNames: Story = () => {
         footer={<span>Italic font in footer</span>}
       >
         {content}
-      </Card>
+      </Dialog>
     </ThemeProvider>
   )
 }
@@ -215,11 +188,20 @@ export const StyledWithClassNames: Story = () => {
 StyledWithClassNames.args = {}
 
 export const StyledWithInlineStyles: Story = () => {
+  const [open, setOpen] = useState(true)
+
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Card
+      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+        Open dialog
+      </Button>
+      <Dialog
         contentStyle={{ color: '#999' }}
         footerStyle={{ fontStyle: 'italic' }}
+        id="simple"
+        face={DialogFace.Default}
+        open={open}
+        onClose={() => setOpen(false)}
         width="400px"
         header={{
           actions: <Button face={ButtonFace.Success}>Read</Button>,
@@ -230,7 +212,7 @@ export const StyledWithInlineStyles: Story = () => {
         footer={<span>Italic font in footer</span>}
       >
         {content}
-      </Card>
+      </Dialog>
     </ThemeProvider>
   )
 }

@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, MouseEventHandler, ReactNode } from 'react';
 import { CardFace } from './CardFace';
 export interface CardProps {
     className?: string;
@@ -17,5 +17,6 @@ export interface CardProps {
     };
     footer?: ReactNode;
     style?: CSSProperties | undefined;
-    maxWidth?: string;
+    width?: string;
+    onClick?: MouseEventHandler<HTMLElement | undefined>;
 }

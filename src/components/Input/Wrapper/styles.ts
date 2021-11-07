@@ -9,14 +9,14 @@ export const Box = SC.span`
 
 export const WrappedIcon = SC(Icon)`
   position: absolute;
-  left: ${(p) => p.theme.components.input.padding.x}rem;
-  top: ${(p) => p.theme.components.input.padding.y}rem;
+  left: ${(p) => p.theme.adzhna.components.input.padding.x}rem;
+  top: ${(p) => p.theme.adzhna.components.input.padding.y}rem;
 `
 
 export const CopyIcon = SC(Icon)`
   position: absolute;
-  right: ${(p) => p.theme.components.input.padding.x}rem;
-  top: ${(p) => p.theme.components.input.padding.y}rem;
+  right: ${(p) => p.theme.adzhna.components.input.padding.x}rem;
+  top: ${(p) => p.theme.adzhna.components.input.padding.y}rem;
   cursor: pointer;
   transform: scale(1);
   transition: transform .5s;
@@ -35,8 +35,8 @@ export const CopyIcon = SC(Icon)`
 export const ClearIcon = SC(Icon)<{ $showCopyIcon?: boolean }>`
   position: absolute;
   right: ${(p) =>
-    p.$showCopyIcon ? p.theme.components.input.padding.x * 2 + 1 : p.theme.components.input.padding.x}rem;
-  top: ${(p) => p.theme.components.input.padding.y}rem;
+    p.$showCopyIcon ? p.theme.adzhna.components.input.padding.x * 2 + 1 : p.theme.adzhna.components.input.padding.x}rem;
+  top: ${(p) => p.theme.adzhna.components.input.padding.y}rem;
   cursor: pointer;
   transform: scale(1);
   transition: transform .5s;

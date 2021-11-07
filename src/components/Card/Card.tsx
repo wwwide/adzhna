@@ -14,12 +14,13 @@ export const Card: FC<CardProps> = memo((props) => {
     face = CardFace.Default,
     footer,
     header,
-    maxWidth,
+    width,
+    onClick,
     ...rest
   } = props
 
   return (
-    <Box {...rest} $maxWidth={maxWidth} className={className}>
+    <Box {...rest} $width={width} className={className} onClick={onClick}>
       {!!(header?.title || header?.actions) && (
         <Header $face={face} className={header.headerClassName} style={header.headerStyle}>
           {!!header.title && (

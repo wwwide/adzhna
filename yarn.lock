@@ -3583,6 +3583,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-dom@npm:^17.0.11":
+  version: 17.0.11
+  resolution: "@types/react-dom@npm:17.0.11"
+  dependencies:
+    "@types/react": "*"
+  checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
+  languageName: node
+  linkType: hard
+
 "@types/react-syntax-highlighter@npm:11.0.5":
   version: 11.0.5
   resolution: "@types/react-syntax-highlighter@npm:11.0.5"
@@ -4337,6 +4346,7 @@ __metadata:
     "@types/jest-image-snapshot": ^4.3.1
     "@types/node": ^16.11.0
     "@types/react": ^17.0.33
+    "@types/react-dom": ^17.0.11
     "@types/styled-components": ^5.1.15
     "@types/webpack": ^5.28.0
     "@typescript-eslint/eslint-plugin": ^5.0.0

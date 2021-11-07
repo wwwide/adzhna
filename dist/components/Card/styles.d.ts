@@ -1,6 +1,6 @@
 import { CardFace } from './CardFace';
 export declare const Box: import("styled-components").StyledComponent<"section", import("styled-components").DefaultTheme, {
-    $maxWidth?: string | undefined;
+    $width?: string | undefined;
 }, never>;
 export declare const Header: import("styled-components").StyledComponent<"div", import("styled-components").DefaultTheme, {
     $face: CardFace;
