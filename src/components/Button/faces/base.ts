@@ -5,6 +5,7 @@ export const Base = SC.button<ButtonStyledProps>`
   cursor: pointer;
   letter-spacing: .5px;
   font-size: ${(p) => p.theme.adzhna.fonts.size}rem;
+  font-family: ${(p) => p.theme.adzhna.fonts.family};
   padding: ${(p) => p.theme.adzhna.components.button.padding.y}rem ${(p) =>
   p.theme.adzhna.components.button.padding.x}rem;
   border: none;
