@@ -3,8 +3,8 @@ import { ButtonStyledProps } from '../ButtonStyledProps'
 import { Base } from './base'
 
 export const Link = SC(Base)<ButtonStyledProps>`
-  padding: 0 ${(p) => p.theme.adzhna.grid.step / 2}rem;
-  background: ${(p) => p.theme.adzhna.colors.link.fill.normal};;
+  padding: 0 .5rem;
+  background: ${(p) => p.theme.adzhna.colors.link.fill.normal};
   color: ${(p) => p.theme.adzhna.colors.link.text.normal};
   box-shadow: none;
   border-radius: 0;
@@ -23,5 +23,10 @@ export const Link = SC(Base)<ButtonStyledProps>`
   
   &:focus {
     border-radius: ${(p) => p.theme.adzhna.borders.radius}px;
+  }
+  
+  &:disabled {
+    background: none !important;
+    border-bottom: none;
   }
 `

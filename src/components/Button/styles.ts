@@ -8,8 +8,5 @@ export const ContentWithIcon = SC.span<{ $position?: IconPosition }>`
 `
 
 export const WrappedIcon = SC(Icon)<{ position?: IconPosition }>`
-  ${(p) =>
-    p.position === IconPosition.Right
-      ? `margin-left: ${p.theme.adzhna.grid.step}rem;`
-      : `margin-right: ${p.theme.adzhna.grid.step}rem;`}
+  ${(p) => (p.position === IconPosition.Right ? `margin-left: 1rem;` : `margin-right: 1rem;`)}
 `

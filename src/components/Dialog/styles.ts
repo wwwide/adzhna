@@ -32,7 +32,7 @@ export const Actions = SC.div`
 `
 
 export const CloseIcon = SC(Icon)`
-  margin-left: ${(p) => p.theme.adzhna.grid.step * 3}rem;
+  margin-left: 2rem;
   cursor: pointer;
   
   &:hover {

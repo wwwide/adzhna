@@ -2,6 +2,7 @@ import { ButtonTheme } from '../components/Button';
 import { CardTheme } from '../components/Card';
 import { DialogTheme } from '../components/Dialog';
 import { InputTheme } from '../components/Input';
+import { PaginationTheme } from '../components/Pagination';
 export declare type Theme = {
     adzhna: {
         colors: {
@@ -108,9 +109,6 @@ export declare type Theme = {
             radius: number;
             color: string;
         };
-        grid: {
-            step: number;
-        };
         base: {
             outline: {
                 width: number;
@@ -123,6 +121,7 @@ export declare type Theme = {
             card: CardTheme;
             dialog: DialogTheme;
             input: InputTheme;
+            pagination: PaginationTheme;
         };
     };
 };

@@ -2,6 +2,7 @@ import { ButtonTheme } from '../components/Button'
 import { CardTheme } from '../components/Card'
 import { DialogTheme } from '../components/Dialog'
 import { InputTheme } from '../components/Input'
+import { PaginationTheme } from '../components/Pagination'
 
 export type Theme = {
   adzhna: {
@@ -143,11 +144,6 @@ export type Theme = {
       // Border color
       color: string
     }
-    // Layout grid parameters
-    grid: {
-      // Base step size in "rem"
-      step: number
-    }
     base: {
       outline: {
         width: number
@@ -161,6 +157,7 @@ export type Theme = {
       card: CardTheme
       dialog: DialogTheme
       input: InputTheme
+      pagination: PaginationTheme
     }
   }
 }

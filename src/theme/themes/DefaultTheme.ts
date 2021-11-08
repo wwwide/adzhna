@@ -106,9 +106,6 @@ export const DefaultTheme: Theme = {
       radius: 4,
       color: '#e0e0e0',
     },
-    grid: {
-      step: 0.5,
-    },
     base: {
       outline: {
         width: 1,
@@ -168,6 +165,24 @@ export const DefaultTheme: Theme = {
           x: 0.6,
           y: 0.6,
         },
+      },
+      pagination: {
+        regular: {
+          padding: {
+            x: 0.6,
+            y: 0.3,
+          },
+          borderRadius: 4,
+        },
+        active: {
+          padding: {
+            x: 0.6,
+            y: 0.3,
+          },
+          borderRadius: 4,
+        },
+        fontSize: 0.8,
+        itemsGap: 0.5,
       },
     },
   },

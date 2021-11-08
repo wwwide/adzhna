@@ -35,7 +35,7 @@ export const Title = SC.span<{ $hasActions: boolean }>`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-right: ${(p) => (p.$hasActions ? p.theme.adzhna.grid.step * 2 : 0)}rem;
+  margin-right: ${(p) => (p.$hasActions ? 2 : 0)}rem;
 `
 
 export const Actions = SC.span`
