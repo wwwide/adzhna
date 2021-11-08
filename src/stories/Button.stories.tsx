@@ -17,10 +17,7 @@ export const Normal: Story = () => {
       <Button face={ButtonFace.Light}>Light</Button> <Button face={ButtonFace.Primary}>Primary</Button>{' '}
       <Button face={ButtonFace.Secondary}>Secondary</Button> <Button face={ButtonFace.Danger}>Danger</Button>{' '}
       <Button face={ButtonFace.Warning}>Warning</Button> <Button face={ButtonFace.Success}>Success</Button>{' '}
-      <Button disabled>Disabled</Button>{' '}
-      <Button disabled face={ButtonFace.Link}>
-        Forgot password?
-      </Button>
+      <Button disabled>Disabled</Button> <Button face={ButtonFace.Link}>Forgot password?</Button>
     </ThemeProvider>
   )
 }
