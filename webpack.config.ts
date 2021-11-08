@@ -7,6 +7,7 @@ const config: Configuration = {
   entry: {
     button: './src/components/Button',
     card: './src/components/Card',
+    'check-box': './src/components/CheckBox',
     icon: './src/components/Icon',
     input: './src/components/Input',
     theme: './src/theme',
