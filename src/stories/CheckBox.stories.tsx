@@ -1,51 +1,21 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { ThemeProvider } from 'styled-components'
-import { Icon, IconFace, IconName, IconSize } from '../components/Icon'
+import { CheckBox } from '../components/CheckBox'
 import { DefaultTheme } from '../theme'
 
 export default {
-  title: 'Icon',
-  component: Icon,
+  title: 'CheckBox',
+  component: CheckBox,
   argTypes: {},
 } as Meta
 
-export const Faces: Story = () => {
+export const Simple: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Icon name={IconName.DeleteCircle} face={IconFace.Primary} />{' '}
-      <Icon name={IconName.DeleteCircle} face={IconFace.Secondary} />{' '}
-      <Icon name={IconName.DeleteCircle} face={IconFace.Success} />{' '}
-      <Icon name={IconName.DeleteCircle} face={IconFace.Warning} />{' '}
-      <Icon name={IconName.DeleteCircle} face={IconFace.Danger} />{' '}
-      <Icon name={IconName.DeleteCircle} color="red" fill="magenta" />{' '}
+      <CheckBox />
     </ThemeProvider>
   )
 }
 
-Faces.args = {}
-
-export const Sizes: Story = () => {
-  return (
-    <ThemeProvider theme={DefaultTheme}>
-      <Icon name={IconName.DeleteCircle} size={IconSize.XS} />{' '}
-      <Icon name={IconName.DeleteCircle} size={IconSize.S} />{' '}
-      <Icon name={IconName.DeleteCircle} size={IconSize.M} />{' '}
-      <Icon name={IconName.DeleteCircle} size={IconSize.L} />{' '}
-      <Icon name={IconName.DeleteCircle} size={IconSize.XL} />{' '}
-      <Icon name={IconName.DeleteCircle} size="150px" />{' '}
-    </ThemeProvider>
-  )
-}
-
-Faces.args = {}
-
-export const Set: Story = () => {
-  return (
-    <ThemeProvider theme={DefaultTheme}>
-      <Icon name={IconName.DeleteCircle} />{' '}
-    </ThemeProvider>
-  )
-}
-
-Set.args = {}
+Simple.args = {}
