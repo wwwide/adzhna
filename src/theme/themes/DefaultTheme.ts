@@ -184,6 +184,11 @@ export const DefaultTheme: Theme = {
         fontSize: 0.8,
         itemsGap: 0.5,
       },
+      checkBox: {
+        width: 1.3,
+        height: 1.3,
+        borderRadius: 4,
+      },
     },
   },
 }

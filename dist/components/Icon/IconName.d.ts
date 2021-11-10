@@ -1,4 +1,5 @@
 export declare enum IconName {
+    Check = "check",
     Copy = "copy",
     Cross = "cross",
     DeleteCircle = "delete-circle",

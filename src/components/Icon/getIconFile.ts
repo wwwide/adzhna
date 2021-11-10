@@ -1,6 +1,7 @@
 import { IconName } from './IconName'
 
 const mapping = {
+  [IconName.Check]: require('!!raw-loader!./assets/check.svg'),
   [IconName.Copy]: require('!!raw-loader!./assets/copy.svg'),
   [IconName.Cross]: require('!!raw-loader!./assets/cross.svg'),
   [IconName.DeleteCircle]: require('!!raw-loader!./assets/delete-circle.svg'),

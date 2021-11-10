@@ -3,6 +3,7 @@ import { CardTheme } from '../components/Card';
 import { DialogTheme } from '../components/Dialog';
 import { InputTheme } from '../components/Input';
 import { PaginationTheme } from '../components/Pagination';
+import { CheckBoxTheme } from '../components/CheckBox';
 export declare type Theme = {
     adzhna: {
         colors: {
@@ -122,6 +123,7 @@ export declare type Theme = {
             dialog: DialogTheme;
             input: InputTheme;
             pagination: PaginationTheme;
+            checkBox: CheckBoxTheme;
         };
     };
 };
