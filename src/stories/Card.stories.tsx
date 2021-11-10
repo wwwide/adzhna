@@ -2,7 +2,7 @@ import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { Button } from '../components/Button'
-import { Card, CardFace } from '../components/Card'
+import { Card } from '../components/Card'
 import { DefaultTheme } from '../theme'
 
 export default {
@@ -82,7 +82,7 @@ export const Faces: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
       <Card
-        face={CardFace.Default}
+        face="default"
         width="400px"
         header={{
           actions: <Button face="success">Read</Button>,
@@ -93,7 +93,7 @@ export const Faces: Story = () => {
       </Card>
       <br />
       <Card
-        face={CardFace.Primary}
+        face="primary"
         width="400px"
         header={{
           actions: <Button face="success">Read</Button>,
@@ -104,7 +104,7 @@ export const Faces: Story = () => {
       </Card>
       <br />
       <Card
-        face={CardFace.Secondary}
+        face="secondary"
         width="400px"
         header={{
           actions: <Button face="success">Read</Button>,
@@ -115,10 +115,10 @@ export const Faces: Story = () => {
       </Card>
       <br />
       <Card
-        face={CardFace.Success}
+        face="success"
         width="400px"
         header={{
-          actions: <Button face="success">Read</Button>,
+          actions: <Button face="primary">Read</Button>,
           title: 'War and peace',
         }}
       >
@@ -126,10 +126,10 @@ export const Faces: Story = () => {
       </Card>
       <br />
       <Card
-        face={CardFace.Warning}
+        face="warning"
         width="400px"
         header={{
-          actions: <Button face="success">Read</Button>,
+          actions: <Button face="primary">Read</Button>,
           title: 'War and peace',
         }}
       >
@@ -137,10 +137,10 @@ export const Faces: Story = () => {
       </Card>
       <br />
       <Card
-        face={CardFace.Danger}
+        face="danger"
         width="400px"
         header={{
-          actions: <Button face="success">Read</Button>,
+          actions: <Button face="light">Read</Button>,
           title: 'War and peace',
         }}
       >

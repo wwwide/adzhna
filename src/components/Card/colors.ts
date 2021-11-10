@@ -3,21 +3,21 @@ import { CardFace } from './CardFace'
 
 export const getColor = (face: CardFace, theme: Theme, type: 'text' | 'fill') => {
   switch (face) {
-    case CardFace.Default:
+    case 'default':
       if (type === 'text') {
         return theme.adzhna.colors.text
       } else {
         return 'transparent'
       }
-    case CardFace.Primary:
+    case 'primary':
       return theme.adzhna.colors.primary[type].normal
-    case CardFace.Secondary:
+    case 'secondary':
       return theme.adzhna.colors.secondary[type].normal
-    case CardFace.Danger:
+    case 'danger':
       return theme.adzhna.colors.danger[type].normal
-    case CardFace.Warning:
+    case 'warning':
       return theme.adzhna.colors.warning[type].normal
-    case CardFace.Success:
+    case 'success':
       return theme.adzhna.colors.success[type].normal
   }
 }

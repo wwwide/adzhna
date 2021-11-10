@@ -1,8 +1,1 @@
-export enum CardFace {
-  Default = 'default',
-  Danger = 'danger',
-  Primary = 'primary',
-  Secondary = 'secondary',
-  Success = 'success',
-  Warning = 'warning',
-}
+export type CardFace = 'default' | 'danger' | 'primary' | 'secondary' | 'success' | 'warning'

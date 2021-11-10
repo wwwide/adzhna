@@ -1,1 +1,3 @@
-export { CardFace as DialogFace } from '../Card'
+import { CardFace } from '../Card'
+
+export type DialogFace = CardFace

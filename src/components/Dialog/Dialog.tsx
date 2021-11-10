@@ -5,10 +5,9 @@ import { usePortal } from './usePortal'
 import { IconName, IconSize } from '../Icon'
 import { Actions, CloseIcon, Overlay, Window } from './styles'
 import { getCloseIconFaceByDialogFace } from './getCloseIconFaceByDialogFace'
-import { DialogFace } from './DialogFace'
 
 export const Dialog: FC<DialogProps> = memo((props) => {
-  const { children, face = DialogFace.Default, id, open, onClose, header, ...rest } = props
+  const { children, face = 'default', id, open, onClose, header, ...rest } = props
   const root = usePortal(id)
   const stopBubbling = useCallback((event: MouseEvent<HTMLElement>) => event.stopPropagation(), [])
   const actions = header?.actions

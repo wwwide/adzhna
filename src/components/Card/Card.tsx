@@ -1,7 +1,6 @@
 import React, { FC, memo } from 'react'
 import { CardProps } from './CardProps'
 import { Actions, Box, Content, Header, Title, Footer } from './styles'
-import { CardFace } from './CardFace'
 
 export const Card: FC<CardProps> = memo((props) => {
   const {
@@ -11,7 +10,7 @@ export const Card: FC<CardProps> = memo((props) => {
     footerClassName,
     footerStyle,
     children,
-    face = CardFace.Default,
+    face = 'default',
     footer,
     header,
     width,

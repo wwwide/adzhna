@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { Button } from '../components/Button'
-import { Dialog, DialogFace } from '../components/Dialog'
+import { Dialog } from '../components/Dialog'
 import { DefaultTheme } from '../theme'
 
 export default {
@@ -105,7 +105,7 @@ export const CustomFace: Story = () => {
           title: 'Sample dialog',
           actions: <Button face="light">Action</Button>,
         }}
-        face={DialogFace.Primary}
+        face="primary"
       >
         {content}
       </Dialog>
@@ -129,7 +129,7 @@ export const WithFooter: Story = () => {
         onClose={() => setOpen(false)}
         width="400px"
         header={{ title: 'Sample dialog' }}
-        face={DialogFace.Danger}
+        face="danger"
         footer={<i>Footer content</i>}
       >
         {content}
@@ -199,7 +199,7 @@ export const StyledWithInlineStyles: Story = () => {
         contentStyle={{ color: '#999' }}
         footerStyle={{ fontStyle: 'italic' }}
         id="simple"
-        face={DialogFace.Default}
+        face="default"
         open={open}
         onClose={() => setOpen(false)}
         width="400px"
