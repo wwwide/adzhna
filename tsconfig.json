@@ -17,7 +17,8 @@
     "paths": {
       "theme": ["./src/theme"]
     },
-    "alwaysStrict": true
+    "alwaysStrict": true,
+    "strictNullChecks": true
   },
   "include": [
     "./src/**/*"

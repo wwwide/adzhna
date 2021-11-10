@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { Button, ButtonFace } from '../components/Button'
+import { Button } from '../components/Button'
 import { Dialog, DialogFace } from '../components/Dialog'
 import { DefaultTheme } from '../theme'
 
@@ -28,7 +28,7 @@ export const Simple: Story = () => {
 
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+      <Button face="primary" onClick={() => setOpen(true)}>
         Open dialog
       </Button>
       <Dialog id="simple" open={open} onClose={() => setOpen(false)} width="400px" header={{ title: 'Sample dialog' }}>
@@ -45,7 +45,7 @@ export const WithLongTitle: Story = () => {
 
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+      <Button face="primary" onClick={() => setOpen(true)}>
         Open dialog
       </Button>
       <Dialog
@@ -70,7 +70,7 @@ export const WithTitleAndActions: Story = () => {
 
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+      <Button face="primary" onClick={() => setOpen(true)}>
         Open dialog
       </Button>
       <Dialog
@@ -78,7 +78,7 @@ export const WithTitleAndActions: Story = () => {
         open={open}
         onClose={() => setOpen(false)}
         width="800px"
-        header={{ title: 'Sample dialog', actions: <Button face={ButtonFace.Success}>Read</Button> }}
+        header={{ title: 'Sample dialog', actions: <Button face="success">Read</Button> }}
       >
         {content}
       </Dialog>
@@ -93,7 +93,7 @@ export const CustomFace: Story = () => {
 
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+      <Button face="primary" onClick={() => setOpen(true)}>
         Open dialog
       </Button>
       <Dialog
@@ -103,7 +103,7 @@ export const CustomFace: Story = () => {
         width="400px"
         header={{
           title: 'Sample dialog',
-          actions: <Button face={ButtonFace.Light}>Action</Button>,
+          actions: <Button face="light">Action</Button>,
         }}
         face={DialogFace.Primary}
       >
@@ -120,7 +120,7 @@ export const WithFooter: Story = () => {
 
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+      <Button face="primary" onClick={() => setOpen(true)}>
         Open dialog
       </Button>
       <Dialog
@@ -161,7 +161,7 @@ export const StyledWithClassNames: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
       <GlobalStyle />
-      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+      <Button face="primary" onClick={() => setOpen(true)}>
         Open dialog
       </Button>
       <Dialog
@@ -172,7 +172,7 @@ export const StyledWithClassNames: Story = () => {
         onClose={() => setOpen(false)}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'Underlined title',
           headerClassName: 'header-class',
           titleClassName: 'title-class',
@@ -192,7 +192,7 @@ export const StyledWithInlineStyles: Story = () => {
 
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Button face={ButtonFace.Primary} onClick={() => setOpen(true)}>
+      <Button face="primary" onClick={() => setOpen(true)}>
         Open dialog
       </Button>
       <Dialog
@@ -204,7 +204,7 @@ export const StyledWithInlineStyles: Story = () => {
         onClose={() => setOpen(false)}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'Underlined title',
           headerStyle: { background: 'greenyellow' },
           titleStyle: { textDecoration: 'underline' },

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { Button, ButtonFace } from '../components/Button'
+import { Button } from '../components/Button'
 import { Card, CardFace } from '../components/Card'
 import { DefaultTheme } from '../theme'
 
@@ -56,7 +56,7 @@ export const WithTitleAndActions: Story = () => {
       <Card
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'War and peace',
         }}
       >
@@ -67,7 +67,7 @@ export const WithTitleAndActions: Story = () => {
         width="400px"
         header={{
           title,
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
         }}
       >
         {content}
@@ -85,7 +85,7 @@ export const Faces: Story = () => {
         face={CardFace.Default}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'War and peace',
         }}
       >
@@ -96,7 +96,7 @@ export const Faces: Story = () => {
         face={CardFace.Primary}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'War and peace',
         }}
       >
@@ -107,7 +107,7 @@ export const Faces: Story = () => {
         face={CardFace.Secondary}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'War and peace',
         }}
       >
@@ -118,7 +118,7 @@ export const Faces: Story = () => {
         face={CardFace.Success}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Primary}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'War and peace',
         }}
       >
@@ -129,7 +129,7 @@ export const Faces: Story = () => {
         face={CardFace.Warning}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Primary}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'War and peace',
         }}
       >
@@ -140,7 +140,7 @@ export const Faces: Story = () => {
         face={CardFace.Danger}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Light}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'War and peace',
         }}
       >
@@ -158,7 +158,7 @@ export const WithFooter: Story = () => {
       <Card
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'War and peace',
         }}
         footer={
@@ -199,7 +199,7 @@ export const StyledWithClassNames: Story = () => {
         footerClassName="footer-class"
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'Underlined title',
           headerClassName: 'header-class',
           titleClassName: 'title-class',
@@ -222,7 +222,7 @@ export const StyledWithInlineStyles: Story = () => {
         footerStyle={{ fontStyle: 'italic' }}
         width="400px"
         header={{
-          actions: <Button face={ButtonFace.Success}>Read</Button>,
+          actions: <Button face="success">Read</Button>,
           title: 'Underlined title',
           headerStyle: { background: 'greenyellow' },
           titleStyle: { textDecoration: 'underline' },

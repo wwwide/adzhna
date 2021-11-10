@@ -6,19 +6,19 @@ export const getIconFaceByButtonFace = (face: ButtonFace, disabled?: boolean): I
     return IconFace.Disabled
   }
   switch (face) {
-    case ButtonFace.Light:
+    case 'light':
       return IconFace.Disabled
-    case ButtonFace.Warning:
+    case 'warning':
       return IconFace.Warning
-    case ButtonFace.Success:
+    case 'success':
       return IconFace.Success
-    case ButtonFace.Danger:
+    case 'danger':
       return IconFace.Danger
-    case ButtonFace.Primary:
+    case 'primary':
       return IconFace.Primary
-    case ButtonFace.Secondary:
+    case 'secondary':
       return IconFace.Secondary
-    case ButtonFace.Link:
+    case 'link':
       return IconFace.Secondary
   }
 }

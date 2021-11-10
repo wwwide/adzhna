@@ -1,12 +1,11 @@
 import React, { FC, memo, useMemo } from 'react'
 import { ButtonProps } from './ButtonProps'
 import { getButtonByFace } from './getButtonByFace'
-import { ButtonFace } from './ButtonFace'
 import { getIconFaceByButtonFace } from './getIconFaceByButtonFace'
 import { ContentWithIcon, WrappedIcon } from './styles'
 
 export const Button: FC<ButtonProps> = memo((props) => {
-  const { children, disabled, face = ButtonFace.Secondary, icon, outlined, ...rest } = props
+  const { children, disabled, face = 'secondary', icon, outlined, ...rest } = props
   const Element = getButtonByFace(face)
 
   if (!Element) {

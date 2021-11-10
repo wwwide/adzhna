@@ -3,7 +3,6 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { Pagination } from '../components/Pagination'
 import { DefaultTheme } from '../theme'
-import { ButtonFace } from '../components/Button'
 
 export default {
   title: 'Pagination',
@@ -55,9 +54,9 @@ export const CustomButtonFace: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
       <Pagination
-        pageButtonFace={ButtonFace.Secondary}
-        activePageButtonFace={ButtonFace.Success}
-        arrowPageButtonFace={ButtonFace.Light}
+        pageButtonFace="secondary"
+        activePageButtonFace="success"
+        arrowPageButtonFace="light"
         page={page}
         size={2}
         total={items.length}

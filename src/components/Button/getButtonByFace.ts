@@ -7,25 +7,25 @@ import { ButtonStyledProps } from './ButtonStyledProps'
 export const getButtonByFace = (
   face: ButtonFace,
 ): StyledComponent<'button', Theme, ButtonStyledProps> | undefined => {
-  if (face === ButtonFace.Primary) {
+  if (face === 'primary') {
     return Primary
   }
-  if (face === ButtonFace.Secondary) {
+  if (face === 'secondary') {
     return Secondary
   }
-  if (face === ButtonFace.Danger) {
+  if (face === 'danger') {
     return Danger
   }
-  if (face === ButtonFace.Warning) {
+  if (face === 'warning') {
     return Warning
   }
-  if (face === ButtonFace.Success) {
+  if (face === 'success') {
     return Success
   }
-  if (face === ButtonFace.Link) {
+  if (face === 'link') {
     return Link
   }
-  if (face === ButtonFace.Light) {
+  if (face === 'light') {
     return Light
   }
   return undefined

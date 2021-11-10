@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { ThemeProvider } from 'styled-components'
 import { Input, MaskedInput, PhoneInput } from '../components/Input'
-import { Button, ButtonFace } from '../components/Button'
+import { Button } from '../components/Button'
 import { DefaultTheme } from '../theme'
 import { IconFace, IconName } from '../components/Icon'
 
@@ -34,7 +34,7 @@ export const Simple: Story = () => {
         onChange={onChange}
         placeholder="Type at least 3 symbols"
       />
-      <Button face={error ? ButtonFace.Danger : ButtonFace.Success}>Error: {error || 'no error'}</Button>
+      <Button face={error ? 'danger' : 'success'}>Error: {error || 'no error'}</Button>
     </ThemeProvider>
   )
 }

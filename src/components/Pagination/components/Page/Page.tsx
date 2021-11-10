@@ -1,6 +1,5 @@
 import React, { FC, memo, useCallback } from 'react'
 import { PageProps } from './PageProps'
-import { ButtonFace } from '../../../Button'
 import { Box } from './styles'
 
 export const Page: FC<PageProps> = memo((props) => {
@@ -22,9 +21,9 @@ export const Page: FC<PageProps> = memo((props) => {
     disabled,
   } = props
   const onClickWrapper = useCallback(() => onClick(number), [number, onClick])
-  const regularFace = pageButtonFace || ButtonFace.Link
-  const activeFace = activePageButtonFace || ButtonFace.Primary
-  const arrowFace = arrowPageButtonFace || ButtonFace.Link
+  const regularFace = pageButtonFace || 'link'
+  const activeFace = activePageButtonFace || 'primary'
+  const arrowFace = arrowPageButtonFace || 'link'
   let face = active ? activeFace : regularFace
   let className = active ? activePageButtonClassName : pageButtonClassName
   let style = active ? activePageButtonStyle : pageButtonStyle
