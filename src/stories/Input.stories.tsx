@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components'
 import { Input, MaskedInput, PhoneInput } from '../components/Input'
 import { Button } from '../components/Button'
 import { DefaultTheme } from '../theme'
-import { IconFace } from '../components/Icon'
 
 export default {
   title: 'Input',
@@ -59,7 +58,7 @@ export const WithIcon: Story = () => {
         <PhoneInput
           countryCodeMask={['7']}
           copyButton={{ show: true, title: 'Copy to clipboard' }}
-          icon={{ name: 'phone', face: IconFace.Primary }}
+          icon={{ name: 'phone', face: 'primary' }}
           value={value}
           onChange={setValue}
         />

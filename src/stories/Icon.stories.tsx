@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { ThemeProvider } from 'styled-components'
-import { Icon, IconFace, IconSize } from '../components/Icon'
+import { Icon, IconSize } from '../components/Icon'
 import { DefaultTheme } from '../theme'
 
 export default {
@@ -13,11 +13,11 @@ export default {
 export const Faces: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Icon name="delete-circle" face={IconFace.Primary} />{' '}
-      <Icon name="delete-circle" face={IconFace.Secondary} />{' '}
-      <Icon name="delete-circle" face={IconFace.Success} />{' '}
-      <Icon name="delete-circle" face={IconFace.Warning} />{' '}
-      <Icon name="delete-circle" face={IconFace.Danger} />{' '}
+      <Icon name="delete-circle" face="primary" />{' '}
+      <Icon name="delete-circle" face="secondary" />{' '}
+      <Icon name="delete-circle" face="success" />{' '}
+      <Icon name="delete-circle" face="warning" />{' '}
+      <Icon name="delete-circle" face="danger" />{' '}
       <Icon name="delete-circle" color="red" fill="magenta" />{' '}
     </ThemeProvider>
   )

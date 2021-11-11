@@ -1,5 +1,5 @@
 import React, { FC, memo } from 'react'
-import { IconFace, IconSize } from '../../Icon'
+import { IconSize } from '../../Icon'
 import { WrapperProps } from './WrapperProps'
 import { Box, ClearIcon, CopyIcon, WrappedIcon } from './styles'
 
@@ -11,10 +11,10 @@ export const Wrapper: FC<WrapperProps> = memo((props) => {
       {icon && <WrappedIcon {...{ ...icon, size: IconSize.M }} />}
       {children}
       {copyButton?.show && (
-        <CopyIcon face={IconFace.Primary} name="copy" title={copyButton.title || 'Copy'} onClick={onCopy} />
+        <CopyIcon face="primary" name="copy" title={copyButton.title || 'Copy'} onClick={onCopy} />
       )}
       {showClearButton && (
-        <ClearIcon $showCopyIcon={copyButton?.show} name="cross" face={IconFace.Primary} onClick={onClear} />
+        <ClearIcon $showCopyIcon={copyButton?.show} name="cross" face="primary" onClick={onClear} />
       )}
     </Box>
   )

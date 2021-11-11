@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { CheckBox } from '../components/CheckBox'
 import { DefaultTheme } from '../theme'
-import { IconFace, IconSize } from '../components/Icon'
+import { IconSize } from '../components/Icon'
 
 export default {
   title: 'CheckBox',
@@ -54,7 +54,7 @@ export const Simple: Story = () => {
         label="Customized mark icon"
         boxIcon={{
           name: 'cross',
-          face: IconFace.Danger,
+          face: 'danger',
           size: IconSize.S,
         }}
       />
@@ -69,7 +69,7 @@ export const Simple: Story = () => {
         label="Customized with classes"
         boxIcon={{
           name: 'cross',
-          face: IconFace.Danger,
+          face: 'danger',
           size: IconSize.S,
         }}
       />
@@ -84,7 +84,7 @@ export const Simple: Story = () => {
         label="Customized with classes"
         boxIcon={{
           name: 'cross',
-          face: IconFace.Danger,
+          face: 'danger',
           size: IconSize.S,
         }}
       />

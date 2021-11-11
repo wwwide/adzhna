@@ -4,16 +4,16 @@ import { IconFace } from '../Icon'
 export const getCloseIconFaceByDialogFace = (face: DialogFace): IconFace => {
   switch (face) {
     case 'default':
-      return IconFace.Disabled
+      return 'disabled'
     case 'warning':
-      return IconFace.Warning
+      return 'warning'
     case 'success':
-      return IconFace.Success
+      return 'success'
     case 'danger':
-      return IconFace.Danger
+      return 'danger'
     case 'primary':
-      return IconFace.Primary
+      return 'primary'
     case 'secondary':
-      return IconFace.Secondary
+      return 'secondary'
   }
 }

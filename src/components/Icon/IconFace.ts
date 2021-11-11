@@ -1,8 +1,1 @@
-export enum IconFace {
-  Danger = 'danger',
-  Primary = 'primary',
-  Secondary = 'secondary',
-  Success = 'success',
-  Warning = 'warning',
-  Disabled = 'disabled',
-}
+export type IconFace = 'danger' | 'primary' | 'secondary' | 'success' | 'warning' |'disabled'

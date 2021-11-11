@@ -3,22 +3,22 @@ import { IconFace } from '../Icon'
 
 export const getIconFaceByButtonFace = (face: ButtonFace, disabled?: boolean): IconFace => {
   if (disabled) {
-    return IconFace.Disabled
+    return 'disabled'
   }
   switch (face) {
     case 'light':
-      return IconFace.Disabled
+      return 'disabled'
     case 'warning':
-      return IconFace.Warning
+      return 'warning'
     case 'success':
-      return IconFace.Success
+      return 'success'
     case 'danger':
-      return IconFace.Danger
+      return 'danger'
     case 'primary':
-      return IconFace.Primary
+      return 'primary'
     case 'secondary':
-      return IconFace.Secondary
+      return 'secondary'
     case 'link':
-      return IconFace.Secondary
+      return 'secondary'
   }
 }

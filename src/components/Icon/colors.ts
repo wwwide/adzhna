@@ -3,17 +3,17 @@ import { IconFace } from './IconFace'
 
 export const getColor = (face: IconFace, theme: Theme, type: 'text' | 'fill') => {
   switch (face) {
-    case IconFace.Disabled:
+    case 'disabled':
       return theme.adzhna.colors.disabled[type]
-    case IconFace.Primary:
+    case 'primary':
       return theme.adzhna.colors.primary[type].normal
-    case IconFace.Secondary:
+    case 'secondary':
       return theme.adzhna.colors.secondary[type].normal
-    case IconFace.Danger:
+    case 'danger':
       return theme.adzhna.colors.danger[type].normal
-    case IconFace.Warning:
+    case 'warning':
       return theme.adzhna.colors.warning[type].normal
-    case IconFace.Success:
+    case 'success':
       return theme.adzhna.colors.success[type].normal
   }
 }
