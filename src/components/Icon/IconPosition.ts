@@ -1,4 +1,1 @@
-export enum IconPosition {
-  Left = 'left',
-  Right = 'right',
-}
+export type IconPosition = 'left' | 'right'

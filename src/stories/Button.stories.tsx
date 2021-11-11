@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import SC, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { Button } from '../components/Button'
 import { DefaultTheme } from '../theme'
-import { IconFace, IconPosition, IconSize } from '../components/Icon'
+import { IconFace, IconSize } from '../components/Icon'
 
 export default {
   title: 'Button',
@@ -57,7 +57,7 @@ export const WithIcon: Story = () => {
       <Button face="primary" icon={{ name: 'delete-circle' }}>
         Default left aligned icon
       </Button>{' '}
-      <Button face="primary" icon={{ name: 'delete-circle', position: IconPosition.Right }}>
+      <Button face="primary" icon={{ name: 'delete-circle', position: 'right' }}>
         Right aligned icon
       </Button>{' '}
       <Button face="warning" icon={{ name: 'delete-circle', face: IconFace.Danger }}>

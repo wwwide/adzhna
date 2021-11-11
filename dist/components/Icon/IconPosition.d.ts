@@ -1,4 +1,1 @@
-export declare enum IconPosition {
-    Left = "left",
-    Right = "right"
-}
+export declare type IconPosition = 'left' | 'right';
