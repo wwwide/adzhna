@@ -1,6 +1,6 @@
 import React, { FC, memo, useCallback } from 'react'
 import { CheckBoxProps } from './CheckBoxProps'
-import { IconFace, IconName, IconSize } from '../Icon'
+import { IconFace, IconSize } from '../Icon'
 import { Box, Input, Label, Mark, Outer } from './styles'
 
 export const CheckBox: FC<CheckBoxProps> = memo((props) => {
@@ -30,7 +30,7 @@ export const CheckBox: FC<CheckBoxProps> = memo((props) => {
         <Box $hasLabel={!!label} className={boxClassName} style={boxStyle}>
           <Mark
             $visible={!!value}
-            name={boxIcon?.name || IconName.Check}
+            name={boxIcon?.name || 'check'}
             face={boxIcon?.face || IconFace.Primary}
             color={boxIcon?.color}
             fill={boxIcon?.fill}

@@ -1,4 +1,4 @@
-import Path, { resolve } from 'path'
+import { resolve } from 'path'
 import { Configuration } from 'webpack'
 
 const StatoscopeWebpackPlugin = require('@statoscope/webpack-plugin').default
@@ -42,7 +42,7 @@ const config: Configuration = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      theme: Path.resolve(__dirname, './src/theme'),
+      theme: resolve(__dirname, './src/theme'),
     },
   },
   plugins: [

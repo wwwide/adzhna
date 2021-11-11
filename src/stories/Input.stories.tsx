@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { Input, MaskedInput, PhoneInput } from '../components/Input'
 import { Button } from '../components/Button'
 import { DefaultTheme } from '../theme'
-import { IconFace, IconName } from '../components/Icon'
+import { IconFace } from '../components/Icon'
 
 export default {
   title: 'Input',
@@ -49,7 +49,7 @@ export const WithIcon: Story = () => {
       <div style={{ width: '400px' }}>
         <Input
           autoFocus
-          icon={{ name: IconName.DeleteCircle }}
+          icon={{ name: 'delete-circle' }}
           copyButton={{ show: true, title: 'Copy to clipboard' }}
           value={value}
           onChange={setValue}
@@ -59,7 +59,7 @@ export const WithIcon: Story = () => {
         <PhoneInput
           countryCodeMask={['7']}
           copyButton={{ show: true, title: 'Copy to clipboard' }}
-          icon={{ name: IconName.Phone, face: IconFace.Primary }}
+          icon={{ name: 'phone', face: IconFace.Primary }}
           value={value}
           onChange={setValue}
         />

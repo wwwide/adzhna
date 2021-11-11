@@ -1,7 +1,7 @@
 import React, { CSSProperties, ReactElement } from 'react'
 import { Page } from '../components/Page'
 import { Dots } from '../components/Dots'
-import { Icon, IconName } from '../../Icon'
+import { Icon } from '../../Icon'
 import { renderInlinePages } from './renderInlinePages'
 import { ButtonFace } from '../../Button'
 
@@ -46,7 +46,7 @@ export const renderFullMarkup = (
         arrowPageButtonStyle={arrowPageButtonStyle}
         disabled={disabled}
       >
-        <Icon name={IconName.LeftDoubleArrow} />
+        <Icon name="left-double-arrow" />
       </Page>,
       <Page
         arrow
@@ -64,7 +64,7 @@ export const renderFullMarkup = (
         arrowPageButtonStyle={arrowPageButtonStyle}
         disabled={disabled}
       >
-        <Icon name={IconName.LeftArrow} />
+        <Icon name="left-arrow" />
       </Page>,
       <Dots key={-998} />,
     ])
@@ -109,7 +109,7 @@ export const renderFullMarkup = (
         arrowPageButtonStyle={arrowPageButtonStyle}
         disabled={disabled}
       >
-        <Icon name={IconName.RightArrow} />
+        <Icon name="right-arrow" />
       </Page>,
       <Page
         arrow
@@ -127,7 +127,7 @@ export const renderFullMarkup = (
         arrowPageButtonStyle={arrowPageButtonStyle}
         disabled={disabled}
       >
-        <Icon name={IconName.RightDoubleArrow} />
+        <Icon name="right-double-arrow" />
       </Page>,
     ])
   }

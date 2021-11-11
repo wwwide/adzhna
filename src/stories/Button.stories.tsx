@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import SC, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { Button } from '../components/Button'
 import { DefaultTheme } from '../theme'
-import { IconFace, IconName, IconPosition, IconSize } from '../components/Icon'
+import { IconFace, IconPosition, IconSize } from '../components/Icon'
 
 export default {
   title: 'Button',
@@ -54,25 +54,25 @@ Outlined.args = {}
 export const WithIcon: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Button face="primary" icon={{ name: IconName.DeleteCircle }}>
+      <Button face="primary" icon={{ name: 'delete-circle' }}>
         Default left aligned icon
       </Button>{' '}
-      <Button face="primary" icon={{ name: IconName.DeleteCircle, position: IconPosition.Right }}>
+      <Button face="primary" icon={{ name: 'delete-circle', position: IconPosition.Right }}>
         Right aligned icon
       </Button>{' '}
-      <Button face="warning" icon={{ name: IconName.DeleteCircle, face: IconFace.Danger }}>
+      <Button face="warning" icon={{ name: 'delete-circle', face: IconFace.Danger }}>
         Warning button with danger faced icon
       </Button>{' '}
-      <Button face="success" icon={{ name: IconName.DeleteCircle, size: IconSize.XL }}>
+      <Button face="success" icon={{ name: 'delete-circle', size: IconSize.XL }}>
         Button with XL icon
       </Button>{' '}
-      <Button face="danger" icon={{ name: IconName.DeleteCircle, color: 'yellow', fill: 'magenta' }}>
+      <Button face="danger" icon={{ name: 'delete-circle', color: 'yellow', fill: 'magenta' }}>
         Button with custom colored icon
       </Button>{' '}
-      <Button outlined face="warning" icon={{ name: IconName.DeleteCircle }}>
+      <Button outlined face="warning" icon={{ name: 'delete-circle' }}>
         Outlined warning with icon
       </Button>{' '}
-      <Button disabled face="warning" icon={{ name: IconName.DeleteCircle }}>
+      <Button disabled face="warning" icon={{ name: 'delete-circle' }}>
         Disabled with icon
       </Button>{' '}
     </ThemeProvider>
