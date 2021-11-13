@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { ThemeProvider } from 'styled-components'
-import { Icon, IconSize } from '../components/Icon'
+import { Icon } from '../components/Icon'
 import { DefaultTheme } from '../theme'
 
 export default {
@@ -28,11 +28,11 @@ Faces.args = {}
 export const Sizes: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Icon name="delete-circle" size={IconSize.XS} />{' '}
-      <Icon name="delete-circle" size={IconSize.S} />{' '}
-      <Icon name="delete-circle" size={IconSize.M} />{' '}
-      <Icon name="delete-circle" size={IconSize.L} />{' '}
-      <Icon name="delete-circle" size={IconSize.XL} />{' '}
+      <Icon name="delete-circle" size="XS" />{' '}
+      <Icon name="delete-circle" size="S" />{' '}
+      <Icon name="delete-circle" size="M" />{' '}
+      <Icon name="delete-circle" size="L" />{' '}
+      <Icon name="delete-circle" size="XL" />{' '}
       <Icon name="delete-circle" size="150px" />{' '}
     </ThemeProvider>
   )
@@ -43,7 +43,15 @@ Faces.args = {}
 export const Set: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
+      <Icon name="check" />{' '}
+      <Icon name="copy" />{' '}
+      <Icon name="cross" />{' '}
       <Icon name="delete-circle" />{' '}
+      <Icon name="left-arrow" />{' '}
+      <Icon name="left-double-arrow" />{' '}
+      <Icon name="phone" />{' '}
+      <Icon name="right-arrow" />{' '}
+      <Icon name="right-double-arrow" />{' '}
     </ThemeProvider>
   )
 }

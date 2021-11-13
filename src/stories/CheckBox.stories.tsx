@@ -3,7 +3,6 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { CheckBox } from '../components/CheckBox'
 import { DefaultTheme } from '../theme'
-import { IconSize } from '../components/Icon'
 
 export default {
   title: 'CheckBox',
@@ -55,7 +54,7 @@ export const Simple: Story = () => {
         boxIcon={{
           name: 'cross',
           face: 'danger',
-          size: IconSize.S,
+          size: 'S',
         }}
       />
       <br />
@@ -70,7 +69,7 @@ export const Simple: Story = () => {
         boxIcon={{
           name: 'cross',
           face: 'danger',
-          size: IconSize.S,
+          size: 'S',
         }}
       />
       <br />
@@ -85,7 +84,7 @@ export const Simple: Story = () => {
         boxIcon={{
           name: 'cross',
           face: 'danger',
-          size: IconSize.S,
+          size: 'S',
         }}
       />
     </ThemeProvider>

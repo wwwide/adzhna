@@ -1,6 +1,5 @@
 import React, { FC, memo, useCallback } from 'react'
 import { CheckBoxProps } from './CheckBoxProps'
-import { IconSize } from '../Icon'
 import { Box, Input, Label, Mark, Outer } from './styles'
 
 export const CheckBox: FC<CheckBoxProps> = memo((props) => {
@@ -34,7 +33,7 @@ export const CheckBox: FC<CheckBoxProps> = memo((props) => {
             face={boxIcon?.face || 'primary'}
             color={boxIcon?.color}
             fill={boxIcon?.fill}
-            size={boxIcon?.size || IconSize.M}
+            size={boxIcon?.size || 'M'}
           />
           <Input {...rest} type="checkbox" onChange={onChangeWrapper} value={value as any} />
         </Box>

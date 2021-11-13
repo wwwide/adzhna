@@ -1,11 +1,10 @@
 import React, { FC, memo } from 'react'
 import { IconProps } from './IconProps'
 import { getIconFile } from './getIconFile'
-import { IconSize } from './IconSize'
 import { Box, Content } from './styles'
 
 export const Icon: FC<IconProps> = memo((props) => {
-  const { color, face = 'secondary', fill, name, size = IconSize.M, onClick, ...rest } = props
+  const { color, face = 'secondary', fill, name, size = 'M', onClick, ...rest } = props
   const file = getIconFile(name).default
 
   return (

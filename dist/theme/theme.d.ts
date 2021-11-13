@@ -2,6 +2,7 @@ import { ButtonTheme } from '../components/Button';
 import { CardTheme } from '../components/Card';
 import { DialogTheme } from '../components/Dialog';
 import { InputTheme } from '../components/Input';
+import { IconTheme } from '../components/Icon';
 import { PaginationTheme } from '../components/Pagination';
 import { CheckBoxTheme } from '../components/CheckBox';
 export declare type Theme = {
@@ -124,6 +125,7 @@ export declare type Theme = {
             input: InputTheme;
             pagination: PaginationTheme;
             checkBox: CheckBoxTheme;
+            icon: IconTheme;
         };
     };
 };

@@ -4,3 +4,4 @@ export * from './IconName';
 export * from './IconPosition';
 export * from './IconProps';
 export * from './IconSize';
+export * from './IconTheme';

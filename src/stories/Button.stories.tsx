@@ -3,7 +3,6 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import SC, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { Button } from '../components/Button'
 import { DefaultTheme } from '../theme'
-import { IconSize } from '../components/Icon'
 
 export default {
   title: 'Button',
@@ -63,7 +62,7 @@ export const WithIcon: Story = () => {
       <Button face="warning" icon={{ name: 'delete-circle', face: 'danger' }}>
         Warning button with danger faced icon
       </Button>{' '}
-      <Button face="success" icon={{ name: 'delete-circle', size: IconSize.XL }}>
+      <Button face="success" icon={{ name: 'delete-circle', size: 'XL' }}>
         Button with XL icon
       </Button>{' '}
       <Button face="danger" icon={{ name: 'delete-circle', color: 'yellow', fill: 'magenta' }}>

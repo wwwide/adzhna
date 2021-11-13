@@ -5,9 +5,9 @@ import { PhoneInput } from './kinds/PhoneInput'
 
 export const getInputByKind = (kind?: InputKind) => {
   switch (kind) {
-    case InputKind.Masked:
+    case 'masked':
       return MaskedInput
-    case InputKind.Phone:
+    case 'phone':
       return PhoneInput
     default:
       return CommonInput

@@ -189,6 +189,15 @@ export const DefaultTheme: Theme = {
         height: 1.3,
         borderRadius: 4,
       },
+      icon: {
+        sizes: {
+          XS: '.7rem',
+          S: '.8rem',
+          M: '1rem',
+          L: '1.5rem',
+          XL: '2rem',
+        }
+      }
     },
   },
 }

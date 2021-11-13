@@ -1,20 +1,21 @@
 import SC from 'styled-components'
 import { IconFace } from './IconFace'
 import { getColor } from './colors'
+import { IconSize } from './IconSize'
 
 export const Box = SC.i`
   display: inline-block;
 `
 
 export const Content = SC.span<{
-  $size: string
+  $size: IconSize | string
   $face: IconFace
   $color?: string
   $fill?: string
 }>`
   display: flex;
   align-items: center;
-  width: ${(p) => p.$size};
+  width: ${(p) => p.theme.adzhna.components.icon.sizes[p.$size as IconSize] || p.$size};
   height: ${(p) => p.$size};
   
   > svg {

@@ -2,7 +2,6 @@ import React, { FC, memo, MouseEvent, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import { DialogProps } from './DialogProps'
 import { usePortal } from './usePortal'
-import { IconSize } from '../Icon'
 import { Actions, CloseIcon, Overlay, Window } from './styles'
 import { getCloseIconFaceByDialogFace } from './getCloseIconFaceByDialogFace'
 
@@ -25,7 +24,7 @@ export const Dialog: FC<DialogProps> = memo((props) => {
               {actions}
               <CloseIcon
                 name="delete-circle"
-                size={IconSize.L}
+                size="L"
                 face={getCloseIconFaceByDialogFace(face)}
                 onClick={onClose}
               />

@@ -1,5 +1,1 @@
-export declare enum InputKind {
-    SingleLine = "single-line",
-    Masked = "masked",
-    Phone = "phone"
-}
+export declare type InputKind = 'single-line' | 'masked' | 'phone';
