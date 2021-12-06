@@ -10,6 +10,7 @@ const config: Configuration = {
     'check-box': './src/components/CheckBox',
     icon: './src/components/Icon',
     input: './src/components/Input',
+    pagination: './src/components/Pagination',
     theme: './src/theme',
   },
   output: {
