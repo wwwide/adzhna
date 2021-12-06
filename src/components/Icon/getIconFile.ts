@@ -1,6 +1,7 @@
 import { IconName } from './IconName'
 
 const mapping = {
+  calendar: require('!!raw-loader!./assets/calendar.svg'),
   check: require('!!raw-loader!./assets/check.svg'),
   comment: require('!!raw-loader!./assets/comment.svg'),
   copy: require('!!raw-loader!./assets/copy.svg'),

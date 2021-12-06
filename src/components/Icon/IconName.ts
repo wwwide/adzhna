@@ -1,4 +1,5 @@
 export type IconName =
+  | 'calendar'
   | 'check'
   | 'comment'
   | 'copy'
