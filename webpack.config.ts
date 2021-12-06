@@ -9,6 +9,7 @@ const config: Configuration = {
     card: './src/components/Card',
     'check-box': './src/components/CheckBox',
     confirmation: './src/components/Confirmation',
+    dialog: './src/components/Dialog',
     icon: './src/components/Icon',
     input: './src/components/Input',
     pagination: './src/components/Pagination',
