@@ -6,6 +6,7 @@ export interface PaginationProps {
   size: number
   total: number
   onChange: (page: number, size: number) => void
+  centered?: boolean
   maxInlinePages?: number
   disabled?: boolean
   className?: string
