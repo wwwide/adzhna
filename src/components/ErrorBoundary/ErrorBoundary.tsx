@@ -18,15 +18,15 @@ export class ErrorBoundary extends React.PureComponent<ErrorBoundaryProps> {
   }
 
   render() {
-    const { children, debug } = this.props
+    const { children, debug, title, errorLabel } = this.props
     const { error, info } = this.state
 
     if (error) {
       if (debug) {
-        return <ErrorDetails data={{ error, info }} />
+        return <ErrorDetails data={{ error, info }} title={title} errorLabel={errorLabel} />
       }
 
-      return <ErrorDetails data={{ error }} />
+      return <ErrorDetails data={{ error }} title={title} errorLabel={errorLabel} />
     }
 
     return children

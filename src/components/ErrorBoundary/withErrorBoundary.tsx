@@ -1,11 +1,12 @@
 import React from 'react'
 import { ErrorBoundary } from './ErrorBoundary'
+import { ErrorBoundaryProps } from './ErrorBoundaryProps'
 
 export const withErrorBoundary =
-  <T,>(Component: React.ComponentType<T>, debug?: boolean) =>
+  <T,>(Component: React.ComponentType<T>, opts?: ErrorBoundaryProps) =>
   (props: T) =>
     (
-      <ErrorBoundary debug={debug}>
+      <ErrorBoundary {...(opts || {})}>
         <Component {...(props as any)} />
       </ErrorBoundary>
     )

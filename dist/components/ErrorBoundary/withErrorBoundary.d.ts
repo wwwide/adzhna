@@ -1,2 +1,3 @@
 import React from 'react';
-export declare const withErrorBoundary: <T>(Component: React.ComponentType<T>, debug?: boolean | undefined) => (props: T) => JSX.Element;
+import { ErrorBoundaryProps } from './ErrorBoundaryProps';
+export declare const withErrorBoundary: <T>(Component: React.ComponentType<T>, opts?: ErrorBoundaryProps | undefined) => (props: T) => JSX.Element;

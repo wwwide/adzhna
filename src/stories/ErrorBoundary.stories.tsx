@@ -14,21 +14,13 @@ const SomeFailingComponent = () => {
   throw new Error('Unexpected error')
 }
 
-const WrappedDebugFailingComponent = withErrorBoundary(SomeFailingComponent, true)
+const WrappedDebugFailingComponent = withErrorBoundary(SomeFailingComponent, {
+  debug: true,
+  errorLabel: 'Details',
+  title: 'We have a problem',
+})
 
 const WrappedProductionFailingComponent = withErrorBoundary(SomeFailingComponent)
-
-export const DebugMode: Story = () => {
-  return (
-    <ThemeProvider theme={DefaultTheme}>
-      <ErrorBoundary debug>
-        <SomeFailingComponent />
-      </ErrorBoundary>
-    </ThemeProvider>
-  )
-}
-
-DebugMode.args = {}
 
 export const ProductionMode: Story = () => {
   return (
@@ -41,16 +33,6 @@ export const ProductionMode: Story = () => {
 }
 
 ProductionMode.args = {}
-
-export const DebugModeWithHook: Story = () => {
-  return (
-    <ThemeProvider theme={DefaultTheme}>
-      <WrappedDebugFailingComponent />
-    </ThemeProvider>
-  )
-}
-
-DebugModeWithHook.args = {}
 
 export const ProductionModeWithHook: Story = () => {
   return (
