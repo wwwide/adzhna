@@ -16,7 +16,7 @@ export const Default: Story = () => {
       <div style={{ height: '200px', position: 'relative' }}>
         Just then another visitor entered the drawing room: Prince Andrew Bolkónski, the little princess’ husband. He
         was a very handsome young man, of medium height, with firm, clearcut features.
-        {/*<Spinner />*/}
+        {/*<Spinner centered />*/}
       </div>
     </ThemeProvider>
   )

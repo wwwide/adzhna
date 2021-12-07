@@ -1,14 +1,26 @@
 import React, { FC, memo } from 'react'
 import { SpinnerProps } from './SpinnerProps'
-import { Spinner as S, Overlay } from './styles'
+import { Spinner as S, Overlay, Box } from './styles'
 
 export const Spinner: FC<SpinnerProps> = memo((props) => {
-  if (props.centered) {
+  const { children, ...rest } = props
+
+  if (children) {
     return (
-      <Overlay>
-        <S {...props} />
+      <Box>
+        {children}
+        <Overlay $position="absolute" />
+        <S {...{ ...rest, centered: true }} />
+      </Box>
+    )
+  }
+
+  if (rest.centered) {
+    return (
+      <Overlay $position="absolute">
+        <S {...rest} />
       </Overlay>
     )
   }
-  return <S {...props} />
+  return <S {...rest} />
 })

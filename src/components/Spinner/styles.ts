@@ -26,10 +26,11 @@ export const Spinner = SC.div`${css<SpinnerProps>`
   border-radius: 50%;
   border-width: ${(p) => (p.size || 32) / 10}px;
   animation: ${rotate} ${(p) => p.durationInSeconds || 2}s infinite linear;
+  z-index: 10001;
 `}`
 
-export const Overlay = SC.div`${css`
-  position: absolute;
+export const Overlay = SC.div`${css<{ $position: 'absolute' | 'relative' }>`
+  position: ${(p) => p.$position};
   left: 0;
   right: 0;
   top: 0;
@@ -37,4 +38,8 @@ export const Overlay = SC.div`${css`
   background: rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(2px);
   z-index: 10000;
+`}`
+
+export const Box = SC.div`${css`
+  position: relative;
 `}`
