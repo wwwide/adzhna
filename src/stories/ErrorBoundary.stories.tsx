@@ -15,7 +15,6 @@ const SomeFailingComponent = () => {
 }
 
 const WrappedProductionFailingComponent = withErrorBoundary(SomeFailingComponent, {
-  debug: true,
   errorLabel: 'Details',
   title: 'We have a problem',
 })

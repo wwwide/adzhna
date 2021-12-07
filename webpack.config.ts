@@ -14,6 +14,7 @@ const config: Configuration = {
     icon: './src/components/Icon',
     input: './src/components/Input',
     pagination: './src/components/Pagination',
+    spinner: './src/components/Spinner',
     theme: './src/theme',
     toast: './src/components/Toast',
   },
