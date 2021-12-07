@@ -8,6 +8,7 @@ export const CommonInput = memo(
   forwardRef<HTMLInputElement, CommonInputProps>((props, ref) => {
     const {
       disabled,
+      readOnly,
       onChange,
       validator,
       className,
@@ -62,7 +63,7 @@ export const CommonInput = memo(
         copyButton={copyButton}
         onCopy={onCopy}
         onClear={onClear}
-        showClearButton={showClearButton && !!value}
+        showClearButton={showClearButton && !!value && !disabled && !readOnly}
       >
         <Component
           {...rest}
@@ -76,6 +77,7 @@ export const CommonInput = memo(
           className={inputClassName}
           style={inputStyle}
           value={value}
+          readOnly={readOnly}
         />
       </Wrapper>
     )
