@@ -14,13 +14,11 @@ const SomeFailingComponent = () => {
   throw new Error('Unexpected error')
 }
 
-const WrappedDebugFailingComponent = withErrorBoundary(SomeFailingComponent, {
+const WrappedProductionFailingComponent = withErrorBoundary(SomeFailingComponent, {
   debug: true,
   errorLabel: 'Details',
   title: 'We have a problem',
 })
-
-const WrappedProductionFailingComponent = withErrorBoundary(SomeFailingComponent)
 
 export const ProductionMode: Story = () => {
   return (
