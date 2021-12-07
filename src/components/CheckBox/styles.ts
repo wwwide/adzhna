@@ -1,12 +1,11 @@
 import SC, { css } from 'styled-components'
 import { Icon } from '../Icon'
 
-const outerCss = css`
+export const Outer = SC.span`${css`
   display: inline-block;
-`
-export const Outer = SC.span`${outerCss}`
+`}`
 
-const boxCss = css<{ $hasLabel?: boolean }>`
+export const Box = SC.span`${css<{ $hasLabel?: boolean }>`
   outline: ${(p) => p.theme.adzhna.base.outline.width}px ${(p) => p.theme.adzhna.base.outline.style} transparent;
   width: ${(p) => p.theme.adzhna.components.checkBox.width}rem;
   height: ${(p) => p.theme.adzhna.components.checkBox.height}rem;
@@ -21,10 +20,9 @@ const boxCss = css<{ $hasLabel?: boolean }>`
   &:focus-within {
     outline-color: ${(p) => p.theme.adzhna.base.outline.color};
   }
-`
-export const Box = SC.span`${boxCss}`
+`}`
 
-const inputCss = css`
+export const Input = SC.input`${css`
   opacity: 0;
   margin: 0;
   position: absolute;
@@ -32,22 +30,18 @@ const inputCss = css`
   right: 0;
   top: 0;
   bottom: 0;
-`
-export const Input = SC.input`${inputCss}`
+`}`
 
-const markCss = css<{ $visible: boolean }>`
+export const Mark = SC(Icon)`${css<{ $visible: boolean }>`
   pointer-events: none;
   opacity: ${(p) => (p.$visible ? 1 : 0)};
   transition: opacity 0.5s;
-`
-export const Mark = SC(Icon)`${markCss}`
+`}`
 
-const labelCss = css`
+export const Label = SC.label`${css`
   font-size: ${(p) => p.theme.adzhna.fonts.size}rem;
   font-family: ${(p) => p.theme.adzhna.fonts.family};
-  margin-left: 0.5rem;
   display: flex;
   align-items: center;
   cursor: pointer;
-`
-export const Label = SC.label`${labelCss}`
+`}`
