@@ -16,6 +16,8 @@ type Options = {
   title?: string | ReactNode
 }
 
+// TODO: when using this hook, confirmation appers and disappears not smoothly, fix it.
+
 export const useConfirmation = (opts: Options) => {
   const [isOpen, setOpen] = useState(false)
   const open = useCallback(() => setOpen(true), [setOpen])

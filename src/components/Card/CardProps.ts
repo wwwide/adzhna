@@ -20,4 +20,8 @@ export interface CardProps {
   style?: CSSProperties | undefined
   width?: string
   onClick?: MouseEventHandler<HTMLElement | undefined>
+  pending?: boolean
+  headerPending?: boolean
+  contentPending?: boolean
+  footerPending?: boolean
 }
