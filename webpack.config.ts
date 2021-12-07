@@ -14,6 +14,7 @@ const config: Configuration = {
     input: './src/components/Input',
     pagination: './src/components/Pagination',
     theme: './src/theme',
+    toast: './src/components/Toast',
   },
   output: {
     path: resolve(__dirname, './dist'),

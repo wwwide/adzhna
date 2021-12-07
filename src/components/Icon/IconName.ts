@@ -5,6 +5,8 @@ export type IconName =
   | 'copy'
   | 'cross'
   | 'delete-circle'
+  | 'exclamation'
+  | 'info'
   | 'left-arrow'
   | 'left-double-arrow'
   | 'phone'
