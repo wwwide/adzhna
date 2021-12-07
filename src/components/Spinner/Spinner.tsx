@@ -3,9 +3,12 @@ import { SpinnerProps } from './SpinnerProps'
 import { Spinner as S, Overlay, Box } from './styles'
 
 export const Spinner: FC<SpinnerProps> = memo((props) => {
-  const { children, ...rest } = props
+  const { children, visible, ...rest } = props
 
   if (children) {
+    if (!visible) {
+      return children as any
+    }
     return (
       <Box>
         {children}

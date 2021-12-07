@@ -3,4 +3,5 @@ export interface SpinnerProps {
     color?: string;
     durationInSeconds?: number;
     centered?: boolean;
+    visible?: boolean;
 }
