@@ -24,6 +24,8 @@ export const Window = SC(Card)`
   margin: 5% auto 0 auto;
   max-height: calc(100vh - 5%);
   max-width: 90%;
+  display: flex;
+  flex-direction: column;
 `
 
 export const Actions = SC.div`
