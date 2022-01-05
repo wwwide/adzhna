@@ -22,7 +22,7 @@ export const Overlay = SC.div<{ $open: boolean }>`
 
 export const Window = SC(Card)`
   margin: 5% auto 0 auto;
-  max-height: 90vh;
+  max-height: calc(100vh - 5%);
   max-width: 90%;
 `
 

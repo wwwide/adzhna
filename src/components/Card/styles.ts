@@ -48,6 +48,7 @@ export const Content = SC.div`
   padding-bottom: ${(p) => p.theme.adzhna.components.card.content.padding.bottom}rem;
   padding-left: ${(p) => p.theme.adzhna.components.card.content.padding.left}rem;
   padding-right: ${(p) => p.theme.adzhna.components.card.content.padding.right}rem;
+  overflow-y: auto;
 `
 
 export const Footer = SC.div`
