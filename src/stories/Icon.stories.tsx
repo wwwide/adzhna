@@ -43,17 +43,28 @@ Faces.args = {}
 export const Set: Story = () => {
   return (
     <ThemeProvider theme={DefaultTheme}>
+      <Icon name="arrow-down" />
+      <Icon name="bars" />
       <Icon name="calendar" />
+      <Icon name="chat" />
       <Icon name="check" />
+      <Icon name="client" />
       <Icon name="comment" />
       <Icon name="copy" />
       <Icon name="cross" />
       <Icon name="delete-circle" />
+      <Icon name="download" />
       <Icon name="left-arrow" />
       <Icon name="left-double-arrow" />
+      <Icon name="person" />
       <Icon name="phone" />
       <Icon name="right-arrow" />
       <Icon name="right-double-arrow" />
+      <Icon name="ruble" />
+      <Icon name="settings" />
+      <Icon name="star" />
+      <Icon name="status" />
+      <Icon name="url" />
     </ThemeProvider>
   )
 }
