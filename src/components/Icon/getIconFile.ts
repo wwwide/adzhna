@@ -16,6 +16,7 @@ const mapping = {
   info: require('!!raw-loader!./assets/info.svg'),
   'left-arrow': require('!!raw-loader!./assets/left-arrow.svg'),
   'left-double-arrow': require('!!raw-loader!./assets/left-double-arrow.svg'),
+  number: require('!!raw-loader!./assets/number.svg'),
   person: require('!!raw-loader!./assets/person.svg'),
   phone: require('!!raw-loader!./assets/phone.svg'),
   ruble: require('!!raw-loader!./assets/ruble.svg'),
