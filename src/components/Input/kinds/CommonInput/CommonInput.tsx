@@ -30,7 +30,7 @@ export const CommonInput = memo(
         if (onChange) {
           const value = event.target.value
           const error = validator ? validator(value) : undefined
-          onChange(value, error)
+          onChange(value, error, event.target.files)
         }
       },
       [onChange, validator],

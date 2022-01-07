@@ -1,1 +1,1 @@
-export declare type InputKind = 'single-line' | 'masked' | 'phone';
+export declare type InputKind = 'single-line' | 'masked' | 'phone' | 'file';

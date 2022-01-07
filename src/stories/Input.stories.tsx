@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { ThemeProvider } from 'styled-components'
-import { Input, MaskedInput, PhoneInput } from '../components/Input'
+import { Input, MaskedInput, PhoneInput, FileInput } from '../components/Input'
 import { Button } from '../components/Button'
 import { DefaultTheme } from '../theme'
 
@@ -39,6 +39,25 @@ export const Simple: Story = () => {
 }
 
 Simple.args = {}
+
+export const File: Story = () => {
+  const [value, setValue] = useState<FileList | null>(null)
+
+  const onChange = useCallback(
+    (value: FileList | null) => {
+      setValue(value)
+    },
+    [setValue],
+  )
+
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <FileInput autoFocus value={value} onChange={onChange} />
+    </ThemeProvider>
+  )
+}
+
+File.args = {}
 
 export const WithIcon: Story = () => {
   const [value, setValue] = useState('')

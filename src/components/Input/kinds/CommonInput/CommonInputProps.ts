@@ -4,7 +4,7 @@ import { IconProps } from '../../../Icon'
 
 export interface CommonInputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   kind?: InputKind
-  onChange?: (value: string, error?: string) => void
+  onChange?: (value: string, error?: string, files?: FileList | null) => void
   validator?: (value: string) => string | undefined
   inputClassName?: string
   inputStyle?: CSSProperties | undefined
