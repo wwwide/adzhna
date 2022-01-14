@@ -3,6 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, css, ThemeProvider } from 'styled-components'
 import { DefaultTheme } from 'theme'
 import { Select } from '../components/Select'
+import { Dialog } from '../components/Dialog'
 
 export default {
   title: 'Select',
@@ -476,3 +477,23 @@ export const SearchModeWithTerm: Story = () => {
 }
 
 SearchModeWithTerm.args = {}
+
+export const UsageInDialog: Story = () => {
+  const [value1, setValue1] = useState('1')
+  const [value2, setValue2] = useState('2')
+
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <Dialog open id="dialog1" onClose={() => true} header={{ title: 'Usage in dialog' }}>
+        <div style={{ width: '400px', marginBottom: '30px' }}>
+          <Select dataSource={dataSource} value={value1} onChange={setValue1} />
+        </div>
+        <div style={{ width: '400px' }}>
+          <Select dataSource={dataSource} value={value2} onChange={setValue2} />
+        </div>
+      </Dialog>
+    </ThemeProvider>
+  )
+}
+
+UsageInDialog.args = {}
