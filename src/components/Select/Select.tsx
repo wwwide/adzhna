@@ -26,12 +26,14 @@ export const Select: FC<SelectProps> = memo((props) => {
     maxDropDownHeight,
     optionRenderer,
     onSearch,
+    searchTerm,
   } = props
 
   const {
     dropDownVisible,
     closeDropDown,
     switchDropDown,
+    openDropDown,
     boxRef,
     dropDownRef,
     dropDownTop,
@@ -55,10 +57,11 @@ export const Select: FC<SelectProps> = memo((props) => {
     <Box tabIndex={0} ref={boxRef} onFocus={onFocus} onBlur={onBlur} onKeyDown={disabled ? undefined : keyboardHandler}>
       {onSearch ? (
         <SearchField
-          onDropDownOpen={switchDropDown}
+          onDropDownOpen={openDropDown}
           valueOption={valueOption}
           ref={innerRef}
           onTermChange={onSearchTermChange}
+          searchTerm={searchTerm}
           icon={icon}
           dropDownVisible={dropDownVisible}
         />

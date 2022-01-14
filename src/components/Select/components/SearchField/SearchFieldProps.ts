@@ -9,4 +9,5 @@ export interface SearchFieldProps {
   valueOption?: { label: ReactNode; value: any; searchLabel?: string }
   className?: string
   style?: CSSProperties | undefined
+  searchTerm?: string
 }

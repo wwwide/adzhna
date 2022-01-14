@@ -42,9 +42,10 @@ export const useComponentsGuts = (
       if (onSearch) {
         onChange(null, validator ? validator(null) : undefined)
         onSearch(term)
+        openDropDown()
       }
     },
-    [onSearch, onChange, validator],
+    [onSearch, onChange, validator, openDropDown],
   )
 
   const { keyboardHandler } = useKeyboardHandler(

@@ -6,7 +6,7 @@ import { ArrowIcon, Box } from './styles'
 
 export const SearchField = memo(
   forwardRef<HTMLInputElement, SearchFieldProps>((props, ref) => {
-    const { onDropDownOpen, valueOption, onTermChange, icon, dropDownVisible, className, style } = props
+    const { onDropDownOpen, valueOption, onTermChange, icon, dropDownVisible, className, style, searchTerm } = props
     const initialText = typeof valueOption?.label === 'string' ? valueOption?.label : valueOption?.searchLabel
     const [text, setText] = useState(initialText)
 
@@ -20,17 +20,19 @@ export const SearchField = memo(
     )
 
     useEffect(() => {
-      if (valueOption) {
+      if (typeof searchTerm !== 'undefined') {
+        setText(searchTerm)
+      } else if (valueOption) {
         setText(initialText)
       }
-    }, [valueOption, setText, initialText])
+    }, [valueOption, setText, initialText, searchTerm])
 
     return (
       <Box>
         <Input
           showClearButton={false}
           onFocus={onDropDownOpen}
-          value={text}
+          value={searchTerm || text}
           ref={ref}
           onChange={onChange}
           icon={icon}

@@ -12,4 +12,5 @@ export interface SearchFieldProps {
     };
     className?: string;
     style?: CSSProperties | undefined;
+    searchTerm?: string;
 }

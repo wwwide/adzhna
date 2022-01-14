@@ -433,3 +433,46 @@ export const SearchMode: Story = () => {
 }
 
 SearchMode.args = {}
+
+export const SearchModeWithTerm: Story = () => {
+  const [value, setValue] = useState('2')
+  const [term, setTerm] = useState('2')
+
+  const onChangeWrapper = useCallback(
+    (value: any) => {
+      const item = dataSource.find((i) => i.value === value)
+      if (item) {
+        setValue(value)
+        setTerm(typeof item.label === 'string' ? item.label : item.searchLabel || '')
+      }
+    },
+    [dataSource, setValue],
+  )
+
+  const filtered = dataSource.filter(({ label, searchLabel }) => {
+    return (
+      (typeof label === 'string' && label.toLowerCase().indexOf(term.toLowerCase()) !== -1) ||
+      (!!searchLabel && searchLabel.toLowerCase().indexOf(term.toLowerCase()) !== -1)
+    )
+  })
+
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <GlobalStyle />
+      <div style={{ width: '400px' }}>
+        <Select
+          onSearch={(term: string) => setTerm(term)}
+          dataSource={filtered}
+          value={value}
+          onChange={onChangeWrapper}
+          icon={{
+            name: 'star',
+          }}
+          searchTerm={term}
+        />
+      </div>
+    </ThemeProvider>
+  )
+}
+
+SearchModeWithTerm.args = {}
