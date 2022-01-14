@@ -16,6 +16,7 @@ export const SearchField = memo(
       style,
       searchTerm,
       isLoading,
+      disabled,
     } = props
     const initialText = typeof valueOption?.label === 'string' ? valueOption?.label : valueOption?.searchLabel
     const [text, setText] = useState(initialText)
@@ -40,6 +41,7 @@ export const SearchField = memo(
     return (
       <Box>
         <Input
+          disabled={disabled}
           showClearButton={false}
           onFocus={onDropDownOpen}
           value={searchTerm || text}

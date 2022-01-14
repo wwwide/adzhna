@@ -11,4 +11,5 @@ export interface SearchFieldProps {
   style?: CSSProperties | undefined
   searchTerm?: string
   isLoading?: boolean
+  disabled?: boolean
 }
