@@ -196,8 +196,22 @@ export const DefaultTheme: Theme = {
           M: '1rem',
           L: '1.5rem',
           XL: '2rem',
-        }
-      }
+        },
+      },
+      select: {
+        borderRadius: 4,
+        padding: {
+          x: 0.6,
+          y: 0.6,
+        },
+        dropDown: {
+          shadow: '1px 1px 5px rgba(0, 0, 0, .25)',
+          padding: {
+            x: 0.6,
+            y: 0.6,
+          },
+        },
+      },
     },
   },
 }

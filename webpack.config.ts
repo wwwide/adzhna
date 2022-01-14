@@ -14,6 +14,7 @@ const config: Configuration = {
     icon: './src/components/Icon',
     input: './src/components/Input',
     pagination: './src/components/Pagination',
+    select: './src/components/Select',
     spinner: './src/components/Spinner',
     theme: './src/theme',
     toast: './src/components/Toast',
@@ -48,6 +49,7 @@ const config: Configuration = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
+      hooks: resolve(__dirname, './src/hooks'),
       theme: resolve(__dirname, './src/theme'),
     },
   },

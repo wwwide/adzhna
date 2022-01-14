@@ -5,6 +5,7 @@ import { InputTheme } from '../components/Input';
 import { IconTheme } from '../components/Icon';
 import { PaginationTheme } from '../components/Pagination';
 import { CheckBoxTheme } from '../components/CheckBox';
+import { SelectTheme } from '../components/Select';
 export declare type Theme = {
     adzhna: {
         colors: {
@@ -126,6 +127,7 @@ export declare type Theme = {
             pagination: PaginationTheme;
             checkBox: CheckBoxTheme;
             icon: IconTheme;
+            select: SelectTheme;
         };
     };
 };
