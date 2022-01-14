@@ -9,4 +9,5 @@ export interface InnerPickerProps {
     focused?: boolean;
     inputClassName?: string;
     inputStyle?: CSSProperties | undefined;
+    isLoading?: boolean;
 }

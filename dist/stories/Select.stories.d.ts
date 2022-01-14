@@ -14,3 +14,4 @@ export declare const InvalidDataSourceInSearchMode: Story;
 export declare const SearchMode: Story;
 export declare const SearchModeWithTerm: Story;
 export declare const UsageInDialog: Story;
+export declare const WithLoader: Story;

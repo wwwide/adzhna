@@ -9,5 +9,5 @@ export const Box = SC.div`${css<{ $maxHeight: number; $visible: boolean }>`
   overflow-x: hidden;
   overflow-y: auto;
   background: #fff;
-  z-index: 1000;
+  z-index: 10002;
 `}`

@@ -27,6 +27,7 @@ export const Select: FC<SelectProps> = memo((props) => {
     optionRenderer,
     onSearch,
     searchTerm,
+    isLoading,
   } = props
 
   const {
@@ -57,6 +58,7 @@ export const Select: FC<SelectProps> = memo((props) => {
     <Box tabIndex={0} ref={boxRef} onFocus={onFocus} onBlur={onBlur} onKeyDown={disabled ? undefined : keyboardHandler}>
       {onSearch ? (
         <SearchField
+          isLoading={isLoading}
           onDropDownOpen={openDropDown}
           valueOption={valueOption}
           ref={innerRef}
@@ -67,6 +69,7 @@ export const Select: FC<SelectProps> = memo((props) => {
         />
       ) : (
         <InnerPicker
+          isLoading={isLoading}
           focused={focused}
           disabled={disabled}
           icon={icon}

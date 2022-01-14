@@ -1,5 +1,6 @@
 import SC, { css } from 'styled-components'
 import { Icon } from '../../../Icon'
+import { Spinner } from '../../../Spinner'
 
 export const Inner = SC.div`${css<{ $hasIcon?: boolean; $disabled?: boolean; $focused?: boolean }>`
   position: relative;
@@ -32,4 +33,12 @@ export const CustomIcon = SC(Icon)`${css`
   position: absolute;
   left: 10px;
   top: 11px;
+`}`
+
+export const Loader = SC(Spinner)`${css`
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  left: unset;
+  pointer-events: none;
 `}`

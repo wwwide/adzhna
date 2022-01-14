@@ -4,6 +4,7 @@ import { createGlobalStyle, css, ThemeProvider } from 'styled-components'
 import { DefaultTheme } from 'theme'
 import { Select } from '../components/Select'
 import { Dialog } from '../components/Dialog'
+import { Button } from '../components/Button'
 
 export default {
   title: 'Select',
@@ -492,6 +493,25 @@ export const UsageInDialog: Story = () => {
           <Select dataSource={dataSource} value={value2} onChange={setValue2} />
         </div>
       </Dialog>
+    </ThemeProvider>
+  )
+}
+
+UsageInDialog.args = {}
+
+export const WithLoader: Story = () => {
+  const [value, setValue] = useState('1')
+  const [loading, setLoading] = useState(false)
+
+  return (
+    <ThemeProvider theme={DefaultTheme}>
+      <div style={{ width: '400px', marginBottom: '30px' }}>
+        <Select isLoading={loading} dataSource={dataSource} value={value} onChange={setValue} />
+      </div>
+      <div style={{ width: '400px', marginBottom: '30px' }}>
+        <Select isLoading={loading} dataSource={dataSource} value={value} onChange={setValue} onSearch={() => true} />
+      </div>
+      <Button onClick={() => setLoading(!loading)}>Switch loading state</Button>
     </ThemeProvider>
   )
 }

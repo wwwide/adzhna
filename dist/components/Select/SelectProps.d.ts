@@ -21,4 +21,5 @@ export interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement
     optionRenderer?: (label: ReactNode, value: any, onSelect: (value: any) => void, active?: boolean, highlighted?: boolean, className?: string, style?: CSSProperties | undefined) => ReactElement;
     onSearch?: (term: string) => void;
     searchTerm?: string;
+    isLoading?: boolean;
 }

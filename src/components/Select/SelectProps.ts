@@ -26,4 +26,5 @@ export interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement
   ) => ReactElement
   onSearch?: (term: string) => void
   searchTerm?: string
+  isLoading?: boolean
 }

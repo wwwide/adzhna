@@ -8,3 +8,4 @@ export declare const ArrowIcon: import("styled-components").StyledComponent<impo
     $open: boolean;
 }, never>;
 export declare const CustomIcon: import("styled-components").StyledComponent<import("react").FC<import("../../../Icon").IconProps>, import("styled-components").DefaultTheme, {}, never>;
+export declare const Loader: import("styled-components").StyledComponent<import("react").FC<import("../../../Spinner").SpinnerProps>, import("styled-components").DefaultTheme, {}, never>;

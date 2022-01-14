@@ -2,11 +2,21 @@ import React, { forwardRef, memo, useCallback, useEffect, useState } from 'react
 import { SearchFieldProps } from './SearchFieldProps'
 import { Input } from '../../../Input'
 
-import { ArrowIcon, Box } from './styles'
+import { ArrowIcon, Box, Loader } from './styles'
 
 export const SearchField = memo(
   forwardRef<HTMLInputElement, SearchFieldProps>((props, ref) => {
-    const { onDropDownOpen, valueOption, onTermChange, icon, dropDownVisible, className, style, searchTerm } = props
+    const {
+      onDropDownOpen,
+      valueOption,
+      onTermChange,
+      icon,
+      dropDownVisible,
+      className,
+      style,
+      searchTerm,
+      isLoading,
+    } = props
     const initialText = typeof valueOption?.label === 'string' ? valueOption?.label : valueOption?.searchLabel
     const [text, setText] = useState(initialText)
 
@@ -44,7 +54,7 @@ export const SearchField = memo(
             ...style,
           }}
         />
-        <ArrowIcon $open={dropDownVisible} name="arrow-down" face="primary" />
+        {isLoading ? <Loader size={16} /> : <ArrowIcon $open={dropDownVisible} name="arrow-down" face="primary" />}
       </Box>
     )
   }),

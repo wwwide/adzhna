@@ -1,11 +1,11 @@
 import React, { forwardRef, memo } from 'react'
 import { InnerPickerProps } from './InnerPickerProps'
 
-import { ArrowIcon, CustomIcon, Inner } from './styles'
+import { ArrowIcon, CustomIcon, Inner, Loader } from './styles'
 
 export const InnerPicker = memo(
   forwardRef<HTMLDivElement, InnerPickerProps>((props, ref) => {
-    const { inputStyle, inputClassName, icon, disabled, focused, onSwitchDropDown, label, visible } = props
+    const { inputStyle, inputClassName, icon, disabled, focused, onSwitchDropDown, label, visible, isLoading } = props
 
     return (
       <Inner
@@ -19,7 +19,7 @@ export const InnerPicker = memo(
       >
         {!!icon && <CustomIcon {...icon} />}
         {label}
-        <ArrowIcon $open={visible} name="arrow-down" face="primary" />
+        {isLoading ? <Loader size={16} /> : <ArrowIcon $open={visible} name="arrow-down" face="primary" />}
       </Inner>
     )
   }),
