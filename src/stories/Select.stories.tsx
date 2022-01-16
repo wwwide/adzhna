@@ -517,3 +517,65 @@ export const WithLoader: Story = () => {
 }
 
 UsageInDialog.args = {}
+
+// const FormField = (props: any) => {
+//   const { label, children, required, error, name, ...rest } = props
+//
+//   return (
+//     <div {...rest} style={{ marginBottom: '30px' }}>
+//       {!!label && (
+//         <label>
+//           {label} {required && <span>*</span>}
+//         </label>
+//       )}
+//       {children}
+//     </div>
+//   )
+// }
+//
+// export const WithBriefForm: Story = () => {
+//   const { formValue, formErrors, registeredFields, onChange, validate } = useFormData<any, any>({ a: 1, b: 2 }, {})
+//
+//   const ComponentsDictionary = {
+//     input: Input,
+//     select: Select,
+//   }
+//
+//   return (
+//     <ThemeProvider theme={DefaultTheme}>
+//       <BriefForm
+//         value={formValue}
+//         errors={formErrors}
+//         onChange={onChange}
+//         registeredFields={registeredFields}
+//         components={ComponentsDictionary as any}
+//         field={FormField}
+//       >
+//         <Field
+//           required
+//           name="a"
+//           label="A"
+//           type="input"
+//           inputProps={{
+//             autoFocus: true,
+//           }}
+//         />
+//         <Field
+//           required
+//           name="b"
+//           label="B"
+//           type="select"
+//           inputProps={{
+//             dataSource: [
+//               { label: 1, value: 1 },
+//               { label: 2, value: 2 },
+//               { label: 3, value: 3 },
+//             ],
+//           }}
+//         />
+//       </BriefForm>
+//     </ThemeProvider>
+//   )
+// }
+//
+// WithBriefForm.args = {}
