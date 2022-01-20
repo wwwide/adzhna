@@ -10,8 +10,10 @@ type Options = {
     text: string | ReactNode
     face?: ButtonFace
   }
+  cancelButton?: {
+    text: string | ReactNode
+  }
   face?: DialogFace
-  isConfirmationNegative?: boolean
   dialogId?: string
   title?: string | ReactNode
 }
@@ -37,6 +39,7 @@ export const useConfirmation = (opts: Options) => {
         onConfirm={onConfirm}
         onCancel={() => setOpen(false)}
         confirmationButton={opts.confirmationButton}
+        cancelButton={opts.cancelButton}
         title={opts.title}
       />
     ),

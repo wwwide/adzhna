@@ -52,6 +52,9 @@ export const WithHook: Story = () => {
       text: 'Confirm',
       face: 'success',
     },
+    cancelButton: {
+      text: 'No!',
+    },
   })
 
   return (

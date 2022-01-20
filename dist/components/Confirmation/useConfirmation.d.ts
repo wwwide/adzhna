@@ -8,8 +8,10 @@ declare type Options = {
         text: string | ReactNode;
         face?: ButtonFace;
     };
+    cancelButton?: {
+        text: string | ReactNode;
+    };
     face?: DialogFace;
-    isConfirmationNegative?: boolean;
     dialogId?: string;
     title?: string | ReactNode;
 };

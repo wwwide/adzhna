@@ -10,6 +10,9 @@ export interface ConfirmationProps {
         text: string | ReactNode;
         face?: ButtonFace;
     };
+    cancelButton?: {
+        text: string | ReactNode;
+    };
     onCancel: () => void;
     title?: string | ReactNode;
     face?: DialogFace;

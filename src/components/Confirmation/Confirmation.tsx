@@ -5,7 +5,7 @@ import { ConfirmationProps } from './ConfirmationProps'
 import { ActionsWrapper, ConfirmationContainer } from './style'
 
 export const Confirmation: FC<ConfirmationProps> = (props) => {
-  const { id, onCancel, message, onConfirm, confirmationButton, title, face, open } = props
+  const { id, onCancel, message, onConfirm, confirmationButton, cancelButton, title, face, open } = props
 
   return (
     <Dialog open={open} id={id} onClose={onCancel} header={{ title }} face={face}>
@@ -16,7 +16,7 @@ export const Confirmation: FC<ConfirmationProps> = (props) => {
             {confirmationButton?.text || 'OK'}
           </Button>
           <Button face="light" onClick={onCancel}>
-            Отмена
+            {cancelButton?.text || 'Cancel'}
           </Button>
         </ActionsWrapper>
       </ConfirmationContainer>
