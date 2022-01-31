@@ -4,6 +4,8 @@ import { InputStyledProps } from './InputStyledProps'
 const style = css<InputStyledProps>`
   width: 100%;
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   font-size: ${(p) => p.theme.adzhna.fonts.size}rem;
   font-family: ${(p) => p.theme.adzhna.fonts.family};
   padding-top: ${(p) => p.theme.adzhna.components.input.padding.y}rem;
