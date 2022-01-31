@@ -3,7 +3,7 @@ import { InputStyledProps } from './InputStyledProps'
 
 const style = css<InputStyledProps>`
   width: 100%;
-  outline: ${(p) => p.theme.adzhna.base.outline.width}px ${(p) => p.theme.adzhna.base.outline.style} transparent;
+  outline: none;
   font-size: ${(p) => p.theme.adzhna.fonts.size}rem;
   font-family: ${(p) => p.theme.adzhna.fonts.family};
   padding-top: ${(p) => p.theme.adzhna.components.input.padding.y}rem;
@@ -22,7 +22,7 @@ const style = css<InputStyledProps>`
   ${(p) =>
     !p.$disabled &&
     `&:focus {
-      outline-color: ${p.theme.adzhna.base.outline.color};
+      box-shadow: 0 0 ${p.theme.adzhna.base.outline.width}px ${p.theme.adzhna.base.outline.width}px ${p.theme.adzhna.base.outline.color};
   }`}
 
   &::placeholder {

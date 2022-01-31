@@ -110,7 +110,9 @@ export const PhoneNumberInput: Story = () => {
 
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <PhoneInput autoFocus countryCodeMask={['7']} value={value} onChange={setValue} />
+      <div style={{ width: '400px' }}>
+        <PhoneInput autoFocus countryCodeMask={['7']} value={value} onChange={setValue} />
+      </div>
     </ThemeProvider>
   )
 }
