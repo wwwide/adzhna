@@ -11,6 +11,8 @@ export type IconName =
   | 'delete-circle'
   | 'download'
   | 'exclamation'
+  | 'flash-off'
+  | 'flash-on'
   | 'info'
   | 'left-arrow'
   | 'left-double-arrow'

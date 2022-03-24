@@ -13,6 +13,8 @@ const mapping = {
   'delete-circle': require('!!raw-loader!./assets/delete-circle.svg'),
   download: require('!!raw-loader!./assets/download.svg'),
   exclamation: require('!!raw-loader!./assets/exclamation.svg'),
+  'flash-off': require('!!raw-loader!./assets/flash-off.svg'),
+  'flash-on': require('!!raw-loader!./assets/flash-on.svg'),
   info: require('!!raw-loader!./assets/info.svg'),
   'left-arrow': require('!!raw-loader!./assets/left-arrow.svg'),
   'left-double-arrow': require('!!raw-loader!./assets/left-double-arrow.svg'),

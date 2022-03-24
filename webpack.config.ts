@@ -11,6 +11,7 @@ const config: Configuration = {
     confirmation: './src/components/Confirmation',
     dialog: './src/components/Dialog',
     'error-boundary': './src/components/ErrorBoundary',
+    graphics: './src/components/Graphics',
     icon: './src/components/Icon',
     input: './src/components/Input',
     pagination: './src/components/Pagination',

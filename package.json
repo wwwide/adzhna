@@ -1,6 +1,6 @@
 {
   "name": "adzhna",
-  "version": "1.3.12",
+  "version": "1.4.0",
   "description": "React components library",
   "main": "index.js",
   "exports": {
@@ -25,6 +25,9 @@
       ],
       "error-boundary": [
         "./dist/components/ErrorBoundary/index.d.ts"
+      ],
+      "graphics": [
+        "./dist/components/Graphics/index.d.ts"
       ],
       "icon": [
         "./dist/components/Icon/index.d.ts"
