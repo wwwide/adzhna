@@ -1,6 +1,6 @@
 {
   "name": "adzhna",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "React components library",
   "main": "index.js",
   "exports": {
