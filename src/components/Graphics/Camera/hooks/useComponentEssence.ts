@@ -15,29 +15,31 @@ export const useComponentEssence = (photoHandler: (photo: Blob | null) => void) 
       return
     }
 
-    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false }).then((mediaStream) => {
-      const track = mediaStream.getVideoTracks()[0]
+    navigator.mediaDevices
+      .getUserMedia({ video: { facingMode: 'environment', advanced: [{ torch: true }] }, audio: false })
+      .then((mediaStream) => {
+        const track = mediaStream.getVideoTracks()[0]
 
-      if (track) {
-        const trackCapabilities = track.getCapabilities()
-        const settings = track.getSettings()
+        if (track) {
+          const trackCapabilities = track.getCapabilities()
+          const settings = track.getSettings()
 
-        if (settings) {
-          setDimensions([settings.width || 0, settings.height || 0])
+          if (settings) {
+            setDimensions([settings.width || 0, settings.height || 0])
+          }
+
+          setTrack(track)
+          setCapabilities(trackCapabilities)
+
+          if (isZoomAvailable) {
+            track.applyConstraints({ advanced: [{ zoom: true }] }).then()
+          }
         }
 
-        setTrack(track)
-        setCapabilities(trackCapabilities)
-
-        if (isZoomAvailable) {
-          track.applyConstraints({ advanced: [{ zoom: true }] }).then()
+        if (videoRef.current) {
+          videoRef.current.srcObject = mediaStream
         }
-      }
-
-      if (videoRef.current) {
-        videoRef.current.srcObject = mediaStream
-      }
-    })
+      })
   }, [setDimensions, setCapabilities, videoRef, setTrack, isZoomAvailable])
 
   const takeSnapShot = useCallback(() => {
