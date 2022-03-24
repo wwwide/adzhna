@@ -57,7 +57,7 @@ export const useComponentEssence = (photoHandler: (photo: Blob | null) => void) 
   }, [dimensions, canvasRef, photoHandler])
 
   const switchTorch = useCallback(() => {
-    if (track && isTorchAvailable) {
+    if (track) {
       track.applyConstraints({ advanced: [{ torch: !isTorchEnabled }] }).then()
     }
   }, [track, isTorchAvailable, isTorchEnabled])

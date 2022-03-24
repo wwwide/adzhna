@@ -16,11 +16,7 @@ export const InlineCamera: Story = () => {
     console.log(photo)
   }, [])
 
-  return (
-    <ThemeProvider theme={DefaultTheme}>
-      <Camera onTakePhoto={photoHandler} />
-    </ThemeProvider>
-  )
+  return <ThemeProvider theme={DefaultTheme}>{false && <Camera onTakePhoto={photoHandler} />}</ThemeProvider>
 }
 
 InlineCamera.args = {}
