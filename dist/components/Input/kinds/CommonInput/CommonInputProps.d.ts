@@ -1,4 +1,4 @@
-import { CSSProperties, ForwardedRef, InputHTMLAttributes } from 'react';
+import { CSSProperties, InputHTMLAttributes } from 'react';
 import { InputKind } from '../../InputKind';
 import { IconProps } from '../../../Icon';
 export interface CommonInputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
@@ -14,5 +14,4 @@ export interface CommonInputProps extends Omit<InputHTMLAttributes<HTMLInputElem
     };
     showClearButton?: boolean;
     multiline?: boolean;
-    ref?: ForwardedRef<HTMLInputElement>;
 }
