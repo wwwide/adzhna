@@ -25,4 +25,5 @@ export type IconName =
   | 'settings'
   | 'star'
   | 'status'
+  | 'trash-can'
   | 'url'
