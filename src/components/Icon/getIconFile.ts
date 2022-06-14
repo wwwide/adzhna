@@ -3,6 +3,8 @@ import { IconName } from './IconName'
 const mapping = {
   'arrow-down': require('!!raw-loader!./assets/arrow-down.svg'),
   bars: require('!!raw-loader!./assets/bars.svg'),
+  'bars-left': require('!!raw-loader!./assets/bars-left.svg'),
+  'bars-right': require('!!raw-loader!./assets/bars-right.svg'),
   calendar: require('!!raw-loader!./assets/calendar.svg'),
   chat: require('!!raw-loader!./assets/chat.svg'),
   check: require('!!raw-loader!./assets/check.svg'),

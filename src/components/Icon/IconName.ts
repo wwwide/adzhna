@@ -1,6 +1,8 @@
 export type IconName =
   | 'arrow-down'
   | 'bars'
+  | 'bars-right'
+  | 'bars-left'
   | 'calendar'
   | 'chat'
   | 'check'

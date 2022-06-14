@@ -50,7 +50,7 @@
     }
   },
   "scripts": {
-    "build": "yarn lint && webpack --config ./webpack.config.ts --mode=production",
+    "build": "npm run lint && webpack --config ./webpack.config.ts --mode=production",
     "lint": "eslint --fix --ext .tsx,.ts ./src",
     "storybook": "start-storybook -p 4444",
     "test": "jest",

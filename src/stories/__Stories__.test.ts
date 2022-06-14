@@ -1,7 +1,7 @@
 import initStoryShots from '@storybook/addon-storyshots'
 import { imageSnapshot } from '@storybook/addon-storyshots-puppeteer'
 
-const getMatchOptions = (_: any) => {
+const getMatchOptions = () => {
   return {
     failureThreshold: 0.2,
     failureThresholdType: 'percent',
