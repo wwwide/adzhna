@@ -29,6 +29,7 @@ const mapping = {
   settings: require('!!raw-loader!./assets/settings.svg'),
   star: require('!!raw-loader!./assets/star.svg'),
   status: require('!!raw-loader!./assets/status.svg'),
+  target: require('!!raw-loader!./assets/target.svg'),
   'trash-can': require('!!raw-loader!./assets/trash-can.svg'),
   url: require('!!raw-loader!./assets/url.svg'),
 }

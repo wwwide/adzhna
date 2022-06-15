@@ -1,8 +1,8 @@
 export type IconName =
   | 'arrow-down'
   | 'bars'
-  | 'bars-right'
   | 'bars-left'
+  | 'bars-right'
   | 'calendar'
   | 'chat'
   | 'check'
@@ -27,5 +27,6 @@ export type IconName =
   | 'settings'
   | 'star'
   | 'status'
+  | 'target'
   | 'trash-can'
   | 'url'
