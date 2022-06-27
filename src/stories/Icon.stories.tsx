@@ -65,6 +65,7 @@ export const Set: Story = () => {
       <Icon name="star" />
       <Icon name="status" />
       <Icon name="url" />
+      <Icon name="more" />
     </ThemeProvider>
   )
 }

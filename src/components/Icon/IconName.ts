@@ -18,6 +18,7 @@ export type IconName =
   | 'info'
   | 'left-arrow'
   | 'left-double-arrow'
+  | 'more'
   | 'number'
   | 'person'
   | 'phone'
