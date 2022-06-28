@@ -17,9 +17,10 @@ export const SearchField = memo(
       searchTerm,
       isLoading,
       disabled,
+      placeholder,
     } = props
     const initialText = typeof valueOption?.label === 'string' ? valueOption?.label : valueOption?.searchLabel
-    const [text, setText] = useState(initialText)
+    const [text, setText] = useState(initialText || '')
 
     const onChange = useCallback(
       (value: string) => {
@@ -34,7 +35,7 @@ export const SearchField = memo(
       if (typeof searchTerm !== 'undefined') {
         setText(searchTerm)
       } else if (valueOption) {
-        setText(initialText)
+        setText(initialText || '')
       }
     }, [valueOption, setText, initialText, searchTerm])
 
@@ -51,6 +52,7 @@ export const SearchField = memo(
           onBlur={(e) => e.stopPropagation()}
           autoComplete="off"
           inputClassName={className}
+          placeholder={placeholder}
           inputStyle={{
             paddingRight: '35px',
             ...style,

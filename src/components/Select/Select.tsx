@@ -10,6 +10,7 @@ import { Box } from './styles'
 
 export const Select: FC<SelectProps> = memo((props) => {
   const {
+    className,
     dataSource,
     containerSelectors,
     value,
@@ -28,6 +29,7 @@ export const Select: FC<SelectProps> = memo((props) => {
     onSearch,
     searchTerm,
     isLoading,
+    placeholder,
   } = props
 
   const {
@@ -55,9 +57,17 @@ export const Select: FC<SelectProps> = memo((props) => {
   useViewportUpdateListener(scrollAndResizeHandler, dropDownVisible, containerSelectors)
 
   return (
-    <Box tabIndex={0} ref={boxRef} onFocus={onFocus} onBlur={onBlur} onKeyDown={disabled ? undefined : keyboardHandler}>
+    <Box
+      tabIndex={0}
+      ref={boxRef}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      onKeyDown={disabled ? undefined : keyboardHandler}
+      className={className}
+    >
       {onSearch ? (
         <SearchField
+          placeholder={placeholder}
           isLoading={isLoading}
           onDropDownOpen={openDropDown}
           valueOption={valueOption}

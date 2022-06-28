@@ -12,4 +12,5 @@ export interface SearchFieldProps {
   searchTerm?: string
   isLoading?: boolean
   disabled?: boolean
+  placeholder?: string
 }
