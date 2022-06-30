@@ -27,6 +27,7 @@ export const Spinner = SC.div`${css<SpinnerProps>`
   border-width: ${(p) => (p.size || 32) / 10}px;
   animation: ${rotate} ${(p) => p.durationInSeconds || 2}s infinite linear;
   z-index: 10001;
+  flex-shrink: 0;
 `}`
 
 export const Overlay = SC.div`${css<{ $position: 'absolute' | 'relative' }>`

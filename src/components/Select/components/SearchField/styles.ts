@@ -18,6 +18,6 @@ export const Loader = SC(Spinner)`${css`
   position: absolute;
   right: 10px;
   top: 10px;
-  left: unset;
+  left: auto;
   pointer-events: none;
 `}`
