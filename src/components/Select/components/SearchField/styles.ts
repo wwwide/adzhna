@@ -15,9 +15,9 @@ export const ArrowIcon = SC(Icon)`${css<{ $open: boolean }>`
 `}`
 
 export const Loader = SC(Spinner)`${css`
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  position: absolute !important;
+  right: 10px !important;
+  top: 11px !important;
   left: auto;
   pointer-events: none;
 `}`
