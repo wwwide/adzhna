@@ -76,6 +76,7 @@ export const Select: FC<SelectProps> = memo((props) => {
           searchTerm={searchTerm}
           icon={icon}
           dropDownVisible={dropDownVisible}
+          disabled={disabled}
         />
       ) : (
         <InnerPicker
