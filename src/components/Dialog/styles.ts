@@ -16,7 +16,7 @@ export const Overlay = SC.div<{ $open: boolean }>`
   justify-content: center;
   align-items: flex-start;
   pointer-events: ${(p) => (p.$open ? 'all' : 'none')};
-  z-index: 1000;
+  z-index: 10002;
   transition: opacity .5s;
 `
 
