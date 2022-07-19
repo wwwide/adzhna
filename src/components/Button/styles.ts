@@ -3,6 +3,7 @@ import { Icon, IconPosition } from '../Icon'
 
 export const ContentWithIcon = SC.span<{ $position?: IconPosition }>`
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: ${(p) => (p.$position === 'right' ? 'row-reverse' : 'row')};
 `
