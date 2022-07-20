@@ -2,12 +2,13 @@ import { CSSProperties, ReactElement, ReactNode, SelectHTMLAttributes } from 're
 import { SelectDatasourceItem } from './SelectDataSourseItem'
 import { IconProps } from '../Icon'
 
-export interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'onChange' | 'value' | 'disabled'> {
+export interface SelectProps<ValueType>
+  extends Omit<SelectHTMLAttributes<HTMLSelectElement>, 'onChange' | 'value' | 'disabled'> {
   disabled?: boolean
   value?: any
   onChange: (value: any, error?: string) => void
   validator?: (value: any) => string | undefined
-  dataSource: SelectDatasourceItem[]
+  dataSource: SelectDatasourceItem<ValueType>[]
   inputClassName?: string
   inputStyle?: CSSProperties | undefined
   dropDownClassName?: string

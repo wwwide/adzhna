@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react'
+import React from 'react'
 import { useOutsideClick, useViewportUpdateListener } from 'hooks'
 import { useComponentsGuts } from './hooks'
 import { DropDown } from './components/DropDown'
@@ -8,7 +8,7 @@ import { InnerPicker } from './components/InnerPicker'
 
 import { Box } from './styles'
 
-export const Select: FC<SelectProps> = memo((props) => {
+export const Select = function <ValueType>(props: SelectProps<ValueType>) {
   const {
     className,
     dataSource,
@@ -111,4 +111,4 @@ export const Select: FC<SelectProps> = memo((props) => {
       />
     </Box>
   )
-})
+}

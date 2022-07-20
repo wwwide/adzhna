@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
-export type SelectDatasourceItem = {
+export type SelectDatasourceItem<ValueType> = {
   label: ReactNode
-  value: any
+  value: ValueType
   searchLabel?: string
 }

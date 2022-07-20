@@ -1,3 +1,2 @@
-import { FC } from 'react';
 import { SelectProps } from './SelectProps';
-export declare const Select: FC<SelectProps>;
+export declare const Select: <ValueType>(props: SelectProps<ValueType>) => JSX.Element;
