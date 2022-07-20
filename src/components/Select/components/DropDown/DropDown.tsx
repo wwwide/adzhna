@@ -38,7 +38,7 @@ export const DropDown = memo(
       >
         {dataSource.map((item) =>
           optionRenderer ? (
-            <Fragment key={item.value.toString()}>
+            <Fragment key={JSON.stringify(item.value)}>
               {optionRenderer(
                 item.label,
                 item.value,
@@ -53,7 +53,7 @@ export const DropDown = memo(
             <Option
               className={optionClassName}
               style={optionStyle}
-              key={item.value.toString()}
+              key={JSON.stringify(item.value)}
               label={item.label}
               value={item.value}
               onSelect={onSelect}
