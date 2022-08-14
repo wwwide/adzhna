@@ -35,10 +35,15 @@ const addRootElement = (rootElement: Element) => {
  * @param {String} id The id of the target container, e.g 'modal' or 'spotlight'
  * @returns {HTMLElement} The DOM node to use as the Portal target.
  */
-export const usePortal = (id: string): HTMLElement => {
+export const usePortal = (id: string): HTMLElement | null => {
   const rootElementRef = useRef<{ item: HTMLElement | null }>({ item: null })
 
   useEffect(() => {
+    // Run effect only if DOM available
+    if (process.title !== 'browser') {
+      return
+    }
+
     // Look for existing target dom element to append to
     const existingParent = document.querySelector(`#${id}`)
     // Parent is either a new root or the existing dom element
@@ -75,6 +80,9 @@ export const usePortal = (id: string): HTMLElement => {
    * @link https://reactjs.org/docs/hooks-faq.html#how-to-create-expensive-objects-lazily
    */
   const getRootElement = () => {
+    if (process.title !== 'browser') {
+      return null
+    }
     if (!rootElementRef.current?.item) {
       rootElementRef.current.item = document.createElement('div')
     }

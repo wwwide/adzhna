@@ -20,7 +20,13 @@ export const Dialog: FC<DialogProps> = memo((props) => {
     contentPending,
     ...rest
   } = props
+
   const root = usePortal(id)
+
+  if (!root) {
+    return null
+  }
+
   const stopBubbling = useCallback((event: MouseEvent<HTMLElement>) => event.stopPropagation(), [])
   const actions = header?.actions
 

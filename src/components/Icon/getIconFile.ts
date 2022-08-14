@@ -22,6 +22,7 @@ const mapping = {
   info: require('!!raw-loader!./assets/info.svg'),
   'left-arrow': require('!!raw-loader!./assets/left-arrow.svg'),
   'left-double-arrow': require('!!raw-loader!./assets/left-double-arrow.svg'),
+  mail: require('!!raw-loader!./assets/mail.svg'),
   more: require('!!raw-loader!./assets/more.svg'),
   number: require('!!raw-loader!./assets/number.svg'),
   person: require('!!raw-loader!./assets/person.svg'),
@@ -33,8 +34,11 @@ const mapping = {
   star: require('!!raw-loader!./assets/star.svg'),
   status: require('!!raw-loader!./assets/status.svg'),
   target: require('!!raw-loader!./assets/target.svg'),
+  telegram: require('!!raw-loader!./assets/telegram.svg'),
   'trash-can': require('!!raw-loader!./assets/trash-can.svg'),
   url: require('!!raw-loader!./assets/url.svg'),
+  viber: require('!!raw-loader!./assets/viber.svg'),
+  whatsapp: require('!!raw-loader!./assets/whatsapp.svg'),
 }
 
 export const getIconFile = (name: IconName) => mapping[name]
