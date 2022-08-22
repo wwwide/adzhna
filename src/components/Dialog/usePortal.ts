@@ -35,34 +35,37 @@ const addRootElement = (rootElement: Element) => {
  * @param {String} id The id of the target container, e.g 'modal' or 'spotlight'
  * @returns {HTMLElement} The DOM node to use as the Portal target.
  */
-export const usePortal = (id: string): HTMLElement | null => {
+export const usePortal = (id: string, open: boolean): HTMLElement | null => {
   const rootElementRef = useRef<{ item: HTMLElement | null }>({ item: null })
 
   useEffect(() => {
     // Look for existing target dom element to append to
     const existingParent = document.querySelector(`#${id}`)
-    // Parent is either a new root or the existing dom element
-    const parentElement = existingParent || createRootElement(id)
 
-    // If there is no existing DOM element, add a new one.
-    if (!existingParent) {
-      addRootElement(parentElement)
-    }
+    let parentElement: Element
 
-    // Add the detached element to the parent
-    if (rootElementRef.current?.item) {
-      parentElement.appendChild(rootElementRef.current.item)
+    if (open) {
+      // Parent is either a new root or the existing dom element
+      parentElement = existingParent || createRootElement(id)
+
+      // If there is no existing DOM element, add a new one.
+      if (!existingParent) {
+        addRootElement(parentElement)
+      }
+
+      // Add the detached element to the parent
+      if (rootElementRef.current?.item) {
+        parentElement.appendChild(rootElementRef.current.item)
+      }
     }
 
     return () => {
-      if (rootElementRef.current?.item) {
+      if (rootElementRef?.current?.item) {
         rootElementRef.current.item.remove()
       }
-      if (!parentElement.childElementCount) {
-        parentElement.remove()
-      }
+      parentElement?.remove()
     }
-  }, [id])
+  }, [id, open])
 
   /**
    * It's important we evaluate this lazily:

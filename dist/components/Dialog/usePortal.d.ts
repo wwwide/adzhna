@@ -14,4 +14,4 @@
  * @param {String} id The id of the target container, e.g 'modal' or 'spotlight'
  * @returns {HTMLElement} The DOM node to use as the Portal target.
  */
-export declare const usePortal: (id: string) => HTMLElement | null;
+export declare const usePortal: (id: string, open: boolean) => HTMLElement | null;

@@ -21,7 +21,7 @@ export const Dialog: FC<DialogProps> = memo((props) => {
     ...rest
   } = props
 
-  const root = usePortal(id)
+  const root = usePortal(id, open)
 
   if (!root) {
     return null
