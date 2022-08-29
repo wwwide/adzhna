@@ -2,6 +2,7 @@ import { CSSProperties, MouseEventHandler, ReactNode } from 'react';
 import { CardFace } from './CardFace';
 export interface CardProps {
     className?: string;
+    contentId?: string;
     contentClassName?: string;
     footerClassName?: string;
     contentStyle?: CSSProperties | undefined;

@@ -34,6 +34,7 @@ export const Dialog: FC<DialogProps> = memo((props) => {
     <Overlay $open={open} onClick={onClose}>
       <Window
         {...rest}
+        contentId={`${id}-content`}
         pending={pending}
         headerPending={headerPending}
         footerPending={footerPending}

@@ -6,6 +6,7 @@ import { Spinner } from '../Spinner'
 export const Card: FC<CardProps> = memo((props) => {
   const {
     className,
+    contentId,
     contentClassName,
     contentStyle,
     footerClassName,
@@ -39,7 +40,7 @@ export const Card: FC<CardProps> = memo((props) => {
           </Spinner>
         )}
         <Spinner visible={contentPending && !pending}>
-          <Content className={contentClassName} style={contentStyle}>
+          <Content className={contentClassName} style={contentStyle} id={contentId}>
             {children}
           </Content>
         </Spinner>
