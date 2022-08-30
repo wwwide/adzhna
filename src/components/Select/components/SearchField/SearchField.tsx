@@ -18,6 +18,7 @@ export const SearchField = memo(
       isLoading,
       disabled,
       placeholder,
+      preventScrollOnFocus,
     } = props
     const initialText = typeof valueOption?.label === 'string' ? valueOption?.label : valueOption?.searchLabel
     const [text, setText] = useState(initialText || '')
@@ -42,12 +43,10 @@ export const SearchField = memo(
     return (
       <Box>
         <Input
+          preventScrollOnFocus={preventScrollOnFocus}
           disabled={disabled}
           showClearButton={false}
-          onFocus={(event) => {
-            event.preventDefault()
-            onDropDownOpen
-          }}
+          onFocus={onDropDownOpen}
           value={searchTerm || text}
           ref={ref}
           onChange={onChange}

@@ -31,4 +31,5 @@ export interface SelectProps<ValueType>
   searchTerm?: string
   isLoading?: boolean
   closeOnScroll?: boolean
+  preventScrollOnFocus?: boolean
 }

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, forwardRef, memo, useCallback, useRef } from 'react'
+import React, { ChangeEvent, FocusEventHandler, forwardRef, memo, useCallback, useRef } from 'react'
 import { CommonInputProps } from './CommonInputProps'
 import { Wrapper } from '../../Wrapper'
 import { BaseInput, BaseTextArea } from './styles'
@@ -19,6 +19,8 @@ export const CommonInput = memo(
       inputStyle,
       style,
       value,
+      preventScrollOnFocus,
+      onFocus,
       showClearButton = true,
       ...rest
     } = props
@@ -53,6 +55,19 @@ export const CommonInput = memo(
       }
     }, [onChange, validator, ref])
 
+    const onEnhacedFocus: FocusEventHandler<HTMLInputElement> = useCallback(
+      (event) => {
+        if (preventScrollOnFocus) {
+          event.preventDefault()
+          event.target.focus({ preventScroll: true })
+        }
+        if (onFocus) {
+          onFocus(event)
+        }
+      },
+      [onFocus, preventScrollOnFocus],
+    )
+
     const Component: StyledComponent<any, any> = multiline ? BaseTextArea : BaseInput
 
     return (
@@ -78,6 +93,7 @@ export const CommonInput = memo(
           style={inputStyle}
           value={value}
           readOnly={readOnly}
+          onFocus={onEnhacedFocus}
         />
       </Wrapper>
     )

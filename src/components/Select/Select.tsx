@@ -30,6 +30,7 @@ export const Select = function <ValueType>(props: SelectProps<ValueType>) {
     searchTerm,
     isLoading,
     placeholder,
+    preventScrollOnFocus = true,
     closeOnScroll = true,
   } = props
 
@@ -68,6 +69,7 @@ export const Select = function <ValueType>(props: SelectProps<ValueType>) {
     >
       {onSearch ? (
         <SearchField
+          preventScrollOnFocus={preventScrollOnFocus}
           placeholder={placeholder}
           isLoading={isLoading}
           onDropDownOpen={openDropDown}

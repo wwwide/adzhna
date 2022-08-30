@@ -15,4 +15,5 @@ export interface CommonInputProps extends Omit<InputHTMLAttributes<HTMLInputElem
   }
   showClearButton?: boolean
   multiline?: boolean
+  preventScrollOnFocus?: boolean
 }

@@ -13,4 +13,5 @@ export interface SearchFieldProps {
   isLoading?: boolean
   disabled?: boolean
   placeholder?: string
+  preventScrollOnFocus?: boolean
 }
