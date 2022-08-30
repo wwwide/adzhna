@@ -20,7 +20,6 @@ export const CommonInput = memo(
       style,
       value,
       preventScrollOnFocus,
-      onFocus,
       showClearButton = true,
       ...rest
     } = props
@@ -62,7 +61,7 @@ export const CommonInput = memo(
           ;(event.target as HTMLInputElement).focus({ preventScroll: true })
         }
       },
-      [onFocus, preventScrollOnFocus],
+      [preventScrollOnFocus],
     )
 
     const Component: StyledComponent<any, any> = multiline ? BaseTextArea : BaseInput
