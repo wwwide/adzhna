@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FocusEventHandler, forwardRef, memo, useCallback, useRef } from 'react'
+import React, { ChangeEvent, TouchEventHandler, forwardRef, memo, useCallback, useRef } from 'react'
 import { CommonInputProps } from './CommonInputProps'
 import { Wrapper } from '../../Wrapper'
 import { BaseInput, BaseTextArea } from './styles'
@@ -55,14 +55,11 @@ export const CommonInput = memo(
       }
     }, [onChange, validator, ref])
 
-    const onEnhacedFocus: FocusEventHandler<HTMLInputElement> = useCallback(
+    const onTouchStart: TouchEventHandler<HTMLInputElement> = useCallback(
       (event) => {
         if (preventScrollOnFocus) {
           event.preventDefault()
-          event.target.focus({ preventScroll: true })
-        }
-        if (onFocus) {
-          onFocus(event)
+          ;(event.target as HTMLInputElement).focus({ preventScroll: true })
         }
       },
       [onFocus, preventScrollOnFocus],
@@ -93,7 +90,7 @@ export const CommonInput = memo(
           style={inputStyle}
           value={value}
           readOnly={readOnly}
-          onFocus={onEnhacedFocus}
+          onTouchStart={onTouchStart}
         />
       </Wrapper>
     )
