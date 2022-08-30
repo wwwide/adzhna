@@ -8,4 +8,5 @@ export interface DialogProps extends CardProps {
   headerPending?: boolean
   contentPending?: boolean
   footerPending?: boolean
+  scrollableContainers?: string[]
 }

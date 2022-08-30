@@ -12,6 +12,7 @@ export const useComponentsGuts = (
   value: any,
   onChange: (value: any, error?: string) => void,
   hasSearch: boolean,
+  closeOnScroll: boolean,
   onSearch?: (term: string) => void,
   validator?: (value: any) => string | undefined,
 ) => {
@@ -28,6 +29,13 @@ export const useComponentsGuts = (
   )
   const { focused, onFocus, onBlur } = useFocus(closeDropDown)
   const { highlightedValue, setHighlightedValue } = useHighlightedItem(dataSource, scrollToItem, value)
+
+  const enhancedScrollAndResizeHandler = useCallback(() => {
+    if (closeOnScroll) {
+      closeDropDown()
+    }
+    scrollAndResizeHandler
+  }, [closeOnScroll, closeDropDown, scrollAndResizeHandler])
 
   const onOptionSelect = useCallback(
     (value: any) => {
@@ -66,7 +74,6 @@ export const useComponentsGuts = (
     dropDownTop,
     innerRef,
     innerRect,
-    scrollAndResizeHandler,
     dropDownVisible,
     closeDropDown,
     openDropDown,
@@ -79,5 +86,6 @@ export const useComponentsGuts = (
     highlightedValue,
     onSearchTermChange,
     valueOption,
+    scrollAndResizeHandler: enhancedScrollAndResizeHandler,
   }
 }

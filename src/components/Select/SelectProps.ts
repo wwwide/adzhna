@@ -30,4 +30,5 @@ export interface SelectProps<ValueType>
   onSearch?: (term: string) => void
   searchTerm?: string
   isLoading?: boolean
+  closeOnScroll?: boolean
 }

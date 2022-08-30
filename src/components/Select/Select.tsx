@@ -30,6 +30,7 @@ export const Select = function <ValueType>(props: SelectProps<ValueType>) {
     searchTerm,
     isLoading,
     placeholder,
+    closeOnScroll = true,
   } = props
 
   const {
@@ -51,7 +52,7 @@ export const Select = function <ValueType>(props: SelectProps<ValueType>) {
     onBlur,
     highlightedValue,
     onSearchTermChange,
-  } = useComponentsGuts(dataSource, value, onChange, !!onSearch, onSearch, validator)
+  } = useComponentsGuts(dataSource, value, onChange, !!onSearch, closeOnScroll, onSearch, validator)
 
   useOutsideClick(boxRef, closeDropDown)
   useViewportUpdateListener(scrollAndResizeHandler, dropDownVisible, containerSelectors)

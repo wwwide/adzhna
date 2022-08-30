@@ -3,13 +3,12 @@ export declare const useComponentsGuts: (dataSource: {
     label: ReactNode;
     value: any;
     searchLabel?: string | undefined;
-}[], value: any, onChange: (value: any, error?: string | undefined) => void, hasSearch: boolean, onSearch?: ((term: string) => void) | undefined, validator?: ((value: any) => string | undefined) | undefined) => {
+}[], value: any, onChange: (value: any, error?: string | undefined) => void, hasSearch: boolean, closeOnScroll: boolean, onSearch?: ((term: string) => void) | undefined, validator?: ((value: any) => string | undefined) | undefined) => {
     boxRef: import("react").RefObject<HTMLDivElement>;
     dropDownRef: import("react").RefObject<HTMLDivElement>;
     dropDownTop: number;
     innerRef: import("react").MutableRefObject<any>;
     innerRect: DOMRect | null;
-    scrollAndResizeHandler: () => void;
     dropDownVisible: boolean;
     closeDropDown: () => void;
     openDropDown: () => void;
@@ -26,4 +25,5 @@ export declare const useComponentsGuts: (dataSource: {
         value: any;
         searchLabel?: string | undefined;
     } | undefined;
+    scrollAndResizeHandler: () => void;
 };

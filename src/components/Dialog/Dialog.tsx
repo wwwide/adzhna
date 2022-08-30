@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { DialogProps } from './DialogProps'
 import { usePortal } from './usePortal'
 import { getCloseIconFaceByDialogFace } from './getCloseIconFaceByDialogFace'
+import { useBehavior } from './hooks'
 
 import { Actions, CloseIcon, Overlay, Window } from './styles'
 
@@ -18,10 +19,13 @@ export const Dialog: FC<DialogProps> = memo((props) => {
     headerPending,
     footerPending,
     contentPending,
+    scrollableContainers,
     ...rest
   } = props
 
   const root = usePortal(id, open)
+
+  useBehavior(open, scrollableContainers || [])
 
   if (!root) {
     return null

@@ -20,4 +20,5 @@ export interface SelectProps<ValueType> extends Omit<SelectHTMLAttributes<HTMLSe
     onSearch?: (term: string) => void;
     searchTerm?: string;
     isLoading?: boolean;
+    closeOnScroll?: boolean;
 }
