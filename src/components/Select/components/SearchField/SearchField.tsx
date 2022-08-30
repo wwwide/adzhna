@@ -44,7 +44,10 @@ export const SearchField = memo(
         <Input
           disabled={disabled}
           showClearButton={false}
-          onFocus={onDropDownOpen}
+          onFocus={(event) => {
+            event.preventDefault()
+            onDropDownOpen
+          }}
           value={searchTerm || text}
           ref={ref}
           onChange={onChange}
