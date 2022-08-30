@@ -6,9 +6,11 @@ export const useViewportUpdateListener = (handler: () => void, shouldSubscribe: 
     if (shouldSubscribe) {
       window.addEventListener('scroll', handler)
       window.addEventListener('resize', handler)
+      window.visualViewport.addEventListener('resize', handler)
     } else {
       window.removeEventListener('scroll', handler)
       window.removeEventListener('resize', handler)
+      window.visualViewport.removeEventListener('resize', handler)
     }
 
     // Optional selectors.
@@ -30,6 +32,7 @@ export const useViewportUpdateListener = (handler: () => void, shouldSubscribe: 
     return () => {
       window.removeEventListener('scroll', handler)
       window.removeEventListener('resize', handler)
+      window.visualViewport.removeEventListener('resize', handler)
 
       if (selectors && selectors.length) {
         selectors.forEach((node) => {
