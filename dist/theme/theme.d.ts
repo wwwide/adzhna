@@ -9,6 +9,7 @@ import { SelectTheme } from '../components/Select';
 export declare type Theme = {
     adzhna: {
         colors: {
+            bg: string;
             primary: {
                 fill: {
                     normal: string;

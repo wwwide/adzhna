@@ -10,6 +10,7 @@ import { SelectTheme } from '../components/Select'
 export type Theme = {
   adzhna: {
     colors: {
+      bg: string
       // Primary color
       primary: {
         // Background

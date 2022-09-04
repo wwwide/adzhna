@@ -2,6 +2,8 @@ import SC, { css } from 'styled-components'
 import { InputStyledProps } from './InputStyledProps'
 
 const style = css<InputStyledProps>`
+  background: ${(p) => p.theme.adzhna.components.input.bg};
+  color: ${(p) => p.theme.adzhna.colors.text};
   width: 100%;
   outline: none;
   -webkit-appearance: none;

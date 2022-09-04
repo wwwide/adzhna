@@ -4,4 +4,5 @@ export declare type InputTheme = {
         y: number;
     };
     borderRadius?: number;
+    bg: string;
 };

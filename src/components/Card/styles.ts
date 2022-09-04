@@ -12,7 +12,8 @@ export const Box = SC.section<{ $width?: string }>`
   font-family: ${(p) => p.theme.adzhna.fonts.family};
   box-shadow: ${(p) => p.theme.adzhna.components.card.shadow};
   overflow: hidden;
-  background: #fff;
+  color: ${(p) => p.theme.adzhna.colors.text};
+  background: ${(p) => p.theme.adzhna.colors.bg};
 `
 
 export const Header = SC.div<{ $face: CardFace }>`

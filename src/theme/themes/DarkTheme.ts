@@ -1,9 +1,9 @@
 import { Theme } from '../theme'
 
-export const DefaultTheme: Theme = {
+export const DarkTheme: Theme = {
   adzhna: {
     colors: {
-      bg: '#fff',
+      bg: '#444',
       primary: {
         fill: {
           normal: '#3D2F64',
@@ -28,8 +28,8 @@ export const DefaultTheme: Theme = {
           active: '#000',
         },
       },
-      text: '#444',
-      textSecondary: '#aaa',
+      text: '#fff',
+      textSecondary: '#eee',
       success: {
         fill: {
           normal: '#5dcb4e',
@@ -105,7 +105,7 @@ export const DefaultTheme: Theme = {
     },
     borders: {
       radius: 4,
-      color: '#e0e0e0',
+      color: '#777',
     },
     base: {
       outline: {
@@ -166,7 +166,7 @@ export const DefaultTheme: Theme = {
           x: 0.6,
           y: 0.6,
         },
-        bg: '#fff',
+        bg: '#222',
       },
       pagination: {
         regular: {
