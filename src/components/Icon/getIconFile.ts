@@ -16,6 +16,7 @@ const mapping = {
   'delete-circle': require('!!raw-loader!./assets/delete-circle.svg'),
   download: require('!!raw-loader!./assets/download.svg'),
   exclamation: require('!!raw-loader!./assets/exclamation.svg'),
+  filter: require('!!raw-loader!./assets/filter.svg'),
   'flash-off': require('!!raw-loader!./assets/flash-off.svg'),
   'flash-on': require('!!raw-loader!./assets/flash-on.svg'),
   gallery: require('!!raw-loader!./assets/gallery.svg'),
