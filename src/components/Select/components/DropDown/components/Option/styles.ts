@@ -9,15 +9,15 @@ export const Box = SC.div`${css<{ $active?: boolean; $highlighted?: boolean }>`
   font-weight: ${(p) => (p.$active ? 'bold' : 'normal')};
   background: ${(p) => {
     if (p.$active) {
-      return p.theme.adzhna.colors.light.fill.active
+      return 'rgba(127, 127, 127, 0.7)'
     }
     if (p.$highlighted) {
-      return p.theme.adzhna.colors.light.fill.normal
+      return 'rgba(127, 127, 127, 0.8)'
     }
     return 'transparent'
   }};
 
   &:hover {
-    background: ${(p) => p.theme.adzhna.colors.light.fill.normal};
+    background: rgba(127, 127, 127, 0.1);
   }
 `}`

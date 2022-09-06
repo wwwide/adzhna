@@ -10,4 +10,6 @@ export const Box = SC.div`${css<{ $maxHeight: number; $visible: boolean }>`
   overflow-y: auto;
   background: #fff;
   z-index: 10002;
+  background: ${(p) => p.theme.adzhna.colors.bg};
+  color: ${(p) => p.theme.adzhna.colors.text};
 `}`

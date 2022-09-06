@@ -19,6 +19,8 @@ export const Inner = SC.div`${css<{ $hasIcon?: boolean; $disabled?: boolean; $fo
   border-width: 1px;
   border-color: ${(p) => p.theme.adzhna.borders.color};
   border-style: solid;
+  background: ${(p) => p.theme.adzhna.colors.bg};
+  color: ${(p) => p.theme.adzhna.colors.text};
 `}`
 
 export const ArrowIcon = SC(Icon)`${css<{ $open: boolean }>`
@@ -27,6 +29,10 @@ export const ArrowIcon = SC(Icon)`${css<{ $open: boolean }>`
   top: 11px;
   transform: rotate(${(p) => (p.$open ? '180deg' : 0)});
   pointer-events: none;
+
+  svg {
+    fill: ${(p) => p.theme.adzhna.colors.text};
+  }
 `}`
 
 export const CustomIcon = SC(Icon)`${css`
