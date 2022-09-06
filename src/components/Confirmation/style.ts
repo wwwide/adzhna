@@ -21,3 +21,7 @@ export const ConfirmationContainer = SC.div`
   letter-spacing: normal;
   color: #000000;
 `;
+
+export const _Message = SC.span`
+  color: ${p => p.theme.adzhna.colors.text};
+`
