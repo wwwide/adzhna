@@ -1,6 +1,6 @@
 {
   "name": "adzhna",
-  "version": "1.4.45",
+  "version": "1.5.0",
   "description": "React components library",
   "main": "index.js",
   "exports": {
@@ -40,6 +40,9 @@
       ],
       "spinner": [
         "./dist/components/Spinner/index.d.ts"
+      ],
+      "switcher": [
+        "./dist/components/Switcher/index.d.ts"
       ],
       "theme": [
         "./dist/theme/index.d.ts"

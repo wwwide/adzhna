@@ -16,6 +16,7 @@ const config: Configuration = {
     pagination: './src/components/Pagination',
     select: './src/components/Select',
     spinner: './src/components/Spinner',
+    switcher: './src/components/Switcher',
     theme: './src/theme',
     toast: './src/components/Toast',
   },
