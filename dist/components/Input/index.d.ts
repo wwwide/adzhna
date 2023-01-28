@@ -1,7 +1,0 @@
-export * from './getInputByKind';
-export * from './InputKind';
-export * from './InputTheme';
-export { CommonInput as Input, CommonInputProps as InputProps } from './kinds/CommonInput';
-export * from './kinds/MaskedInput';
-export * from './kinds/PhoneInput';
-export * from './kinds/FileInput';

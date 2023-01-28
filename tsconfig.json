@@ -5,14 +5,14 @@
     "strict": true,
     "noImplicitAny": true,
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "jsx": "react",
-    "lib": ["es5", "es2015", "dom"],
+    "lib": ["ES5", "ES6", "ES7", "ES2017", "ES2018", "ES2019", "ES2020", "ES2021", "ESNext", "DOM"],
     "baseUrl": "./",
     "paths": {
       "hooks": ["./src/hooks"],
@@ -21,11 +21,6 @@
     "alwaysStrict": true,
     "strictNullChecks": true
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "debug"
-  ]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "debug"]
 }

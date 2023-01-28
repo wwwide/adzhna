@@ -1,62 +1,27 @@
 {
   "name": "adzhna",
-  "version": "1.5.1",
+  "version": "2.0.0",
   "description": "React components library",
-  "main": "index.js",
   "exports": {
-    "./": "./dist/"
-  },
-  "typesVersions": {
-    "*": {
-      "button": [
-        "./dist/components/Button/index.d.ts"
-      ],
-      "card": [
-        "./dist/components/Card/index.d.ts"
-      ],
-      "check-box": [
-        "./dist/components/CheckBox/index.d.ts"
-      ],
-      "confirmation": [
-        "./dist/components/Confirmation/index.d.ts"
-      ],
-      "dialog": [
-        "./dist/components/Dialog/index.d.ts"
-      ],
-      "error-boundary": [
-        "./dist/components/ErrorBoundary/index.d.ts"
-      ],
-      "icon": [
-        "./dist/components/Icon/index.d.ts"
-      ],
-      "input": [
-        "./dist/components/Input/index.d.ts"
-      ],
-      "pagination": [
-        "./dist/components/Pagination/index.d.ts"
-      ],
-      "select": [
-        "./dist/components/Select/index.d.ts"
-      ],
-      "spinner": [
-        "./dist/components/Spinner/index.d.ts"
-      ],
-      "switcher": [
-        "./dist/components/Switcher/index.d.ts"
-      ],
-      "theme": [
-        "./dist/theme/index.d.ts"
-      ],
-      "toast": [
-        "./dist/components/Toast/index.d.ts"
-      ]
-    }
+    "./button": "./dist/components/Button",
+    "./card": "./dist/components/Card",
+    "./check-box": "./dist/components/CheckBox",
+    "./confirmation": "./dist/components/Confirmation",
+    "./dialog": "./dist/components/Dialog",
+    "./error-boundary": "./dist/components/ErrorBoundary",
+    "./icon": "./dist/components/Icon",
+    "./input": "./dist/components/Input",
+    "./pagination": "./dist/components/Pagination",
+    "./select": "./dist/components/Select",
+    "./spinner": "./dist/components/Spinner",
+    "./switcher": "./dist/components/Switcher",
+    "./toast": "./dist/components/Toast",
+    "./theme": "./dist/theme"
   },
   "scripts": {
-    "build": "npm run lint && webpack --config ./webpack.config.ts --mode=production",
-    "lint": "eslint --fix --ext .tsx,.ts ./src",
-    "storybook": "start-storybook -p 4444",
-    "test": "jest",
+    "lint": "TIMING=1 ./node_modules/eslint/bin/eslint.js --max-warnings=50 ./src",
+    "ts-check": "tsc",
+    "build": "./build.sh",
     "husky-init": "husky install"
   },
   "repository": {
@@ -77,30 +42,19 @@
   },
   "homepage": "https://github.com/wwwide/adzhna#readme",
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.16.0",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.15.0",
-    "@statoscope/webpack-plugin": "^5.16.0",
-    "@storybook/addon-storyshots": "^6.4.9",
-    "@storybook/addon-storyshots-puppeteer": "^6.4.9",
-    "@storybook/react": "^6.4.9",
     "@types/jest": "^27.0.2",
     "@types/jest-image-snapshot": "^4.3.1",
     "@types/node": "^16.11.0",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.15",
-    "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-styled-components": "^1.13.2",
     "brief-form": "^0.0.42",
+    "esbuild": "^0.14.54",
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
     "jest": "^27.3.1",
     "jest-dev-server": "^6.0.0",
@@ -110,24 +64,20 @@
     "prettier": "^2.4.1",
     "puppeteer": "^13.0.1",
     "puppeteer-core": "^13.0.1",
-    "raw-loader": "^4.0.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-is": "^17.0.2",
-    "styled-components": "^5.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "styled-components": "^5.3.6",
     "ts-jest": "^27.0.7",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.3.0",
-    "typescript": "^4.4.4",
-    "webpack": "^5.58.2",
-    "webpack-cli": "^4.9.0"
+    "typescript": "^4.4.4"
   },
   "peerDependencies": {
-    "react": ">=17.0.2",
-    "react-dom": ">=17.0.2",
-    "styled-components": "^5.3.1"
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0",
+    "styled-components": "^5.3.6"
   },
-  "packageManager": "yarn@3.1.0",
   "dependencies": {
     "react-toastify": "^8.1.0"
   }

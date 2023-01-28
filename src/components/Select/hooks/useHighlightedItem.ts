@@ -2,10 +2,10 @@ import { ReactNode, useCallback, useEffect, useState } from 'react'
 
 export const useHighlightedItem = (
   dataSource: { label: string | ReactNode; value: any }[],
-  scrollToItem: (value: any, direction: 'start' | 'end') => void,
-  value: any,
+  scrollToItem: (value: unknown, direction: 'start' | 'end') => void,
+  value: unknown,
 ) => {
-  const [highlightedValue, setHighlighted] = useState()
+  const [highlightedValue, setHighlighted] = useState<unknown>()
 
   useEffect(() => {
     setHighlighted(value)
