@@ -11,8 +11,8 @@ export default {
 } as Meta
 
 export const Basic: Story = () => {
-  const [value, setValue] = useState(1)
-  const onChange = useCallback((value) => setValue(value), [setValue])
+  const [value, setValue] = useState<number | number[]>(1)
+  const onChange = useCallback((value: number | number[]) => setValue(value), [setValue])
 
   return (
     <ThemeProvider theme={DarkTheme}>
@@ -34,8 +34,8 @@ export const Basic: Story = () => {
 Basic.args = {}
 
 export const Vertical: Story = () => {
-  const [value, setValue] = useState(1)
-  const onChange = useCallback((value) => setValue(value), [setValue])
+  const [value, setValue] = useState<number | number[]>(1)
+  const onChange = useCallback((value: number | number[]) => setValue(value), [setValue])
 
   return (
     <ThemeProvider theme={DarkTheme}>
@@ -58,8 +58,8 @@ export const Vertical: Story = () => {
 Vertical.args = {}
 
 export const Faces: Story = () => {
-  const [value, setValue] = useState(1)
-  const onChange = useCallback((value) => setValue(value), [setValue])
+  const [value, setValue] = useState<number | number[]>(1)
+  const onChange = useCallback((value: number | number[]) => setValue(value), [setValue])
 
   const items = [
     { label: 'One', value: 1 },
@@ -80,8 +80,8 @@ export const Faces: Story = () => {
 Faces.args = {}
 
 export const MultiSelect: Story = () => {
-  const [value, setValue] = useState([1, 3])
-  const onChange = useCallback((value) => setValue(value), [setValue])
+  const [value, setValue] = useState<number | number[]>([1, 3])
+  const onChange = useCallback((value: number | number[]) => setValue(value), [setValue])
 
   const items = [
     { label: 'One', value: 1 },
@@ -114,8 +114,8 @@ const GlobalStyle = createGlobalStyle`
 `
 
 export const CustomClasses: Story = () => {
-  const [value, setValue] = useState(1)
-  const onChange = useCallback((value) => setValue(value), [setValue])
+  const [value, setValue] = useState<number | number[]>(1)
+  const onChange = useCallback((value: number | number[]) => setValue(value), [setValue])
 
   const items = [
     { label: 'One', value: 1 },
@@ -144,8 +144,8 @@ export const CustomClasses: Story = () => {
 CustomClasses.args = {}
 
 export const CustomStyles: Story = () => {
-  const [value, setValue] = useState(1)
-  const onChange = useCallback((value) => setValue(value), [setValue])
+  const [value, setValue] = useState<number | number[]>(1)
+  const onChange = useCallback((value: number | number[]) => setValue(value), [setValue])
 
   const items = [
     { label: 'One', value: 1 },

@@ -3,6 +3,7 @@ import { CardFace } from './CardFace'
 
 export interface CardProps {
   className?: string
+  children?: ReactNode
   contentId?: string
   contentClassName?: string
   footerClassName?: string

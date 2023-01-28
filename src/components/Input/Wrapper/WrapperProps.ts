@@ -1,8 +1,9 @@
-import { CSSProperties } from 'react'
+import { CSSProperties, ReactNode } from 'react'
 import { IconProps } from '../../Icon'
 
 export interface WrapperProps {
   className?: string
+  children?: ReactNode
   icon?: IconProps
   style?: CSSProperties | undefined
   copyButton?: {

@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 export const Simple: Story = () => {
   const [checked, setChecked] = useState(true)
 
-  const onChange = useCallback((value) => setChecked(value), [setChecked])
+  const onChange = useCallback((value: boolean) => setChecked(value), [setChecked])
 
   return (
     <ThemeProvider theme={DefaultTheme}>

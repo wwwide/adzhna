@@ -21,7 +21,7 @@ export const usePaginationMarkup = (props: PaginationProps): ReactElement | Reac
     disabled,
   } = props
   const pageCount = Math.ceil(total / size)
-  const onChangePage = useCallback((page) => onChange(page, size), [onChange, size])
+  const onChangePage = useCallback((page: number) => onChange(page, size), [onChange, size])
 
   if (maxInlinePages % 2 === 0) {
     throw new Error('"maxInlinePages" parameter should be odd number.')

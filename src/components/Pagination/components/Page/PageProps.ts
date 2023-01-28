@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react'
+import { CSSProperties, ReactNode } from 'react'
 import { ButtonFace } from '../../../Button'
 
 export interface PageProps {
@@ -16,4 +16,5 @@ export interface PageProps {
   arrowPageButtonStyle?: CSSProperties | undefined
   arrow?: boolean
   disabled?: boolean
+  children?: ReactNode
 }
