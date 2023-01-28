@@ -24,4 +24,6 @@ src/
 __old_stories__
 build.sh
 README.md
+LICENSE
 esbuild
+tests

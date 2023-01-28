@@ -1,9 +1,9 @@
 import { MutableRefObject, useCallback, useEffect, useState } from 'react'
-import { useTopPosition } from 'hooks'
+import { useTopPosition } from '../../../hooks'
 
 export const useScrollAndResizeHandler = (
   innerRef: MutableRefObject<HTMLDivElement | null>,
-  dropDownRef: MutableRefObject<HTMLDivElement | null>
+  dropDownRef: MutableRefObject<HTMLDivElement | null>,
 ) => {
   const [innerRect, setInnerRect] = useState<DOMRect | null>(null)
 

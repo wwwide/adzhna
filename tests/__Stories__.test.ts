@@ -15,7 +15,7 @@ const getMatchOptions = () => {
 initStoryShots({
   suite: 'Check storybook screenshots',
   test: imageSnapshot({
-    storybookUrl: 'http://localhost:4444',
+    storybookUrl: 'http://localhost:6006',
     getMatchOptions: getMatchOptions as any,
   }),
 })

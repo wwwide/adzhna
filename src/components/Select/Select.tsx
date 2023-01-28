@@ -1,5 +1,5 @@
 import React from 'react'
-import { useOutsideClick, useViewportUpdateListener } from 'hooks'
+import { useOutsideClick, useViewportUpdateListener } from '../../hooks'
 import { useComponentsGuts } from './hooks'
 import { DropDown } from './components/DropDown'
 import { SearchField } from './components/SearchField'

@@ -1,7 +1,7 @@
 import React, { CSSProperties, ReactNode, useCallback, useState } from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import { createGlobalStyle, css, ThemeProvider } from 'styled-components'
-import { DarkTheme, DefaultTheme } from 'theme'
+import { DarkTheme, DefaultTheme } from '../theme'
 import { Select } from '../components/Select'
 import { Dialog } from '../components/Dialog'
 import { Button } from '../components/Button'
