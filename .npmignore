@@ -21,3 +21,7 @@ src/
 .pnp.cjs
 .pnp.loader.mjs
 .husky/
+__old_stories__
+build.sh
+README.md
+esbuild

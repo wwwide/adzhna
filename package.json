@@ -1,22 +1,68 @@
 {
   "name": "adzhna",
-  "version": "2.0.0",
+  "version": "2.0.9",
   "description": "React components library",
   "exports": {
-    "./button": "./dist/components/Button",
-    "./card": "./dist/components/Card",
-    "./check-box": "./dist/components/CheckBox",
-    "./confirmation": "./dist/components/Confirmation",
-    "./dialog": "./dist/components/Dialog",
-    "./error-boundary": "./dist/components/ErrorBoundary",
-    "./icon": "./dist/components/Icon",
-    "./input": "./dist/components/Input",
-    "./pagination": "./dist/components/Pagination",
-    "./select": "./dist/components/Select",
-    "./spinner": "./dist/components/Spinner",
-    "./switcher": "./dist/components/Switcher",
-    "./toast": "./dist/components/Toast",
-    "./theme": "./dist/theme"
+    "./button": "./dist/components/Button.js",
+    "./card": "./dist/components/Card.js",
+    "./check-box": "./dist/components/CheckBox.js",
+    "./confirmation": "./dist/components/Confirmation.js",
+    "./dialog": "./dist/components/Dialog.js",
+    "./error-boundary": "./dist/components/ErrorBoundary.js",
+    "./icon": "./dist/components/Icon.js",
+    "./input": "./dist/components/Input.js",
+    "./pagination": "./dist/components/Pagination.js",
+    "./select": "./dist/components/Select.js",
+    "./spinner": "./dist/components/Spinner.js",
+    "./switcher": "./dist/components/Switcher.js",
+    "./toast": "./dist/components/Toast.js",
+    "./theme": "./dist/theme.js"
+  },
+  "typesVersions": {
+    "*": {
+      "button": [
+        "./dist/components/Button/index.d.ts"
+      ],
+      "card": [
+        "./dist/components/Card/index.d.ts"
+      ],
+      "check-box": [
+        "./dist/components/CheckBox/index.d.ts"
+      ],
+      "confirmation": [
+        "./dist/components/Confirmation/index.d.ts"
+      ],
+      "dialog": [
+        "./dist/components/Dialog/index.d.ts"
+      ],
+      "error-boundary": [
+        "./dist/components/ErrorBoundary/index.d.ts"
+      ],
+      "icon": [
+        "./dist/components/Icon/index.d.ts"
+      ],
+      "input": [
+        "./dist/components/Input/index.d.ts"
+      ],
+      "pagination": [
+        "./dist/components/Pagination/index.d.ts"
+      ],
+      "select": [
+        "./dist/components/Select/index.d.ts"
+      ],
+      "spinner": [
+        "./dist/components/Spinner/index.d.ts"
+      ],
+      "switcher": [
+        "./dist/components/Switcher/index.d.ts"
+      ],
+      "theme": [
+        "./dist/theme/index.d.ts"
+      ],
+      "toast": [
+        "./dist/components/Toast/index.d.ts"
+      ]
+    }
   },
   "scripts": {
     "lint": "TIMING=1 ./node_modules/eslint/bin/eslint.js --max-warnings=50 ./src",
