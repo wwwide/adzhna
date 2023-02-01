@@ -5,7 +5,7 @@ import { Box, Content } from './styles'
 
 export const Icon: FC<IconProps> = memo((props) => {
   const { color, face = 'secondary', fill, name, size = 'M', onClick, ...rest } = props
-  const file = getIconFile(name).default
+  const file = getIconFile(name)
 
   return (
     <Box {...rest} onClick={onClick}>
