@@ -18,7 +18,9 @@ export const Confirmation: FC<ConfirmationProps> = (props) => {
   )
 
   useEffect(() => {
-    document.addEventListener('keydown', keyboardHandler)
+    if (open) {
+      document.addEventListener('keydown', keyboardHandler)
+    }
     return () => {
       document.removeEventListener('keydown', keyboardHandler)
     }

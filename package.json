@@ -1,6 +1,6 @@
 {
   "name": "adzhna",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "description": "React components library",
   "exports": {
     "./button": "./dist/components/Button.js",

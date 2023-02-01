@@ -21,11 +21,13 @@ export const useKeyBoard = (open: boolean, closeHander: () => void) => {
   )
 
   useEffect(() => {
-    document.addEventListener('keydown', keyboardHandler)
+    if (open) {
+      document.addEventListener('keydown', keyboardHandler)
+    }
     return () => {
       document.removeEventListener('keydown', keyboardHandler)
     }
-  }, [keyboardHandler])
+  }, [keyboardHandler, open])
 
   return {
     overlayRef,
