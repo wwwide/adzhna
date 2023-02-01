@@ -33,6 +33,7 @@ export const Simple: Story = () => {
       </Button>
       <Dialog id="simple" open={open} onClose={() => setOpen(false)} width="400px" header={{ title: 'Sample dialog' }}>
         Short dialog content.
+        <input autoFocus tabIndex={0} />
       </Dialog>
     </ThemeProvider>
   )

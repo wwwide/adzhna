@@ -1,4 +1,4 @@
-import { CSSProperties, MouseEventHandler, ReactNode } from 'react'
+import { KeyboardEventHandler, CSSProperties, MouseEventHandler, ReactNode } from 'react'
 import { CardFace } from './CardFace'
 
 export interface CardProps {
@@ -26,4 +26,5 @@ export interface CardProps {
   headerPending?: boolean
   contentPending?: boolean
   footerPending?: boolean
+  onKeyDown?: KeyboardEventHandler<HTMLDivElement>
 }

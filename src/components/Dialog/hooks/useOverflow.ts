@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-export const useBehavior = (open: boolean, scrollableContainers: string[]) => {
+export const useOverflow = (open: boolean, scrollableContainers: string[]) => {
   useEffect(() => {
     if (open) {
       document.body.setAttribute('data-overflow', document.body.style.overflow)

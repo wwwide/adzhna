@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback, useState } from 'react'
+import React, { ReactNode, useCallback, useEffect, useState } from 'react'
 import { Confirmation as C } from './Confirmation'
 import { ButtonFace } from '../Button'
 import { DialogFace } from '../Dialog'
@@ -17,8 +17,6 @@ type Options = {
   dialogId?: string
   title?: string | ReactNode
 }
-
-// TODO: when using this hook, confirmation appers and disappears not smoothly, fix it.
 
 export const useConfirmation = (opts: Options) => {
   const [isOpen, setOpen] = useState(false)

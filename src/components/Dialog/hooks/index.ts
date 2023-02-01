@@ -1,1 +1,1 @@
-export * from './useBehavior'
+export * from './useDialog'
