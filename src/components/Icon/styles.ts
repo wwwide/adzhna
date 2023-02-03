@@ -12,6 +12,7 @@ export const Content = SC.span<{
   $face: IconFace
   $color?: string
   $fill?: string
+  $stroke?: string
 }>`
   display: flex;
   align-items: center;
@@ -23,5 +24,6 @@ export const Content = SC.span<{
     height: 100%;
     fill: ${(p) => p.$fill || getColor(p.$face, p.theme, 'fill')};
     color: ${(p) => p.$color || getColor(p.$face, p.theme, 'text')};
+    stroke: ${(p) => p.$stroke || ''};
   }
 `

@@ -17,6 +17,9 @@ export interface IconProps {
   // SVG fill color.
   fill?: string
 
+  // SVG stroke color.
+  stroke?: string
+
   // Not used directly in icon, placed here con consistent usage in button component
   // along with other icon props.
   position?: IconPosition
