@@ -5,6 +5,7 @@ const mapping = {
   bars: require('./assets/bars.svg'),
   'bars-left': require('./assets/bars-left.svg'),
   'bars-right': require('./assets/bars-right.svg'),
+  bulb: require('./assets/bulb.svg'),
   calendar: require('./assets/calendar.svg'),
   camera: require('./assets/camera.svg'),
   chat: require('./assets/chat.svg'),

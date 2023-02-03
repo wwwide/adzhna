@@ -3,6 +3,7 @@ export type IconName =
   | 'bars'
   | 'bars-left'
   | 'bars-right'
+  | 'bulb'
   | 'calendar'
   | 'camera'
   | 'chat'
