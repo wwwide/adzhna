@@ -2,6 +2,7 @@ import { BuildOptions } from 'esbuild'
 
 export const buildConfig = (): BuildOptions => ({
   entryPoints: [
+    './src/components/Autosuggest',
     './src/components/Button',
     './src/components/Card',
     './src/components/CheckBox',
