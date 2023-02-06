@@ -3,7 +3,7 @@ import { Select } from '../Select'
 import { AutosuggestProps } from './AutosuggestProps'
 import { useComponentEssence } from './hooks'
 
-export const AutoSuggest = <ResponseShape, ValueType>(props: AutosuggestProps<ResponseShape, ValueType>) => {
+export const Autosuggest = <ResponseShape, ValueType>(props: AutosuggestProps<ResponseShape, ValueType>) => {
   const { value, onChange, dataSupplier, searchTerm = '', responseMapper, onSearch, ...rest } = props
 
   const { dataSource, onTermChange, isFetching, onSelect } = useComponentEssence<ResponseShape, ValueType>(
