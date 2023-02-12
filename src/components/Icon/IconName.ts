@@ -32,6 +32,7 @@ export type IconName =
   | 'play'
   | 'plus'
   | 'record'
+  | 'retry'
   | 'right-arrow'
   | 'right-double-arrow'
   | 'ruble'

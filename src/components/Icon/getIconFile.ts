@@ -34,6 +34,7 @@ const mapping = {
   play: require('./assets/play.svg'),
   plus: require('./assets/plus.svg'),
   record: require('./assets/record.svg'),
+  retry: require('./assets/retry.svg'),
   ruble: require('./assets/ruble.svg'),
   'right-arrow': require('./assets/right-arrow.svg'),
   'right-double-arrow': require('./assets/right-double-arrow.svg'),
