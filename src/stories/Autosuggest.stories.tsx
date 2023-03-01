@@ -13,7 +13,7 @@ export default {
 export const Simple: Story = () => {
   const [value, setValue] = useState<{ id: string; name: string } | undefined>(undefined)
   const [term, setTerm] = useState('')
-  const dataSupplier = useCallback((term: string) => Promise.resolve([{ id: '1', name: '2' }]), [])
+  const dataSupplier = useCallback(() => Promise.resolve([{ id: '1', name: '2' }]), [])
 
   return (
     <ThemeProvider theme={DarkTheme}>

@@ -12,6 +12,7 @@ export const Box = SC.span`${css<{ $hasLabel?: boolean }>`
   border-radius: ${(p) => p.theme.adzhna.components.checkBox.borderRadius || p.theme.adzhna.borders.radius}px;
   border: 1px solid ${(p) => p.theme.adzhna.borders.color};
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   position: relative;

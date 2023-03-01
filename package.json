@@ -1,6 +1,6 @@
 {
   "name": "adzhna",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "React components library",
   "exports": {
     "./autosuggest": "./dist/components/Autosuggest.js",
