@@ -19,7 +19,7 @@ export const Dialog: FC<DialogProps> = memo((props) => {
     headerPending,
     footerPending,
     contentPending,
-    scrollableContainers,
+    scrollableContainers, 
     ...rest
   } = props
 
@@ -37,7 +37,6 @@ export const Dialog: FC<DialogProps> = memo((props) => {
   return createPortal(
     <Overlay $open={open} onClick={onClose} tabIndex={0} ref={overlayRef}>
       <Window
-        {...rest}
         contentId={`${id}-content`}
         pending={pending}
         headerPending={headerPending}
@@ -54,6 +53,7 @@ export const Dialog: FC<DialogProps> = memo((props) => {
             </Actions>
           ),
         }}
+        {...rest}
       >
         {children}
       </Window>

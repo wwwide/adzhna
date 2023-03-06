@@ -6,7 +6,7 @@ import { ConfirmationProps } from './ConfirmationProps'
 import { ActionsWrapper, ConfirmationContainer, _Message } from './style'
 
 export const Confirmation: FC<ConfirmationProps> = (props) => {
-  const { id, onCancel, message, onConfirm, confirmationButton, cancelButton, title, face, open } = props
+  const { id, onCancel, message, onConfirm, confirmationButton, cancelButton, title, face, open, ...rest } = props
 
   const keyboardHandler = useCallback(
     (event: KeyboardEvent) => {
@@ -27,7 +27,7 @@ export const Confirmation: FC<ConfirmationProps> = (props) => {
   }, [keyboardHandler])
 
   return (
-    <Dialog open={open} id={id} onClose={onCancel} header={{ title }} face={face}>
+    <Dialog open={open} id={id} onClose={onCancel} header={{ title }} face={face} {...rest}>
       <ConfirmationContainer>
         <_Message>{message}</_Message>
         <ActionsWrapper>
