@@ -1,4 +1,5 @@
 import React, { ReactNode, useCallback, useState } from 'react'
+import { CSSProperties } from 'styled-components'
 import { Confirmation as C } from './Confirmation'
 import { ButtonFace } from '../Button'
 import { DialogFace } from '../Dialog'
@@ -16,6 +17,7 @@ type Options = {
   face?: DialogFace
   dialogId?: string
   title?: string | ReactNode
+  style?: CSSProperties
 }
 
 export const useConfirmation = (opts: Options) => {
@@ -39,6 +41,7 @@ export const useConfirmation = (opts: Options) => {
         confirmationButton={opts.confirmationButton}
         cancelButton={opts.cancelButton}
         title={opts.title}
+        style={opts.style}
       />
     ),
     [isOpen, setOpen, onConfirm, opts],
