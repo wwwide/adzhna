@@ -21,12 +21,19 @@ export const useComponentsGuts = (
   const innerRef = useRef<any>(null)
   const { scrollToItem } = useScrollToItem(dropDownRef, dataSource)
   const valueOption = dataSource.find((i) => JSON.stringify(i.value) === JSON.stringify(value))
-  const { dropDownTop, innerRect, scrollAndResizeHandler } = useScrollAndResizeHandler(innerRef, dropDownRef)
+  
+  const { dropDownTop, innerRect, scrollAndResizeHandler } = useScrollAndResizeHandler(
+    innerRef,
+    dropDownRef,
+    dataSource,
+  )
+
   const { dropDownVisible, openDropDown, closeDropDown, switchDropDown } = useDropDownVisibility(
     scrollAndResizeHandler,
     scrollToItem,
     value,
   )
+  
   const { focused, onFocus, onBlur } = useFocus(closeDropDown)
   const { highlightedValue, setHighlightedValue } = useHighlightedItem(dataSource, scrollToItem, value)
 

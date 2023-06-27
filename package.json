@@ -1,6 +1,6 @@
 {
   "name": "adzhna",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "description": "React components library",
   "exports": {
     "./autosuggest": "./dist/components/Autosuggest.js",
@@ -73,7 +73,7 @@
     "ts-check": "tsc",
     "build": "./build.sh",
     "husky-init": "husky install",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "NODE_OPTIONS=\"--openssl-legacy-provider\" start-storybook -p 6006",
     "test": "jest"
   },
   "repository": {
