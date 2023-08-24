@@ -1,6 +1,6 @@
-import SC, { css } from 'styled-components'
+import SC from 'styled-components'
 
-export const Box = SC.div`${css<{ $active?: boolean; $highlighted?: boolean }>`
+export const Box = SC.div<{ $active?: boolean; $highlighted?: boolean }>`
   padding: ${(p) => p.theme.adzhna.components.select.dropDown.padding.y}rem
     ${(p) => p.theme.adzhna.components.select.dropDown.padding.x}rem;
   cursor: pointer;
@@ -20,4 +20,4 @@ export const Box = SC.div`${css<{ $active?: boolean; $highlighted?: boolean }>`
   &:hover {
     background: rgba(127, 127, 127, 0.1);
   }
-`}`
+`

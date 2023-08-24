@@ -1,12 +1,22 @@
 import { ButtonFace } from './ButtonFace'
-import { StyledComponent } from 'styled-components'
-import { Theme } from 'theme'
-import { Danger, Link, Light, Primary, Secondary, Success, Warning } from './faces'
+import { IStyledComponent } from 'styled-components'
+import {
+  Danger,
+  Link,
+  Light,
+  Primary,
+  Secondary,
+  Success,
+  Warning,
+} from './faces'
 import { ButtonStyledProps } from './ButtonStyledProps'
+import { PropsWithChildren } from 'react'
 
 export const getButtonByFace = (
   face: ButtonFace,
-): StyledComponent<'button', Theme, ButtonStyledProps> | undefined => {
+):
+  | IStyledComponent<'web', PropsWithChildren<ButtonStyledProps>>
+  | undefined => {
   if (face === 'primary') {
     return Primary
   }

@@ -1,6 +1,6 @@
 {
   "name": "adzhna",
-  "version": "2.1.10",
+  "version": "2.1.11",
   "description": "React components library",
   "exports": {
     "./autosuggest": "./dist/components/Autosuggest.js",
@@ -99,8 +99,8 @@
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
-    "@storybook/addon-storyshots": "^6.5.16",
-    "@storybook/addon-storyshots-puppeteer": "^6.5.16",
+    "@storybook/addon-storyshots": "^7.3.2",
+    "@storybook/addon-storyshots-puppeteer": "^7.3.2",
     "@storybook/builder-webpack4": "^6.5.16",
     "@storybook/manager-webpack4": "^6.5.16",
     "@storybook/react": "^6.5.16",
@@ -110,7 +110,6 @@
     "@types/node": "^16.11.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "@types/styled-components": "^5.1.15",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "babel-loader": "^8.3.0",
@@ -133,7 +132,7 @@
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
     "storybook": "^6.5.16",
-    "styled-components": "^5.3.6",
+    "styled-components": "^6.0.7",
     "ts-jest": "^27.1.5",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.3.0",
@@ -142,7 +141,7 @@
   "peerDependencies": {
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0",
-    "styled-components": "^5.3.6"
+    "styled-components": "^6.0.7"
   },
   "dependencies": {
     "react-toastify": "^8.1.0"

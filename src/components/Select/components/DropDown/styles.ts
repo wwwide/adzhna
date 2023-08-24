@@ -1,6 +1,6 @@
-import SC, { css } from 'styled-components'
+import SC from 'styled-components'
 
-export const Box = SC.div`${css<{ $maxHeight: number; $visible: boolean }>`
+export const Box = SC.div<{ $maxHeight: number; $visible: boolean }>`
   visibility: ${(p) => (p.$visible ? 'visible' : 'hidden')};
   position: fixed;
   box-shadow: ${(p) => p.theme.adzhna.components.select.dropDown.shadow};
@@ -12,4 +12,4 @@ export const Box = SC.div`${css<{ $maxHeight: number; $visible: boolean }>`
   z-index: 10002;
   background: ${(p) => p.theme.adzhna.colors.bg};
   color: ${(p) => p.theme.adzhna.colors.text};
-`}`
+`

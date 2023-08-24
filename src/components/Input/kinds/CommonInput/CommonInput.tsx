@@ -1,8 +1,15 @@
-import React, { ChangeEvent, TouchEventHandler, forwardRef, memo, useCallback, useRef } from 'react'
+import React, {
+  ChangeEvent,
+  TouchEventHandler,
+  forwardRef,
+  memo,
+  useCallback,
+  useRef,
+} from 'react'
 import { CommonInputProps } from './CommonInputProps'
 import { Wrapper } from '../../Wrapper'
 import { BaseInput, BaseTextArea } from './styles'
-import { StyledComponent } from 'styled-components'
+import { IStyledComponent } from 'styled-components'
 
 export const CommonInput = memo(
   forwardRef<HTMLInputElement, CommonInputProps>((props, ref) => {
@@ -64,7 +71,9 @@ export const CommonInput = memo(
       [preventScrollOnFocus],
     )
 
-    const Component: StyledComponent<any, any> = multiline ? BaseTextArea : BaseInput
+    const Component: IStyledComponent<any, any> = multiline
+      ? BaseTextArea
+      : BaseInput
 
     return (
       <Wrapper

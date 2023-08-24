@@ -1,5 +1,4 @@
-import React, { ReactNode, useCallback, useState } from 'react'
-import { CSSProperties } from 'styled-components'
+import React, { CSSProperties, ReactNode, useCallback, useState } from 'react'
 import { Confirmation as C } from './Confirmation'
 import { ButtonFace } from '../Button'
 import { DialogFace } from '../Dialog'

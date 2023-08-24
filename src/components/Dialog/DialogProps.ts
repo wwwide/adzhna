@@ -1,4 +1,4 @@
-import { CSSProperties } from 'styled-components'
+import { CSSProp } from 'styled-components'
 import { CardProps } from '../Card'
 
 export interface DialogProps extends CardProps {
@@ -11,5 +11,5 @@ export interface DialogProps extends CardProps {
   footerPending?: boolean
   scrollableContainers?: string[]
   dialogClassName?: string
-  dialogStyles?: CSSProperties
+  dialogStyles?: CSSProp
 }

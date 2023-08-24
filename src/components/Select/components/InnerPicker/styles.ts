@@ -2,7 +2,7 @@ import SC, { css } from 'styled-components'
 import { Icon } from '../../../Icon'
 import { Spinner } from '../../../Spinner'
 
-export const Inner = SC.div`${css<{ $hasIcon?: boolean; $disabled?: boolean; $focused?: boolean }>`
+export const Inner = SC.div<{ $hasIcon?: boolean; $disabled?: boolean; $focused?: boolean }>`
   position: relative;
   cursor: pointer;
   width: 100%;
@@ -21,9 +21,9 @@ export const Inner = SC.div`${css<{ $hasIcon?: boolean; $disabled?: boolean; $fo
   border-style: solid;
   background: ${(p) => p.theme.adzhna.colors.bg};
   color: ${(p) => p.theme.adzhna.colors.text};
-`}`
+`
 
-export const ArrowIcon = SC(Icon)`${css<{ $open: boolean }>`
+export const ArrowIcon = SC(Icon)<{ $open: boolean }>`
   position: absolute;
   right: 10px;
   top: 11px;
@@ -33,7 +33,7 @@ export const ArrowIcon = SC(Icon)`${css<{ $open: boolean }>`
   svg {
     fill: ${(p) => p.theme.adzhna.colors.text};
   }
-`}`
+`
 
 export const CustomIcon = SC(Icon)`${css`
   position: absolute;

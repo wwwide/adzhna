@@ -1,5 +1,4 @@
-import { ReactNode } from 'react'
-import { CSSProperties } from 'styled-components'
+import { ReactNode, CSSProperties } from 'react'
 import { ButtonFace } from '../Button'
 import { DialogFace } from '../Dialog'
 

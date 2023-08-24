@@ -11,9 +11,7 @@ export const SmallToastIcon = SC(Icon)`
   display: flex;
 `
 
-export const SmallToastContent = SC.div.attrs({
-  'data-qa': 'feedback-toast',
-})`
+export const SmallToastContent = SC.div`
   display: flex;
   align-items: center;
   line-height: 22px;
@@ -21,9 +19,7 @@ export const SmallToastContent = SC.div.attrs({
   font-weight: 400;
 `
 
-export const BigToastContent = SC.div.attrs({
-  'data-qa': 'feedback-toast',
-})`
+export const BigToastContent = SC.div`
   margin: 16px;
 `
 
